@@ -1,11 +1,29 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+#Imprint
+Managing Director and responsible for the web content:
+Alexander Oelling
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+##Office:
+Köpenicker Str. 154
+10997 Berlin (Kreuzberg)
+Germany
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+##Contact:
+Phone: +49 30 27583021
+Fax: +49 30 27583025
+Email: info -at- sensorberg.com
+
+Amtsgericht Charlottenburg Berlin
+HRB153333B
+
+##Support:
+Web: http://support.sensorberg.com
+Email: support -at- sensorberg.com
+
+##Contents:
+The brand names and titles used on this website are property of Sensorberg GmbH. Names of other companies and products listed on this website may be brands of their respective owners.
