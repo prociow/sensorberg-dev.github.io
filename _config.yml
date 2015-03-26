@@ -10,13 +10,13 @@ url: http://developer.sensorberg.com
 # be the project name.
 # *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
 #     run it like so: jekyll serve --baseurl=''
-baseurl: ''
+baseurl: /sensorberg
 
 # This can be '' to hide the Github nav button
 github: 'sensorberg-dev'
 
 # Set this to your UA-# value, or '' to disable the block completely
-gaaccount: ''
+gaaccount: 'UA-44182727-4'
 
 # Set this to your disqus shortname to enable comments. Note that the 'comments'
 # setting below must also be true. Individual posts can override 'comments' to
@@ -26,6 +26,9 @@ comments: true
 
 permalink: /:year/:month/:title
 paginate: 3
+
+latestiOSRelease : "0.7.9"
+latestAndroidRelease : "0.9.3"
 
 highlighter: pygments
 markdown: redcarpet
