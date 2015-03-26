@@ -1,0 +1,24 @@
+{% include header.html %}
+
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            <div class="sidebar well">
+                <h5>Additional Links</h5>
+                {% if page.additionalNavigation.size > 0 %}
+                    <ul>
+                        {%for navItem in page.additionalNavigation %}
+                        <li><a href="{{ navItem.link }}">{{ navItem.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            {% include sidebar.html %}
+        </div>
+        <div class="col-md-9">
+            {{ content }}
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
