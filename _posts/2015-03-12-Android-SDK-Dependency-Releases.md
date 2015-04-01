@@ -17,7 +17,7 @@ We had to repackage the original Volley in order to distribute it with our SDK. 
 #networkstate [ ![Download](https://api.bintray.com/packages/sensorberg/maven/networkstate/images/download.svg) ](https://bintray.com/sensorberg/maven/networkstate/_latestVersion)
 URL [bintray.com/sensorberg/maven/networkstate/view](https://bintray.com/sensorberg/maven/networkstate/view)
 
-We set this class up as a separate module in order to reuse it. Since the Android gradle plugin does not bundle local modules into a library module, this project hat to be open sourced and released to jcenter as well.
+We set this class up as a separate module in order to reuse it. Since the Android gradle plugin does not bundle local modules into a library module, this project had to be open sourced and released to jcenter as well.
 
 #OkVolley [ ![Download](https://api.bintray.com/packages/sensorberg/maven/okvolley/images/download.svg) ](https://bintray.com/sensorberg/maven/okvolley/_latestVersion)
 
