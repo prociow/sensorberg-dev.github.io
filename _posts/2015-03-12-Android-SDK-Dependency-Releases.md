@@ -5,7 +5,7 @@ date: 2015-03-12 12:00:00 +1
 comments: true
 ---
 
-Over the last weeks, we have open sources the dependencies of the upcoming Android SDK.
+Over the last weeks, we have open sourced the dependencies of the upcoming Android SDK.
 
 There is currently 3 projects that are available via jcenter:
 
