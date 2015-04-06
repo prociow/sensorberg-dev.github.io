@@ -13,33 +13,53 @@
 
 <body>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.name }}</a>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
-                    <li class="active visible-xs-block"><a href="{{ site.baseurl }}/links.html">Links</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/android-sdk/">Android-SDK</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/ios-sdk/">iOS-SDK</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/resolver/">Resolver</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/archive.html">Blog Archive</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/about/">About</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/feed.xml">RSS</a></li>
-                    {% if site.github != '' %}
-                      <li class="active"><a href="https://github.com/{{ site.github }}">Github</a></li>
-                    {% endif %}
-                </ul>
-              </div>
+<div class="header navbar-fixed-top">
+    <div class="container">
+        <div class="">
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <img src="../images/sb_logo_retina_light.png" class="sb_logo" style="margin-top: -5px;">
+            </a>
         </div>
+        <nav class="container-fluid">
+            <div class="row-fluid">
+                <div class="navbar" role="navigation">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="{{ site.baseurl }}/contact/">Contact</a></li>
+                            <li class="active"><a href="{{ site.baseurl }}/newsletter/">Newsletter</a></li>
+                            {% if site.github != '' %}
+                            <li class="active"><a href="https://github.com/{{ site.github }}">Github</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
 </div>
+
+<!-- Navigation
+    <nav class="navbar-fixed-top" style="height: 82px; background-color: #49697d;">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+               <a href="http:www.developer.sensorberg.com">
+                  <img src="../images/sb_logo_retina_light.png" class="sb_logo" style="margin-top: 9px;">
+               </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="padding-top: 16px; font-size: 16px;">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#newsletter">Newsletter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+-->
