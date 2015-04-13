@@ -4,7 +4,6 @@ html {
 }
 
 body {
-    font-family: 'Open Sans';
     font-size: 18px;
     font-size: 1.1rem;
     line-height: 1.2;
@@ -285,4 +284,13 @@ form#mc-form-onsite{
 
 .well>h1 {
     color: #373f49;
+  }
+
+  .col-md-3 {
+    margin-top: 20px;
+  }
+
+.highlight>pre {
+    background-color: rgba(125,162,177,0.2);
+    border: 1px solid #7da2b1;
   }
