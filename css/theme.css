@@ -11,10 +11,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
-    line-height: 1.2;
-}
-
 h1 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -178,7 +174,13 @@ a:hover {
     }
 }
 
-.features h1 {
+.features h1, h2, h3, h4 {
+    line-height: 1;
+}
+
+.feature-content {
+    max-width: 978px; 
+    margin: 80px auto;
     text-align: center;
 }
 
@@ -220,6 +222,15 @@ a:hover {
     border: 2px solid #49697d;
 }
 
+.sb_teaser {
+    background-color: white;
+    margin-top: -5px;
+    padding: 0 0 80px 0;
+}
+
+.sb_teaser>div {
+    text-align: center;
+}
 
 .content_teaser {
     background-color: #efefef;
@@ -296,6 +307,10 @@ form#mc-form-onsite{
 
 .mc-field-group {
     margin: 30px 0;
+}
+
+.info-graphic {
+    margin-top: 20px;
 }
 
 .well>h1 {
