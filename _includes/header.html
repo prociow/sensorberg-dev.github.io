@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
    <div class="row-fluid">
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
@@ -31,6 +30,11 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="https://sensorberg.zendesk.com/hc/en-us/requests/new">Contact</a></li>
                     <li class="active"><a href="/#newsletter">Newsletter</a></li>
+                    {% if page.landingPage != true %}
+                    <li class="active"><a href="/android-sdk/">Android</a></li>
+                    <li class="active"><a href="/ios-sdk/">iOS</a></li>
+                    <li class="active"><a href="/resolver/">Resolver</a></li>
+                    {% endif %}
                     {% if site.github != '' %}
                     <li class="active"><a href="https://github.com/{{ site.github }}">Github</a></li>
                     {% endif %}              
