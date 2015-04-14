@@ -2,8 +2,7 @@
 layout: page
 title: Android SDK Integration
 permalink: /android-sdk/
-additionalNavigation : [ 
-    { "title" : "Android Customizations",   "link" : "/android/customizations/" },
+additionalNavigation : [
     { "title" : "Android SDK",              "link" : "https://github.com/sensorberg-dev/android-sdk" },
     { "title" : "Android SDK Samples",      "link" : "https://github.com/sensorberg-dev/android-sdk-samples" },
     { "title" : "Android SDK Bugtracker",   "link" : "https://github.com/sensorberg-dev/android-sdk/issues" }
