@@ -4,7 +4,7 @@ title: Android SDK Integration
 permalink: /android-sdk/
 additionalNavigation : [ 
     { "title" : "Android Customizations",   "link" : "/android/customizations/" },
-    { "title" : "Android SDK",              "link" : "https://github.com/sensorberg-deve/android-sdk" },
+    { "title" : "Android SDK",              "link" : "https://github.com/sensorberg-dev/android-sdk" },
     { "title" : "Android SDK Samples",      "link" : "https://github.com/sensorberg-dev/android-sdk-samples" },
     { "title" : "Android SDK Bugtracker",   "link" : "https://github.com/sensorberg-dev/android-sdk/issues" }
 ]
@@ -18,10 +18,13 @@ You need to have the jcenter artifactory in your list of repositories and declar
 ```
 repositories {
     jcenter()
+    maven {
+        url "https://dl.bintray.com/sensorberg/maven/" //we´e applied to be included in jCenter, until then, this line is needed
+    }
 }
 
 dependencies {
-       compile ('com.sensorberg.sdk.bootstrapper:sensorberg-sdk-bootstrapper:2.+')
+       compile ('com.sensorberg.sdk:android-sdk-bootstrapper:2.+')
 }
 ```
 
@@ -35,9 +38,9 @@ Set your API key in your manifest and define your BroadcastReceiver:
         <meta-data
             android:name="com.sensorberg.sdk.ApiKey"
             android:value="a8ab23e7f2c4fbdd07d0e0e14835db037d2f62584b976aa0026a671c60e0707f" />
-      <receiver android:name="com.myCompany.MyActionPresenter"
-                android:process=".sensorberg"
-                android:exported:"false">
+        <receiver android:name="com.myCompany.MyActionPresenter"
+            android:process=".sensorberg"
+            android:exported:"false" >
             <intent-filter>
                 <action android:name="com.sensorberg.android.PRESENT_ACTION" />
             </intent-filter>
@@ -117,6 +120,7 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
 ####Process
 #####The Bootstrapper runs in your own process, so you are free to access any singletons or statics that you use in your Application. Push the BeaconEvent to your EventBus, Otto and react as you wish.
 
-
-
-   
+<br/>
+<br/>
+<br/>
+<br/>
