@@ -22,7 +22,7 @@ Amtsgericht Charlottenburg Berlin
 HRB153333B
 
 ##Support:
-Web: http://support.sensorberg.com
+Web: [Support](https://sensorberg.zendesk.com/hc/en-us/requests/new)
 Email: support -at- sensorberg.com
 
 ##Contents:

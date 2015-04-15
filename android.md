@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Android SDK Integration
-permalink: /android-sdk/
+permalink: /android/
 additionalNavigation : [
     { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/android-sdk" },
     { "title" : "Android SDK Samples",      "link" : "https://github.com/sensorberg-dev/android-sdk-samples" },
@@ -16,10 +16,7 @@ You need to have the jcenter artifactory in your list of repositories and declar
 
 ```
 repositories {
-    jcenter()
-    maven {
-        url "https://dl.bintray.com/sensorberg/maven/" //we´e applied to be included in jCenter, until then, this line is needed
-    }
+    jcenter()    
 }
 
 dependencies {

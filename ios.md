@@ -1,7 +1,7 @@
 ---
 layout: page
 title: iOS SDK Integration
-permalink: /ios-sdk/
+permalink: /ios/
 additionalNavigation : [     
     { "title" : "iOS SDK",                  "link" : "https://github.com/sensorberg-dev/ios-sdk" },
     { "title" : "iOS Bugtracker",           "link" : "https://github.com/sensorberg-dev/ios-sdk/issues" }     
@@ -28,7 +28,7 @@ and follow the [latest instructions](http://sensorberg-dev.github.io/ios-sdk/{{ 
 
 ## Support
 
-If you need any technical support, please file an issue at our [GitHub repository](https://github.com/sensorberg-dev/ios-sdk/issues/new) or contact [our support](http://support.sensorberg.com/hc/en-us/requests/new).
+If you need any technical support, please file an issue at our [GitHub repository](https://github.com/sensorberg-dev/ios-sdk/issues/new) or contact [our support](https://sensorberg.zendesk.com/hc/en-us/requests/new).
 
 ## Commercial Support
 
