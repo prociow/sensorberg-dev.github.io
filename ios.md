@@ -18,7 +18,7 @@ The Sensorberg SDK requires iOS 7.0.
 
 ## Installation
 
-SensorbergSDK uses [CocoaPods](http://cocoapods.org).
+Sensorberg SDK uses [CocoaPods](http://cocoapods.org).
 
 To install it, simply add the following line to your Podfile:
 
@@ -32,8 +32,8 @@ If you need any technical support, please file an issue at our [GitHub repositor
 
 ## Commercial Support
 
-Don't hesitate to let us know, how we can support you with developing awesome applications that include iBeacon functionality. Just [drop us](mailto:support@sensorberg.com) a message.
+Let us know how we can support you with developing awesome applications that include iBeacon functionality. Just [drop us](mailto:support@sensorberg.com) a message.
 
 ## Bugs
 
-If you encounter any bugs. Please [report them](https://github.com/sensorberg-dev/ios-sdk/issues).
+If you encounter any bugs, please [report them](https://github.com/sensorberg-dev/ios-sdk/issues).
