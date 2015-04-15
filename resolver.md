@@ -9,9 +9,9 @@ additionalNavigation : [
 
 #Resolver
 
-The Resolver is a microservice that you can run in your own infrastructure or hosted by us, resposible for delivering all neccesary data to the SDKs in order for them to map a beacon the the attached content.
+The Resolver is a microservice that you can run in your own infrastructure or hosted by us, responsible for delivering all necessary data to the SDKs in order for them to map a beacon the the attached content.
 
-The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring-boot/) application.
+The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring-boot/) application. Currently you still need a [Sensorberg Cloud Services account](http://manage.sensorberg.com) which you can register for free at [manage.sensorberg.com/#/signup](https://manage.sensorberg.com/#/signup). 
 
 Simply run
 
@@ -131,6 +131,8 @@ With your apiKey from [manage.sensorberg.com/#/applications](https://manage.sens
     "environment": "https://connect.sensorberg.com/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904"
 }
 {% endhighlight %}
+*You can get an account for free at [manage.sensorberg.com/#/signup](https://manage.sensorberg.com/#/signup)*
+
 ##GET /synchronizations
 Get a list of all the synchronizations that are set up for this host:
 ###return value:
@@ -144,6 +146,8 @@ Get a list of all the synchronizations that are set up for this host:
     }
 ]
 {% endhighlight %}
+
+
 ##GET /layout
 Return the beacon layout for the api key
 ###headers:
