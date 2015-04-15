@@ -5,24 +5,24 @@ permalink: /imprint/
 ---
 
 #Imprint
-Managing Director and responsible for the web content:
-Alexander Oelling
-
-##Office:
-Köpenicker Str. 154
-10997 Berlin (Kreuzberg)
-Germany
+Managing Director and responsible for the web content:             <br/>
+Alexander Oelling                                                  <br/>
+                                                                   
+##Office:                                                          
+Köpenicker Str. 154                                                <br/>
+10997 Berlin (Kreuzberg)                                           <br/>
+Germany                                                            <br/>
 
 ##Contact:
-Phone: +49 30 27583021
-Fax: +49 30 27583025
-Email: info -at- sensorberg.com
+Phone: +49 30 27583021                                             <br/>
+Fax: +49 30 27583025                                               <br/>
+Email: info -at- sensorberg.com                                    <br/>
 
 Amtsgericht Charlottenburg Berlin
-HRB153333B
+HRB153333B                                                         <br/>
 
 ##Support:
-Web: [Support](https://sensorberg.zendesk.com/hc/en-us/requests/new)
+Web: [Support](https://sensorberg.zendesk.com/hc/en-us/requests/new)<br/>
 Email: support -at- sensorberg.com
 
 ##Contents:
