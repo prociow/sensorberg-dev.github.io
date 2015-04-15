@@ -325,3 +325,19 @@ form#mc-form-onsite{
     background-color: rgba(125,162,177,0.2);
     border: 1px solid #7da2b1;
   }
+
+.float-left {
+    float:left;
+}
+
+.float-left img {
+    margin-right: 15px;
+}
+
+.link-list ul {
+    padding-top: 12px;
+}
+
+.link-list li {
+    padding-top: 10;
+}

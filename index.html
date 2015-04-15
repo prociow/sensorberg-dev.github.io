@@ -89,14 +89,16 @@ landingPage : true
 </section>-->
 
 <section class="content_teaser">
-<div class="container row">
+<div class="container row link-list">
   <div class="col-md-6">
     <h2>News</h2>
     <ul>
       {% for post in paginator.posts %}
       <li>
-        <a href="{{ site.baseurl}}{{ post.url }}"> {{ post.title }}</a>
-        <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+        <p>
+          <a href="{{ site.baseurl}}{{ post.url }}"> {{ post.title }}</a><br />
+        {{ post.date | date: "%b %-d, %Y" }}
+        </p>
       </li>
       {% endfor %}
     </ul>
@@ -105,6 +107,56 @@ landingPage : true
     {% endif %}
 
   </div>
+
+  <div class="col-md-6 link-list">
+    <h2>More information</h2>
+    <ul>
+      <li>
+        <div>
+          <div class="float-left">
+              <img src="/images/ico_sb.png" alt="Sensorberg" width="40"/>
+          </div>
+          <div>
+            <div style="display; table-cell;">
+              <p>Sensorberg Beacon Management Platform<br />
+                <a href="https://www.sensorberg.com/" target="_blank">www.sensorberg.com</a>
+              </p>
+            </div>
+          <div>
+        </div>  
+      </li>
+      <li>  
+        <div>
+          <div class="float-left">
+              <img src="/images/ico_shopping_cart.png" alt="Buy Beacons" width="40" style="margin-top: 20px;" />
+          </div>
+          <div>
+            <div style="display: table-cell;">
+              <p>Buy beacons - Individual offers for developers, companies and enterprise customers<br />
+                <a href="https://www.sensorberg.com/shop/" target="_blank">Sensorberg Shop</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li> 
+        <div>
+          <div class="float-left">
+              <img src="/images/ico_guy.png" alt="Join our team" width="40" style="margin-top: 11px;" />
+          </div>
+          <div>
+            <div style="display: table-cell;">
+              <p>Become a part of a great team<br />
+                <a href="https://www.sensorberg.com/jobs" target="_blank">Sensorberg Jobs</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!--
   <div class="col-md-6">
     <h2>More information</h2>
     <ul>
@@ -121,7 +173,7 @@ landingPage : true
         <a href="https://www.sensorberg.com/jobs" target="_blank">Sensorberg Jobs</a>
       </li>
     </ul>
-  </div>
+  </div>-->
 </div>
 </section>
 
