@@ -16,7 +16,7 @@ additionalNavigation : [
 
 You need to have the jcenter artifactory in your list of repositories and declare the dependency to our bootstrapper library. The *Bootstrapper* references the SDK.
 
-```
+{% highlight groovy %}
 repositories {
     jcenter()    
 }
@@ -24,11 +24,11 @@ repositories {
 dependencies {
        compile ('com.sensorberg.sdk:android-sdk-bootstrapper:2.+')
 }
-```
+{% endhighlight %}
 
 Set your API key in your manifest and define your *BroadcastReceiver*:
 
-```
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
@@ -45,7 +45,7 @@ Set your API key in your manifest and define your *BroadcastReceiver*:
         </receiver>
     </application>
 </manifest>
-```
+{% endhighlight %}
 
 <div class="callout callout-alert">
     <h1><i class='fa fa-exclamation-triangle'/></i>The BroadcastReceiver is running in another process</h1>
@@ -57,7 +57,7 @@ Enable the SDK in your [Application](http://developer.android.com/reference/andr
 
 It´s now time to implement the BroadcastReceiver:
 
-```
+{% highlight java %}
 public class MyActionPresenter extends BroadcastReceiver {
        @Override
        public void onReceive(Context context, Intent intent) {
@@ -99,24 +99,24 @@ public class MyActionPresenter extends BroadcastReceiver {
            NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
            notificationManager.notify(id, notification);
        }
-```
+{% endhighlight %}
 
-This class receives a broadcast, if the SDK has detected a beacon and successfully resolved an associated *Action*. We´re using the Support Library, be aware that this will require an additional dependency:
+This class receives a broadcast, if the SDK has detected a beacon and successfully resolved an associated Action. We´re using the Support Library, be aware that this will require an additional dependency:
 
-```
+{% highlight groovy %}
 compile "com.android.support:support-v4:22.0.0"
-```
+{% endhighlight %}
 
 If you want your own UI to react to detected beacons and actions, please extend the *Bootstrapper* and add your customisations:
 
 
-```
+{% highlight java %}
 public class MyBootstrapper extends SensorbergApplicationBootstrapper {
   public void presentBeaconEvent(BeaconEvent beaconEvent) {
       //your custom code
     }
 }
-```
+{% endhighlight %}
 <div class="callout callout-alert">
     <h1><i class='fa fa-exclamation-triangle'/></i>Process</h1>
     <p>The Bootstrapper runs in your own process, so you are free to access any singletons or statics that you use in your Application. Push the BeaconEvent to your EventBus, Otto and react as you wish.</p>

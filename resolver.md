@@ -29,7 +29,7 @@ to have your own instance.
 
 Only an instance of [elastic search](https://www.elastic.co) needs to be available on your machine, or available to your machine.
 
-```
+{% highlight bash %}
 brew install elasticsearch
 elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
 [1990-01-01 00:00:59,300][INFO ][node                     ] [Deacon Frost] version[1.5.1], pid[49391], build[5e38401/2015-04-09T13:41:35Z]
@@ -43,7 +43,7 @@ elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
 [1990-01-01 00:00:05,491][INFO ][http                     ] [Deacon Frost] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
 [1990-01-01 00:00:05,491][INFO ][node                     ] [Deacon Frost] started
 
-```
+{% endhighlight %}
 You might need to change the connection string in the Resolver in */src/main/resources/application.properties*
 
 ```
