@@ -11,7 +11,12 @@ additionalNavigation : [
 
 The Resolver is a microservice that you can run in your own infrastructure or hosted by us, responsible for delivering all necessary data to the SDKs in order for them to map a beacon the the attached content.
 
-The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring-boot/) application. Currently you still need a [Sensorberg Cloud Services account](http://manage.sensorberg.com) which you can register for free at [manage.sensorberg.com/#/signup](https://manage.sensorberg.com/#/signup). 
+The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring-boot/) application. 
+
+<div class="callout callout-info">
+    <h1><i class='fa fa-info-circle'/></i>Sensorberg Cloud Account needed</h1>
+    <p>Currently you still need a <a href="http://manage.sensorberg.com">Sensorberg Cloud Services account</a> which you can register for free at <a href="https://manage.sensorberg.com/#/signup">manage.sensorberg.com/#/signup</a>.</p>
+</div> 
 
 Simply run
 
@@ -85,7 +90,7 @@ Total time: 7.354 secs
 
 #API endpoints:
 
-For a full list, visit our [readme.io live API page](https://sensorberg.readme.io/)
+For a full list, visit our [readme.io live API page](https://sensorberg.readme.io/) (soon)
 
 To get started quickly, here is a list of the most important endpoints:
 

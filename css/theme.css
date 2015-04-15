@@ -339,5 +339,35 @@ form#mc-form-onsite{
 }
 
 .link-list li {
-    padding-top: 10;
+    padding-top: 10px;
+}
+
+.callout{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:10px 20px;
+
+}
+.callout-alert{
+    background-color: #FDF7F7;
+    border-left:3px solid #D9534F;
+}
+
+.callout-alert i, .callout-alert h1{
+    color:#D9534F;
+    padding-right: 10px;
+}
+
+.callout-info{
+        background-color:#F4F8FA;
+        border-left:3px solid #5BC0DE;
+
+}
+.callout h1{
+    font-size: 26px;
+    font-size: 1.6rem;
+}
+.callout-info i, .callout-info h1{
+    color:#5BC0DE;
+    padding-right: 10px;
 }
