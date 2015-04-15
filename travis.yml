@@ -10,4 +10,3 @@ env:
 
   notifications:
 	  slack: sensorberg:bYfkpm6TExFzF5gdpQz2IHDh
-
