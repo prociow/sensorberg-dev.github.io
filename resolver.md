@@ -15,7 +15,7 @@ The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring
 
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'/></i>Sensorberg Cloud Account needed</h1>
-    <p>Currently you still need a <a href="http://manage.sensorberg.com">Sensorberg Cloud Services account</a> which you can register for free at <a href="https://manage.sensorberg.com/#/signup">manage.sensorberg.com/#/signup</a>.</p>
+    <p>Currently you need a <a href="http://manage.sensorberg.com">Sensorberg Cloud Services account</a> which you can register for free at <a href="https://manage.sensorberg.com/#/signup">manage.sensorberg.com/#/signup</a>.</p>
 </div> 
 
 Simply run
