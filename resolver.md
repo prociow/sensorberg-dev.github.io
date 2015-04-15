@@ -9,7 +9,7 @@ additionalNavigation : [
 
 #Resolver
 
-The Resolver is a microservice that you can run in your own infrastructure or hosted by us, responsible for delivering all necessary data to the SDKs in order for them to map a beacon the the attached content.
+The Resolver is a microservice that you can run in your own infrastructure or hosted by us, responsible for delivering all necessary data to the SDKs in order for them to map a beacon the attached content.
 
 The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring-boot/) application. Currently you still need a [Sensorberg Cloud Services account](http://manage.sensorberg.com) which you can register for free at [manage.sensorberg.com/#/signup](https://manage.sensorberg.com/#/signup). 
 
@@ -189,7 +189,7 @@ Return the beacon layout for the api key
 }
 {% endhighlight %}
 
-If you want to use your own resolver in your owm application with the [Android SDK](/android) add this line to your AndroidManifest.xml:
+If you want to use your own resolver in your own application with the [Android SDK](/android) add this line to your AndroidManifest.xml:
 {% highlight json %}
 <meta-data
     android:name="com.sensorberg.sdk.resolverURL"
