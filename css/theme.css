@@ -162,6 +162,14 @@ a:hover {
     padding-top: 80px;
 }
 
+.container i{
+    margin-right: 10px;
+}
+
+.second_row {
+    padding-top: 40px;
+}
+
 .features {
     background-color: #7da2b1;
     color: #fff;
