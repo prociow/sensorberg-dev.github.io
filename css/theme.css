@@ -370,6 +370,8 @@ form#mc-form-onsite{
     padding-right: 10px;
 }
 
+
+
 .callout-info{
         background-color:#F4F8FA;
         border-left:3px solid #5BC0DE;
@@ -383,3 +385,13 @@ form#mc-form-onsite{
     color:#5BC0DE;
     padding-right: 10px;
 }
+
+/*.callout-alert h1:before {*/
+    /*content:"\f05a"*/
+    /*font:normal normal normal 14px/1 FontAwesome;*/
+    /*font-size:inherit;*/
+    /*text-rendering:auto;*/
+    /*transform:translate(0, 0);*/
+    /*-webkit-font-smoothing:antialiased;*/
+    /*-moz-osx-font-smoothing:grayscale;*/
+/*}*/

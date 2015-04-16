@@ -10,7 +10,7 @@ additionalNavigation : [
 ---
 
 <div class="callout callout-info">
-    <h1><i class='fa fa-info-circle'/></i>Gradle only</h1>
+    <h1>Gradle only</h1>
     <p>Gradle is the only supported build system by Google and we also only support integrations if you build with Gradle. Integrating with maven should be identical, but can provide no support.</p>
 </div>
 
