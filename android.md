@@ -10,6 +10,8 @@ additionalNavigation : [
 ]
 ---
 
+#Sensorberg Android SDK <img src="https://travis-ci.org/sensorberg-dev/android-sdk.svg?branch=master" style="float:right" alt="Android SDK Build Status"/>
+
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'/></i>Gradle only</h1>
     <p>Gradle is the only supported build system by Google and we also only support integrations if you build with Gradle. Integrating with maven should be identical, but can provide no support.</p>
