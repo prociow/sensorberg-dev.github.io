@@ -130,7 +130,7 @@ a:hover {
 }
 
 .sb_logo {
-    max-width: 250px;
+    max-width: 250px;*
     float: left;
 }
 
