@@ -4,7 +4,8 @@ title: iOS SDK Integration
 permalink: /ios/
 additionalNavigation : [     
     { "title" : "iOS SDK",                  "link" : "https://github.com/sensorberg-dev/ios-sdk" },
-    { "title" : "iOS Bugtracker",           "link" : "https://github.com/sensorberg-dev/ios-sdk/issues" }     
+    { "title" : "iOS Bugtracker",           "link" : "https://github.com/sensorberg-dev/ios-sdk/issues" },
+    { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/ios.md" }     
 ]
 ---
 
