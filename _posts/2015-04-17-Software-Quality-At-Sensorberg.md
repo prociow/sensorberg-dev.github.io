@@ -3,6 +3,7 @@ layout: post
 title: "Software quality at Sensorberg"
 date: 2015-04-17 16:20:00 +1
 comments: true
+tags: continous-integration
 ---
 
 #Software quality is important to us
@@ -13,6 +14,8 @@ We´re trying to keep you in the loop about the quality of our software. We have
 
 * compile the project
 * run all tests
+
+<!--more-->
 
 ##[Android SDK](https://travis-ci.org/sensorberg-dev/android-sdk) <img src="https://travis-ci.org/sensorberg-dev/android-sdk.svg" alt="Android SDK Build Status" style="float:right">
 

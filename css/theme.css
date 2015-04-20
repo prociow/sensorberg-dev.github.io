@@ -387,3 +387,7 @@ form#mc-form-onsite{
     color:#5BC0DE;
     padding-right: 10px;
 }
+
+.right {
+    float: right;
+}

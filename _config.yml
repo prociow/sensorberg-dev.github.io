@@ -27,6 +27,7 @@ paginate: 3
 latestiOSRelease : "0.7.9"
 latestAndroidRelease : "0.9.3"
 
+excerpt_separator: <!--more-->
 highlighter: pygments
 markdown: redcarpet
 redcarpet:
