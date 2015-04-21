@@ -2,11 +2,7 @@ language: ruby
 rvm:
 - 2.1
 
-before_install:
-- travis_retry gem install html-proofer
-- travis_retry gem install jekyll
-
-script: jekyll build && htmlproof ./_site  --file-ignore ""/.+\/ios\/cocoadocs.+/""
+script: ./scripts/cibuild
 
 env:
   global:
