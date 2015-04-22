@@ -22,9 +22,9 @@ I´ve setup my campaign as an in-app campaign with some custon payload. The payl
 
 {% highlight json %}
 {
-  "title": "Save 17%"
+  "title": "Save 17%",
   "couponCode": "3A2601DD-C508-4AB5-9FD4-201B3A5361E3",
-  "message": "Show this QR code at the cashier.",
+  "message": "Show this QR code at the cashier."
 }
 {% endhighlight %}
 The **Subject** and **Body** will be used to construct the Notification. I use the URL *coupon://redeem* to identify this use-case.
