@@ -16,10 +16,12 @@ permalink: /blog/
                     <div class="well">
                         <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d" }} - {{ post.title }}</a></h1>
                         <div class="post-content">
-                            {{ post.content }}
+                            {{ post.excerpt }}
+
                         </div>
                         <div>
-                            <a href="{{ site.baseurl}}{{ post.url }}/#comments">Write a comment</a>
+                            <a href="{{ site.baseurl}}{{ post.url }}/">Read more »</a>
+                            <a href="{{ site.baseurl}}{{ post.url }}/#comments" class="right"><i class="fa fa-comment"></i>Write a comment</a>
                         </div>
                     </div>
                 {% endfor %}

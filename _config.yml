@@ -24,9 +24,10 @@ comments: true
 permalink: /:year/:month/:title
 paginate: 3
 
-latestiOSRelease : "0.7.9"
+latestiOSRelease : "0.8.0"
 latestAndroidRelease : "0.9.3"
 
+excerpt_separator: <!--more-->
 highlighter: pygments
 markdown: redcarpet
 redcarpet:
