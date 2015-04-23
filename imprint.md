@@ -4,7 +4,7 @@ title: Imprint
 permalink: /imprint/
 ---
 
-#Imprint
+#Imprint<a href="http://nadrosia.tumblr.com/post/53520500877/made-in-berlin-badge-update"><img alt="Made in Berlin with love and passion" src="/images/made-in-berlin-badge.png" class="right"></a>
 Managing Director and responsible for the web content:             <br/>
 Alexander Oelling                                                  <br/>
                                                                    
