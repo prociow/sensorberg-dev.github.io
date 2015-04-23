@@ -66,4 +66,5 @@
 
 .highlight>pre>code {
     white-space: pre;
+    overflow-wrap: normal;
 }
