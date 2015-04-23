@@ -35,6 +35,9 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="https://sensorberg.zendesk.com/hc/en-us/requests/new">Contact</a></li>
                     <li class="active"><a href="/#newsletter">Newsletter</a></li>
+                    {% if page.landingPage == true %}
+                    <li class="active"><a href="/blog/">Developer Blog</a></li>
+                    {% endif %}
                     {% if page.landingPage != true %}
                     <li class="active"><a href="/android/">Android</a></li>
                     <li class="active"><a href="/ios/">iOS</a></li>
