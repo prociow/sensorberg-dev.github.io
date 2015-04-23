@@ -340,7 +340,11 @@ form#mc-form-onsite{
 .highlight>pre {
     background-color: rgba(125,162,177,0.2);
     border: 1px solid #7da2b1;
-  }
+}
+
+.highlight>pre>code {
+    white-space: pre;
+}
 
 .float-left {
     float:left;
