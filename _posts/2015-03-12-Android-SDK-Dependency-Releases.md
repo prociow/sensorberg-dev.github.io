@@ -3,11 +3,14 @@ layout: post
 title: "Android SDK Dependency Releases"
 date: 2015-03-12 12:00:00 +1
 comments: true
+tags: android java open-source
 ---
 
 Over the last weeks, we have open sourced the dependencies of the upcoming Android SDK.
 
 There is currently 3 projects that are available via jcenter:
+
+<!--more-->
 
 #Volley [ ![Download](https://api.bintray.com/packages/sensorberg/maven/volley/images/download.svg) ](https://bintray.com/sensorberg/maven/volley/_latestVersion)
 URL: [bintray.com/sensorberg/maven/volley/view](https://bintray.com/sensorberg/maven/volley/view)

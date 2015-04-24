@@ -8,7 +8,7 @@
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
     <link rel="icon" href="/images/favicon4.png" type="image/png">
-
+    <link rel="alternate" type="text/xml" title="RSS .92" href="{{ site.baseurl }}/feed.xml">
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet">
@@ -35,6 +35,9 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="https://sensorberg.zendesk.com/hc/en-us/requests/new">Contact</a></li>
                     <li class="active"><a href="/#newsletter">Newsletter</a></li>
+                    {% if page.landingPage == true %}
+                    <li class="active"><a href="/blog/">Developer Blog</a></li>
+                    {% endif %}
                     {% if page.landingPage != true %}
                     <li class="active"><a href="/android/">Android</a></li>
                     <li class="active"><a href="/ios/">iOS</a></li>

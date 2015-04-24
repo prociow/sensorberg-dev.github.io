@@ -340,7 +340,7 @@ form#mc-form-onsite{
 .highlight>pre {
     background-color: rgba(125,162,177,0.2);
     border: 1px solid #7da2b1;
-  }
+}
 
 .float-left {
     float:left;
@@ -386,4 +386,8 @@ form#mc-form-onsite{
 .callout-info i, .callout-info h1{
     color:#5BC0DE;
     padding-right: 10px;
+}
+
+.right {
+    float: right;
 }
