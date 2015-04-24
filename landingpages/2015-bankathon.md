@@ -32,6 +32,8 @@ Download the [Showcase App for iOS](https://itunes.apple.com/de/app/sensorberg-s
 
 Download the [Showcase App for Android](https://play.google.com/store/apps/details?id=com.sensorberg.android.showcase) and start your beacon.
 
+<img src="/images/pages/2015bankathon/showcaseAndroid2.png" alt="Showcase Android - Simulate Beacon">
+
 You may also use the bleeding edge Hockey version of the showcase app:
 
 <a href="https://rink.hockeyapp.net/apps/f774155858d12f4931ab32adaab643bf"><img alt="QR code pointing to https://rink.hockeyapp.net/apps/f774155858d12f4931ab32adaab643bf" src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Frink.hockeyapp.net%2Fapps%2Ff774155858d12f4931ab32adaab643bf&chs=256x256"></a>
@@ -42,7 +44,12 @@ Download it [here](https://rink.hockeyapp.net/apps/00f9bc2b440ef8028c4bb8bc5cbcf
 
 <href="https://rink.hockeyapp.net/apps/00f9bc2b440ef8028c4bb8bc5cbcf494"><img src="/images/pages/2015bankathon/sensorbeacon.png" alt="screenshot of sensorbeacon"></a>
 
-##We are only iOS developers :(
+##I´m cool, I want to enable the developer mode in the Android Showcase app:
+
+<img src="/images/pages/2015bankathon/showcaseAndroid.png" alt="Showcase Android - Developer mode">
+
+
+##We are only iOS developers and detection in the background is not working properly :(
 
 If you want to have background notifications on iOS, all the beacons on the hackathon need to have different proximity UUIDs. Your should definitely configure them once with the BeaCfg app. You can also use the Showcase apps to simulate beacons, but make sure, nobody is on the same "channel"
 
@@ -71,20 +78,9 @@ Unfortunatly we´re still in the middle of releasing statistics, that work with 
 
 Write an email to support@sensorberg.com, or use the [contact form](https://sensorberg.zendesk.com/hc/en-us/requests/new). You may also <a class="twitter-mention-button" href="https://twitter.com/intent/tweet?screen_name=sensordev">tweet at us</a>. Or ask a question with disqus on the bottom of the page
 
-<br/>
-<br/>
-<br/>
-
-
-
-
-
-
-
 
 <script>
 window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
 </script>
 
- 
- 
+  
