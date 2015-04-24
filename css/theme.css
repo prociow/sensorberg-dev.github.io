@@ -342,6 +342,10 @@ form#mc-form-onsite{
     border: 1px solid #7da2b1;
 }
 
+.highlight {
+    margin: 20px 0px;
+}
+
 .float-left {
     float:left;
 }

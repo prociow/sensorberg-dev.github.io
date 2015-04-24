@@ -14,7 +14,7 @@ additionalNavigation : [
 
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'/></i>Gradle only</h1>
-    <p>Gradle is the only supported build system by Google and we also only support integrations if you build with Gradle. Integrating with maven should be identical, but can provide no support.</p>
+    <p>Gradle is the only supported build system by Google and we will also only support gradle based integrations. Integrating with maven should be identical, but we can provide no support.</p>
 </div>
 
 You need to have the jcenter artifactory in your list of repositories and declare the dependency to our bootstrapper library. The *Bootstrapper* references the SDK.
@@ -29,7 +29,7 @@ dependencies {
 }
 {% endhighlight %}
 
-Set your API key in your manifest and define your *BroadcastReceiver*:
+Set your API key in your manifest and declare your <em>BroadcastReceiver</em>:
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -49,16 +49,16 @@ Set your API key in your manifest and define your *BroadcastReceiver*:
     </application>
 </manifest>
 {% endhighlight %}
+<em>You cannot add a Broadcastreceiver at runtime! We´e using a <a href="http://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html">LocalBroadcastManager</a> to send the broadcast and find the receiver(s)</em>
 
 <div class="callout callout-alert">
     <h1><i class='fa fa-exclamation-triangle'/></i>The BroadcastReceiver is running in another process</h1>
-    <p>You should be aware, that the Sensorberg Android SDK is running in a separate process. The broadcast will be sent in the separate process as well. The intention of the *BroadcastReceiver* is to present the content of your *Action* when the app is in background.</p>
+    <p>You should be aware, that the Sensorberg Android SDK is running in a separate process. The broadcast will be sent in the separate process as well. The intention of the <em>BroadcastReceiver</em> is to present the content of your <em>Action</em> when the app is in background.</p>
 </div>
-
 
 Enable the SDK in your [Application](http://developer.android.com/reference/android/app/Application.html) object and register foreground/background notifications:
 
-It´s now time to implement the BroadcastReceiver:
+It´s now time to implement the <em>BroadcastReceiver</em>:
 
 {% highlight java %}
 public class MyActionPresenter extends BroadcastReceiver {
@@ -112,7 +112,6 @@ compile "com.android.support:support-v4:22.0.0"
 
 If you want your own UI to react to detected beacons and actions, please extend the *Bootstrapper* and add your customisations:
 
-
 {% highlight java %}
 public class MyBootstrapper extends SensorbergApplicationBootstrapper {
   public void presentBeaconEvent(BeaconEvent beaconEvent) {
@@ -127,7 +126,6 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
 
 <span id="tips"/>
 ###Development Tips
-
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'/></i>Tip: HTTP Debugging</h1>
     <p>You can debug the HTTP communication by enabling the VolleyLog:</p>

@@ -14,7 +14,7 @@ We would like to show a notification when the application is in the background w
 
 **Setup your campaign**
 
-<img alt="Screenshot from manage.sensorberg.com" src="/images/posts/2015-04-22-Unlimited-Use-Cases-With-Action-Payload/management-setup_001.png"/ width="600px">
+<img alt="Screenshot from manage.sensorberg.com" src="/images/posts/2015-04-22-Unlimited-Use-Cases-With-Action-Payload/management-setup_001.png"/ width="100%" style="img-responsive center-block">
 
 <!--more-->
 
