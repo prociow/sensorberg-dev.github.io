@@ -2,7 +2,7 @@
 layout: page
 title: Bankathon 2015
 permalink: /2015bankathon/
-disqusEnabled: true
+comments: true
 
 ---
 
@@ -54,13 +54,13 @@ You need our Android app [Sensorberg BeaCfg](https://play.google.com/store/apps/
 
 Follow our <a href="/ios">iOS instructions</a>
 
-##What is possible?
-
-Check our [latest blog post](/2015/04/Unlimited-Use-Cases-With-Action-Payload/) on a sample, what is possible with our SDK and some sample code. The Sample is only for Android, as the payload feature is still in development for iOS. But you can use IN-App links to achieve something similar on iOS.
-
 ##Android??
 
 Follow our <a href="/android">Android instructions</a>
+
+##What is possible?
+
+Check our [latest blog post](/2015/04/Unlimited-Use-Cases-With-Action-Payload/) on a sample, what is possible with our SDK and some sample code. The Sample is only for Android, as the payload feature is still in development for iOS. But you can use In-App links to achieve something similar on iOS.
 
 ##Statistics with the new SDK?
 
