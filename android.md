@@ -21,11 +21,15 @@ You need to have the jcenter artifactory in your list of repositories and declar
 
 {% highlight groovy %}
 repositories {
-    jcenter()    
+    jcenter()
+    maven {                 //add this just to be sure, if jcenter is not up to date yet
+        url "https://dl.bintray.com/sensorberg/maven/"
+    }
 }
 
 dependencies {
-       compile ('com.sensorberg.sdk:android-sdk-bootstrapper:2.+')
+       compile 'com.sensorberg.sdk:android-sdk-bootstrapper:{{ site.latestAndroidBootstrapperRelease }}'
+       compile 'com.sensorberg.sdk:android-sdk:{{ site.latestiOSRelease }}'
 }
 {% endhighlight %}
 
