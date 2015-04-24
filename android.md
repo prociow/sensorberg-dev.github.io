@@ -125,6 +125,29 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
     <p>The Bootstrapper runs in your own process, so you are free to access any singletons or statics that you use in your Application. Push the BeaconEvent to your EventBus, Otto and react as you wish.</p>
 </div>
 
+<span id="tips"/>
+###Development Tips
+
+<div class="callout callout-info">
+    <h1><i class='fa fa-info-circle'/></i>Tip: HTTP Debugging</h1>
+    <p>You can debug the HTTP communication by enabling the VolleyLog:</p>
+    {% highlight bash %}
+    adb -shell setprop log.tag.SensorbergVolley VERBOSE
+    {% endhighlight %}
+</div>
+
+<div class="callout callout-info">
+    <h1><i class='fa fa-info-circle'/></i>Tip: Pretty ADB log with Android Bluetooth messages hidden</h1>
+    <p>Use <a href="https://github.com/JakeWharton/pidcat">pidcat</a> with grep to show your log and hide the System Bluetooth scan logs:</p>
+    {% highlight bash %}
+    pidcat com.myapp.packageIdentifier | grep --invert-match BluetoothLeScanner
+    {% endhighlight %}
+</div>
+
+<div class="callout callout-info">
+    <h1><i class='fa fa-info-circle'/></i>Tip: Create Your own account when developing</h1>
+    <p>As as developer, you can create an account for free at <a href="https://manage.sensorberg.com/#/signup">manage.sensorberg.com/#/signup</a></p>    
+</div>
 <br/>
 <br/>
 <br/>
