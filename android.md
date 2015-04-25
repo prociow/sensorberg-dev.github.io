@@ -29,7 +29,7 @@ repositories {
 
 dependencies {
        compile 'com.sensorberg.sdk:android-sdk-bootstrapper:{{ site.latestAndroidBootstrapperRelease }}'
-       compile 'com.sensorberg.sdk:android-sdk:{{ site.latestiOSRelease }}'
+       compile 'com.sensorberg.sdk:android-sdk:{{ site.latestAndroidSDKRelease }}'
 }
 {% endhighlight %}
 
