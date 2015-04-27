@@ -53,9 +53,9 @@ Download it [here](https://rink.hockeyapp.net/apps/00f9bc2b440ef8028c4bb8bc5cbcf
 
 If you want to have background notifications on iOS, all the beacons on the hackathon need to have different proximity UUIDs. Your should definitely configure them once with the BeaCfg app. You can also use the Showcase apps to simulate beacons, but make sure, nobody is on the same "channel"
 
-##How do I change the beacons?
+##How do I change the beacons settings?
 
-You need our Android app [Sensorberg BeaCfg](https://play.google.com/store/apps/details?id=com.sensorberg.bconfig) and an Account.
+You need our Android app [Sensorberg BeaCfg](https://play.google.com/store/apps/details?id=com.sensorberg.bconfig) and an Account. You can set the advertisement interval and the transmission power.
 
 ##iOS??
 
