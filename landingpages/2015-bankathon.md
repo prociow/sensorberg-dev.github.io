@@ -16,7 +16,7 @@ We´ve prepared this page to answer some of the questions you might have, any ot
 
 Go to <a href="https://manage.sensorberg.com/#/signup">manage.sensorberg.com/#/signup</a> and register for free now.
 
-##Ho Do I simulate beacons?
+##How Do I simulate beacons?
 
 ###Use one of the beacons that we have sent you
 
@@ -28,7 +28,7 @@ Download the [Showcase App for iOS](https://itunes.apple.com/de/app/sensorberg-s
 
 <a href="https://itunes.apple.com/de/app/sensorberg-showcase/id882711177?mt=8"><img src="/images/pages/2015bankathon/showcaseiOS.jpeg" alt="screenshot of showcase on iOS"></a>
 
-###Use our showcase app on Android (only on Nexus 6/9 and Lollipop S5)
+###Use our showcase app on Android (only on Nexus 6/9 and Lollipop'ed Galaxy S5)
 
 Download the [Showcase App for Android](https://play.google.com/store/apps/details?id=com.sensorberg.android.showcase) and start your beacon.
 
