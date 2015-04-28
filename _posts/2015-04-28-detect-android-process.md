@@ -13,6 +13,8 @@ The "Sensorberg Application object" actually should not do of your logic. No nee
 
 IF you want to detect the process you´re running in here is some code:
 
+<!--more-->
+
 
 {% highlight java %}
 
