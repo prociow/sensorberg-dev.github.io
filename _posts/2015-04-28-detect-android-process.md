@@ -17,7 +17,6 @@ IF you want to detect the process you´re running in here is some code:
 
 
 {% highlight java %}
-
 public class DemoApplication extends Application
 {
 
@@ -25,7 +24,7 @@ public class DemoApplication extends Application
 	public void onCreate() {
 		super.onCreate();
 		      
-        String currentProcName = getProcessName() 		      
+        String currentProcName = getProcessName(); 		      
         if (currentProcName != null && currentProcName.endsWith(":sensorberg")){
             Log.d(TAG, "we´re the Service process, so we´re ending here");
             return;
