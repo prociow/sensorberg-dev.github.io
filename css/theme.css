@@ -1,4 +1,3 @@
-
 html {
     font-size: 100%;
 }
@@ -191,7 +190,7 @@ a:hover {
 }
 
 .feature-content {
-    max-width: 978px; 
+    max-width: 1000px; 
     margin: 80px auto;
     text-align: center;
 }
@@ -206,6 +205,13 @@ a:hover {
     padding: 20px 0;
 }
 
+.coming-soon {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
 .col-md-4>img {
     max-width:100%; 
     position: relative;
@@ -218,8 +224,8 @@ a:hover {
     border: 2px solid #3a5463;
     border-radius: 0px;
     font-size: 1.1rem;
-    padding: 10px 30px;
-    margin: 10px;
+    padding: 10px 20px;
+    margin-top: 10px;
 }
 
 .btn-default:hover {
@@ -232,6 +238,20 @@ a:hover {
     color: #fff;
     background-color: #3a5463;
     border: 2px solid #49697d;
+}
+
+.btn-android-default {
+    color: #fff;
+    background-color: #49697d;
+    border: 2px solid #3a5463;
+    border-radius: 0px;
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    margin-top: 10px;
+}
+
+.windows img {
+    margin-bottom: 15px;
 }
 
 .sb_teaser {
