@@ -22,6 +22,8 @@ The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring
 Simply run
 
 ```
+git clone git@github.com:sensorberg-dev/resolver.git
+cd resolver
 ./gradlew run
 ```
 to have your own instance.
