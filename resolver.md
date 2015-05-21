@@ -8,7 +8,7 @@ additionalNavigation : [
 ]
 ---
 
-#Resolver  <img src="https://travis-ci.org/sensorberg-dev/resolver.svg?branch=master" style="float:right" alt="Resolver Microservice Build Status">
+#How to install the Resolver  <img src="https://travis-ci.org/sensorberg-dev/resolver.svg?branch=master" style="float:right" alt="Resolver Microservice Build Status">
 
 The Resolver is a microservice that you can run in your own infrastructure or hosted by us, responsible for delivering all necessary data to the SDKs in order for them to map a beacon the attached content.
 
