@@ -9,6 +9,7 @@ additionalNavigation : [
 ]
 ---
 
+#How to install the Sensorberg iOS SDK
 ## Usage
 
 To run the example project, clone the repo, and open the Xcode project in the Example directory.
