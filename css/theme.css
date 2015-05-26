@@ -415,3 +415,7 @@ form#mc-form-onsite{
 .right {
     float: right;
 }
+.active_2 {
+    float: right;
+    background-color:#F4F8FA;
+}
