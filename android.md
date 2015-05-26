@@ -10,7 +10,7 @@ additionalNavigation : [
 ]
 ---
 
-#Sensorberg Android SDK <img src="https://travis-ci.org/sensorberg-dev/android-sdk.svg?branch=master" style="float:right" alt="Android SDK Build Status"/>
+#How to install the Sensorberg Android SDK <img src="https://travis-ci.org/sensorberg-dev/android-sdk.svg?branch=master" style="float:right" alt="Android SDK Build Status"/>
 
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'/></i>Gradle only</h1>
