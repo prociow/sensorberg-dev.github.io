@@ -28,24 +28,16 @@
                   <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="/images/sb_logo_retina_light.png" class="sb_logo img-responsive center-block" style="margin-top: -5px;" alt="background image"/>
+                    <img src="/images/sensorberg_developer_logo.png" class="sb_logo img-responsive center-block" style="margin-top: -5px;" alt="background image"/>
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="https://sensorberg.zendesk.com/hc/en-us/requests/new">Contact</a></li>
-                    {% if page.landingPage == true %}
+                    <li class="active"><a href="https://sensorberg.zendesk.com/hc/en-us">Knowledge Base</a></li>
                     <li class="active"><a href="/blog/">Developer Blog</a></li>
-                    {% endif %}
-                    {% if page.landingPage != true %}
-                    <li class="active"><a href="/android/">Android</a></li>
-                    <li class="active"><a href="/ios/">iOS</a></li>
-                    <li class="active"><a href="/resolver/">Resolver</a></li>
-                    {% endif %}
-                    {% if site.github != '' %}
                     <li class="active"><a href="https://github.com/{{ site.github }}">Github</a></li>
-                    {% endif %}
                     <li class="active"><a href="https://sensorberg.com/">Company</a></li>
+                    <li class="active"><a href="https://sensorberg.zendesk.com/hc/en-us/requests/new">Contact</a></li>
                 </ul>
               </div>
         </div>
