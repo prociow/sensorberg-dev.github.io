@@ -38,12 +38,13 @@ p {
 }
 
 a {
-    color: #7da2b1;
+    color: #3a5463;
     text-decoration: none;
 }
 
+
 a:hover {
-    color: #7da2b1;
+    color: #3a5463;
     text-decoration: none;
 }
 
@@ -88,6 +89,10 @@ a:hover {
     color: #3a5463;
     font-size: 1.3em;
 }
+.well h2 {
+    font-size: 1.3em;
+}
+
 
 .author {
     color: #ee4444;
@@ -408,8 +413,14 @@ form#mc-form-onsite{
     padding: 20px;
 }
 
-.well>h1 {
+
+.well>h1{
     color: #373f49;
+    margin-top: 0px;
+  }
+
+.well>h1>a {
+    font-size: 30px;
   }
 
 .col-md-3 {
@@ -692,3 +703,5 @@ table.sdk-table-small th:last-child {
 .justify-text p {
     text-align: justify;
 }
+
+
