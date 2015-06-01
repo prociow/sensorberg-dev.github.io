@@ -1,7 +1,7 @@
 # Jekyll configuration
 
 name: Sensorberg Developer Hub
-description: Develop your own Beacon-based solutions within minutes!
+description: Your toolbox to develop your own Beacon-based solution!
 
 # url is currently only used only for the RSS feed in feed.xml
 url: http://developer.sensorberg.com
