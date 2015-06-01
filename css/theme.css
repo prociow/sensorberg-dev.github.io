@@ -75,6 +75,11 @@ a:hover {
     margin: 0;
 }
 
+.col-md-9  {
+    padding-top: 30px;
+}
+
+
 .col-md-9 .well {
     margin-top: 20px;
 }
@@ -243,7 +248,7 @@ a:hover {
     border: 2px solid #3a5463;
     border-radius: 0px;
     font-size: 1.1rem;
-    padding: 10px 20px;
+    padding: 10px 14px;
     margin-top: 10px;
 }
 
