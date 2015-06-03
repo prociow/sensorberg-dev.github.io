@@ -38,12 +38,13 @@ p {
 }
 
 a {
-    color: #7da2b1;
+    color: #3a5463;
     text-decoration: none;
 }
 
+
 a:hover {
-    color: #7da2b1;
+    color: #3a5463;
     text-decoration: none;
 }
 
@@ -75,6 +76,11 @@ a:hover {
     margin: 0;
 }
 
+.col-md-9  {
+    padding-top: 30px;
+}
+
+
 .col-md-9 .well {
     margin-top: 20px;
 }
@@ -83,6 +89,10 @@ a:hover {
     color: #3a5463;
     font-size: 1.3em;
 }
+.well h2 {
+    font-size: 1.3em;
+}
+
 
 .author {
     color: #ee4444;
@@ -243,7 +253,7 @@ a:hover {
     border: 2px solid #3a5463;
     border-radius: 0px;
     font-size: 1.1rem;
-    padding: 10px 20px;
+    padding: 10px 14px;
     margin-top: 10px;
 }
 
@@ -403,8 +413,14 @@ form#mc-form-onsite{
     padding: 20px;
 }
 
-.well>h1 {
+
+.well>h1{
     color: #373f49;
+    margin-top: 0px;
+  }
+
+.well>h1>a {
+    font-size: 30px;
   }
 
 .col-md-3 {
@@ -687,3 +703,5 @@ table.sdk-table-small th:last-child {
 .justify-text p {
     text-align: justify;
 }
+
+

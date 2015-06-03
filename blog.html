@@ -8,6 +8,10 @@ permalink: /blog/
 <div class="container container-left">
     <div class="row">
         <div class="col-md-3 hidden-xs">
+            <div class="sidebar well">
+                
+                    {{ site.description }}
+             </div>
             {% include sidebar.html %}
         </div>
         <div class="col-md-9">
@@ -19,9 +23,8 @@ permalink: /blog/
                             {{ post.excerpt }}
 
                         </div>
-                        <div>
-                            <a href="{{ site.baseurl}}{{ post.url }}/">Read more »</a>
-                            <a href="{{ site.baseurl}}{{ post.url }}/#comments" class="right"><i class="fa fa-comment"></i>Write a comment</a>
+                        <div style="text-align:right;">
+                            <a href="{{ site.baseurl}}{{ post.url }}/"></i>Read more »</a>
                         </div>
                     </div>
                 {% endfor %}
