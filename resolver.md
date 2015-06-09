@@ -3,7 +3,8 @@ layout: page
 title: Sensorberg Resolver
 permalink: /resolver/
 additionalNavigation : [
-    { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/resolver   " },
+    { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/resolver" },
+    { "title" : "Cloud documentation",      "link" : "http://sensorberg-cloud.readme.io/" },
     { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/resolver.md" }              
 ]
 ---
