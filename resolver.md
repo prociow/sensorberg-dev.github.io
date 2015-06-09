@@ -94,7 +94,7 @@ Total time: 7.354 secs
 
 #API endpoints:
 
-For a full list, visit our [readme.io live API page](https://sensorberg.readme.io/) (soon)
+For a full list, visit our [readme.io live API page](https://sensorberg-cloud.readme.io/) 
 
 To get started quickly, here is a list of the most important endpoints:
 
