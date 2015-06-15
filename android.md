@@ -62,6 +62,26 @@ Set your API key in your manifest and declare your <em>BroadcastReceiver</em>:
 
 Enable the SDK in your [Application](http://developer.android.com/reference/android/app/Application.html) object and register foreground/background notifications:
 
+{% highlight java %}
+public class DemoApplication extends Application {
+    private SensorbergApplicationBootstrapper boot;
+    private BackgroundDetector detector;
+
+    @Override
+	public void onCreate() {
+		super.onCreate();
+
+        boot = new SensorbergApplicationBootstrapper(this);
+        boot.activateService();
+        boot.hostApplicationInForeground();
+
+        detector = new BackgroundDetector(boot);
+        registerActivityLifecycleCallbacks(detector);
+
+	}
+}
+{% endhighlight %}
+
 It´s now time to implement the <em>BroadcastReceiver</em>:
 
 {% highlight java %}
