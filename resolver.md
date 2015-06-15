@@ -3,7 +3,8 @@ layout: page
 title: Sensorberg Resolver
 permalink: /resolver/
 additionalNavigation : [
-    { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/resolver   " },
+    { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/resolver" },
+    { "title" : "Cloud documentation",      "link" : "http://sensorberg-cloud.readme.io/" },
     { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/resolver.md" }              
 ]
 ---
@@ -93,7 +94,7 @@ Total time: 7.354 secs
 
 #API endpoints:
 
-For a full list, visit our [readme.io live API page](https://sensorberg.readme.io/) (soon)
+For a full list, visit our [readme.io live API page](https://sensorberg-cloud.readme.io/) 
 
 To get started quickly, here is a list of the most important endpoints:
 
