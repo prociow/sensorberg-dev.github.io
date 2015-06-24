@@ -7,7 +7,7 @@ tags: sdk
 ---
 #Secret Codes are now optional
 
-If you want to use the secret codes feature of the SDK, add this to your mannifest. You may also change the actual secred number code by changing the android:host:
+If you want to use the secret codes feature of the SDK, add this to your manifest. You may also change the actual secret number code by changing the value in `android:host:`. See below:
 
 
 {% highlight java %}
