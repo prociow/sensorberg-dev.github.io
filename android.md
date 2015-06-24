@@ -172,7 +172,7 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
 </div>
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'/></i>Tip: Use the secred codes broadcastreceiver to add more debugging to your app.</h1> 
-    <p>Read all about it in this <a href="/2015/06/Secred-codes-now-optional/">blog post</a>.</p>    
+    <p>Read all about it in this <a href="/2015/06/Secret-codes-now-optional/">blog post</a>.</p>    
 </div>
 <br/>
 <br/>
