@@ -10,4 +10,4 @@ If you want to see your drafts:
 ```
 jekyll serve --drafts
 ```
-The drafts will not be visible on the actual website!!!
+The drafts will not be visible on the actual website.
