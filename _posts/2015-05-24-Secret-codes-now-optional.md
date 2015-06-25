@@ -25,4 +25,4 @@ If you want to use the secret codes feature of the SDK, add this to your manifes
 </receiver>
 {% endhighlight %}
 
-This change comes to affect in the final Android 1.0.1 release.
+This change comes into effect in the final Android 1.0.1 release.
