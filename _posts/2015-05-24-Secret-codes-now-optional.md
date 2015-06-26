@@ -5,24 +5,24 @@ date: 2015-06-24 17:20:00 +1
 comments: true
 tags: sdk
 ---
-#Secret Codes are now optional
+#Tip: Remove Secret Codes Broadcastreceiver from your manifest
 
-If you want to use the secret codes feature of the SDK, add this to your manifest. You may also change the actual secret number code by changing the value in `android:host`. See below:
+If you don´t want to ship the secret codes feature of the SDK, add this to your *application* part of your manifest.
 
-
-{% highlight java %}
-<receiver android:name=".SensorbergCodeReceiver"
-    android:process=":sensorberg"
-    android:label="sensorberg-logger">
-    <intent-filter>
-        <action android:name="android.provider.Telephony.SECRET_CODE" />
-        <data android:scheme="android_secret_code" android:host="73676723741" />
-    </intent-filter>
-    <intent-filter>
-        <action android:name="android.provider.Telephony.SECRET_CODE" />
-        <data android:scheme="android_secret_code" android:host="73676723740" />
-    </intent-filter>
-</receiver>
+{% highlight xml %}
+<receiver
+   android:name="com.sensorberg.sdk.SensorbergCodeReceiver"
+   tools:node="remove"
+   tools:selector="com.sensorberg.sdk" />
 {% endhighlight %}
 
-This change comes into effect in the final Android 1.0.1 release.
+<!--more-->
+
+<div class="callout callout-info">
+    <h1><i class='fa fa-info-circle'/></i>Check your manifest with apktool</h1>
+    <p>To make sure this worked, test your final APK with <a href="http://ibotpeaches.github.io/Apktool/">apktool</a>:</p>
+{% highlight bash %}
+apktool d -s -f <your-apk-file>
+{% endhighlight %}
+</div>
+
