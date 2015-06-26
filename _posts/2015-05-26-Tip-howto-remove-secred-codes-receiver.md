@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "Secret Codes are now optional"
-date: 2015-06-24 17:20:00 +1
+title: "Tip: Remove Secret Codes Broadcastreceiver from your manifest"
+date: 2015-06-26 16:20:00 +1
 comments: true
 tags: sdk
 ---
-#Tip: Remove Secret Codes Broadcastreceiver from your manifest
-
 If you don´t want to ship the secret codes feature of the SDK, add this to your *application* part of your manifest.
 
 {% highlight xml %}
@@ -25,4 +23,6 @@ If you don´t want to ship the secret codes feature of the SDK, add this to your
 apktool d -s -f <your-apk-file>
 {% endhighlight %}
 </div>
+
+This Tip works with **all versions** of the Android SDK
 
