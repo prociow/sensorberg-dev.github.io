@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "android.permission.READ_SYNC_SETTINGS permission optional"
+title: "READ_SYNC_SETTINGS permission optional"
 date: 2015-06-26 14:00:00 +1
 comments: true
 tags: sdk
@@ -16,7 +16,7 @@ If, for some reason your don´t like the READ_SYNC_SETTINGS permission to be add
 
 This change comes to affect in the final Android 1.0.1 release.
 
-Read all about the tools:remove feature in the [Manifest Merger documentation](http://tools.android.com/tech-docs/new-build-system/user-guide/manifest-merger#TOC-tools:node-markers)
+Read all about the tools:remove feature in the <a href="http://tools.android.com/tech-docs/new-build-system/user-guide/manifest-merger#TOC-tools:node-markers">Manifest Merger documentation</a>
 
 
 <div class="callout callout-alert">
