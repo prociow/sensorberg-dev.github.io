@@ -1,0 +1,174 @@
+---
+layout: null
+permalink: /tutorial/
+---
+
+{% include header.html %}
+
+<script type="text/javascript">
+//<!--
+var current_tab = 1;
+function display(tab_id)
+{
+  document.getElementById('tab_'+current_tab).className = 'tab';
+  document.getElementById('tab_'+tab_id).className = ' active tab';
+  document.getElementById('content_'+current_tab).style.display = 'none';
+  document.getElementById('content_'+tab_id).style.display = 'block';
+  current_tab = tab_id;
+}
+//-->
+</script>
+
+<style type="text/css">
+
+.tab
+{
+  display:inline-block;
+  margin:10px 10px 0 0px;
+  padding:17px 100px ;
+  border:1px solid #AAA;
+  border-bottom:none;
+  border-radius:8px 8px 0 0;
+  color:#555;
+  cursor: pointer;
+  font-weight:bold;
+}
+.active
+{
+  background:#f5f5f5;
+}
+.active:hover
+{
+  background:#AAA;
+}
+.content
+{
+  background-color:#f5f5f5;
+  margin-top:-2px;
+  padding:20px ;
+  display:none;
+  border:1px solid #AAA;
+  border-radius:8px;
+  color:#555;
+}
+.content-init
+{
+  background-color:#f5f5f5;
+  margin-top:-2px;
+  padding:0px 20px;
+  padding-bottom:100px;
+  border:1px solid #AAA;
+  border-radius:8px;
+  color:#555;
+}
+</style>
+
+</br></br>
+
+<div style="background-color: #efefef">
+  <div class="container container-left">
+  </br> </br> 
+   <h1 style= "color: #3a5463; font-size: 2.5em;">Sensorberg's tutorials</h1>
+    </br> 
+  </div>
+</div>
+
+<div class="container container-left">
+
+  <ul class="nav nav-tabs">
+    <li class="active tab" id="tab_1" onclick="javascript:display('1');">Getting started</li>
+    <li class="tab" id="tab_2" onclick="javascript:display('2');">Sensorberg's Cloud Services</li>
+    <li class="tab" id="tab_3" onclick="javascript:display('3');">Developer's tipps</li>
+  </ul>
+
+
+<div class="content-init " id="content_1">
+<div class="row">
+  <div class="col-md-4 feature-block" >
+    <div class="single-block">
+     <iframe width="300" height="200" src="https://www.youtube.com/embed/8T7g2m5nRFM?autoplay=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="col-md-4 feature-block">
+    <div class="single-block">
+     <iframe width="300" height="200" src="https://www.youtube.com/embed/8T7g2m5nRFM?autoplay=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+<div class="col-md-4 feature-block">
+    <div class="single-block">
+     <iframe width="300" height="200" src="https://www.youtube.com/embed/8T7g2m5nRFM?autoplay=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+
+<div class="row">
+  <div class="col-md-4 feature-block" >
+    <div class="single-block">
+     <iframe width="300" height="200" src="https://www.youtube.com/embed/8T7g2m5nRFM?autoplay=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="col-md-4 feature-block">
+    <div class="single-block">
+     <iframe width="300" height="200" src="https://www.youtube.com/embed/8T7g2m5nRFM?autoplay=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+<div class="col-md-4 feature-block">
+    <div class="single-block">
+     <iframe width="300" height="200" src="https://www.youtube.com/embed/8T7g2m5nRFM?autoplay=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="content" id="content_2">  ergewg
+</br>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/8T7g2m5nRFM?autoplay=1&loop=1&rel=0&playlist=8T7g2m5nRFM" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+<div class="content" id="content_3"> wegwe
+
+</br>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/8T7g2m5nRFM?autoplay=1&loop=1&rel=0&playlist=8T7g2m5nRFM" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<section class="content_teaser background" >
+  <div class="container row">
+    <div class="col-md-6">
+      <h3><i class="fa fa-github-square"></i>Truly open licence</h3>
+      <p>All our open source projects are MIT licensed, giving you the most freedom for your projects.</p>
+    </div>
+    <div class="col-md-6">
+      <h3><i class="fa fa-university"></i>Proven solution</h3>
+      <p>Our SDK has been improved constantly over the last year and is deployed on thousands of devices.</p>
+    </div>
+  </div>
+  <div class="container row second_row">
+    <div class="col-md-6">
+      <h3><i class="fa fa-rocket"></i>Easy deployment</h3>
+      <p>Deploy the Resolver service on any machine with a Java Runtime. No Apache, JBoss or other application server needed.</p>
+    </div>
+    <div class="col-md-6">
+      <h3><i class="fa fa-magic"></i>Flexible integration</h3>
+      <p>Integrate the Android SDK and maintain full control over the UI of your proximity interaction.</p>
+    </div>
+  </div>
+  <div class="container row second_row">
+    <div class="col-md-6">
+      <h3><i class="fa fa-phone-square"></i>Superior support</h3>
+      <p>Contact us with any questions you have, we have real people answering you sales/technical questions.</p>
+    </div>
+  </div>
+</section>
+
+
+{% include disqus-comments.html %}
+{% include footer.html %}

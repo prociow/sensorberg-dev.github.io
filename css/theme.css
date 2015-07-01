@@ -136,7 +136,12 @@ a:hover {
     background-color: #49697d;
 }
 
-.nav>li>a {
+.tab_tuto{
+    font-size: 1rem;
+    color: #49697d;
+}
+
+.nav>li>a{
     font-size: 1rem;
     color: #fff;
 }
