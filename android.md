@@ -6,7 +6,8 @@ additionalNavigation : [
     { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/android-sdk" },
     { "title" : "Android SDK Samples",      "link" : "https://github.com/sensorberg-dev/android-sdk-samples" },
     { "title" : "Android SDK Bugtracker",   "link" : "https://github.com/sensorberg-dev/android-sdk/issues" },
-    { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/android.md" }   
+    { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/android.md" },
+    { "title" : "JCenter files",            "link" : "http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/" }   
 ]
 ---
 
@@ -17,7 +18,7 @@ additionalNavigation : [
     <p>Gradle is the only supported build system by Google and we will also only support gradle based integrations. Integrating with maven should be identical, but we can provide no support.</p>
 </div>
 
-You need to have the jcenter artifactory in your list of repositories and declare the dependency to our bootstrapper library. The *Bootstrapper* references the SDK.
+You need to have the jcenter artifactory in your list of repositories and declare the dependency to our <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk-bootstrapper/{{site.latestAndroidBootstrapperRelease}}/">bootstrapper</a> and the <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/{{site.latestAndroidSDKRelease}}/">sdk</a> library.
 
 {% highlight groovy %}
 repositories {
