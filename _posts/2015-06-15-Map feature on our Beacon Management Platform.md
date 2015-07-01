@@ -22,13 +22,13 @@ You can now enter the location of any of your Beacons on our Beacon Management P
 <br/>
 
 
-<img src="/images/map.png"  style="width: 800px;"/>
+<img alt="Overview of the Beacon registration form"  src="/images/map.png"  style="width: 800px;"/>
 
 <br/>
 
 <br/>
 
-<img src="/images/map2.png"  style="width: 800px;"/>
+<img alt="Zoom on the map" src="/images/map2.png"  style="width: 800px;"/>
 
 <br/><br/>
 We'll also release soon a tool to design building plans in order for you to visualize properly and optimize the location of you Beacons within your facilities...
