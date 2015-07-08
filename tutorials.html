@@ -1,0 +1,275 @@
+---
+layout: null
+permalink: /tutorial/
+---
+
+{% include header.html %}
+
+<script type="text/javascript">
+//<!--
+var current_tab = 1;
+function display(tab_id)
+{
+document.getElementById('tab_'+current_tab).className = 'tab';
+document.getElementById('tab_'+tab_id).className = 'active tab';
+document.getElementById('content_'+current_tab).style.display = 'none';
+document.getElementById('content_'+tab_id).style.display = 'block';
+current_tab = tab_id;
+}
+//-->
+</script>
+
+<style type="text/css">
+
+.tab
+{
+display:inline-block;
+margin:10px 10px 0 0px;
+padding:12px 30px ;
+border:1px solid #CFCFCF;
+border-bottom:none;
+border-radius:4px 4px 0 0;
+color:#555;
+cursor: pointer;
+font-weight:bold;
+}
+.active
+{
+border:0px solid #AAA;
+
+background:#f5f5f5;
+}
+.active:hover
+{
+background:#AAA;
+}
+.content
+{
+background-color:#f5f5f5;
+margin-top:0px;
+padding:0px 20px;
+padding-bottom:50px;
+display:none;
+border:0px solid #AAA;
+border-radius:0px;
+color:#555;
+}
+.content-init
+{
+background-color:#f5f5f5;
+margin-top:0px;
+padding:0px 20px;
+padding-bottom:50px;
+border:0px solid #AAA;
+border-radius:0px;
+color:#555;
+}
+
+
+</style>
+
+</br></br></br></br>
+
+<div>
+  <div class="container2">
+    <h1 style= "font-size: 2em;">Sensorberg tutorials</h1>
+  </div>
+</div>
+
+<div class="container2" >
+
+  <ul class="nav nav-tabs" style="border-bottom:0px;">
+    <li class="active tab" id="tab_1" onclick="javascript:display('1');">Getting started</li>
+    <li class="tab" id="tab_2" onclick="javascript:display('2');">Sensorberg's Cloud Services</li>
+    <li class="tab" id="tab_3" onclick="javascript:display('3');">Developer's tipps</li>
+  </ul>
+
+  <div class="content-init " id="content_1">
+
+    <div class="row">
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <a href="/video-1/"><img src="/images/bg_darkness-blues.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;"></a>
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+           <img src="/images/beacon.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/sparkling-design.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/bg4-3.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/bg_darkness-blues.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/bg4-3.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" id="content_2"> 
+     <div class="row">
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/bg_darkness-blues.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+         
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/beacon.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/sparkling-design.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+         
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content" id="content_3"> 
+   <div class="row">
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/bg4-3.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/bg_darkness-blues.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 feature-block2">
+        <div class="single-block">
+          <img src="/images/bg4-3.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;">   
+          
+          </br> 
+          </br> 
+          <div width="260">
+            How to configure your Beacons </br> 
+            <i>2:30</i> 
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+</br></br></br></br></br>
+
+{% include footer.html %}
