@@ -187,13 +187,20 @@ a:hover {
     padding-top: 50px;
 }
 
+.container2 {
+    max-width: 1000px;
+    min-width: 320px;
+    margin: 5px auto;
+    padding-top: 20px;
+}
+
 .container i{
     margin-right: 10px;
 }
 
 .container-text {
     min-width: 320px;
-    max-width: 900px;
+    max-width: 700px;
     padding: 0 20px;
     margin: 5px auto;
 }
@@ -238,6 +245,10 @@ a:hover {
 
 .feature-block {
     padding: 40px 15px; 
+    text-align: center;
+}
+.feature-block2 {
+    padding: 20px 15px; 
     text-align: center;
 }
 
