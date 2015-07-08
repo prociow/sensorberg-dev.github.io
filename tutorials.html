@@ -1,6 +1,9 @@
 ---
 layout: null
-permalink: /tutorial/
+permalink: /tutorials/
+
+categories : [ "gettingStarted", "sbCloudServices", "developersTips" ]
+
 ---
 
 {% include header.html %}
@@ -79,194 +82,82 @@ color:#555;
 <div class="container2" >
 
   <ul class="nav nav-tabs" style="border-bottom:0px;">
-    <li class="active tab" id="tab_1" onclick="javascript:display('1');">Getting started</li>
-    <li class="tab" id="tab_2" onclick="javascript:display('2');">Sensorberg's Cloud Services</li>
-    <li class="tab" id="tab_3" onclick="javascript:display('3');">Developer's tipps</li>
+    <li class="active tab"  id="tab_1" onclick="javascript:display('1');">Getting started</li>
+    <li class="tab"         id="tab_2" onclick="javascript:display('2');">Sensorberg's Cloud Services</li>
+    <li class="tab"         id="tab_3" onclick="javascript:display('3');">Developer's tipps</li>
   </ul>
 
   <div class="content-init " id="content_1">
-
-    <div class="row">
+  {%for video in site.videos %}
+    {% if video.category == "gettingStarted" %}
+    <div class="row" >
       <div class="col-md-4 feature-block2">
         <div class="single-block">
-          <a href="/video-1/"><img src="/images/bg_darkness-blues.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+          <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
            -webkit-border-radius: 4px;"></a>
           
           </br> 
           </br> 
           <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 feature-block2">
-        <div class="single-block">
-           <img src="/images/beacon.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
-          
-          </br> 
-          </br> 
-          <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 feature-block2">
-        <div class="single-block">
-          <img src="/images/sparkling-design.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
-          
-          </br> 
-          </br> 
-          <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
+            {{ video.title }} </br> 
+            <i>{{ video.length }}</i> 
           </div>
         </div>
       </div>
     </div>
-
-    <div class="row">
-
-      <div class="col-md-4 feature-block2">
-        <div class="single-block">
-          <img src="/images/bg4-3.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
-          
-          </br> 
-          </br> 
-          <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 feature-block2">
-        <div class="single-block">
-          <img src="/images/bg_darkness-blues.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
-          
-          </br> 
-          </br> 
-          <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 feature-block2">
-        <div class="single-block">
-          <img src="/images/bg4-3.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
-          
-          </br> 
-          </br> 
-          <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
-          </div>
-        </div>
-      </div>
-    </div>
+    {% endif %}
+    {% endfor %}
   </div>
 
-  <div class="content" id="content_2"> 
-     <div class="row">
-      <div class="col-md-4 feature-block2">
-        <div class="single-block">
-          <img src="/images/bg_darkness-blues.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
-         
-          </br> 
-          </br> 
-          <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
-          </div>
-        </div>
-      </div>
 
+
+    <div class="content " id="content_2">
+  {%for video in site.videos %}
+    {% if video.category == "sbCloudServices" %}
+    <div class="row">
       <div class="col-md-4 feature-block2">
         <div class="single-block">
-          <img src="/images/beacon.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
+          <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;"></a>
           
           </br> 
           </br> 
           <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 feature-block2">
-        <div class="single-block">
-          <img src="/images/sparkling-design.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
-         
-          </br> 
-          </br> 
-          <div width="260">
-            How to configure your Beacons </br> 
+            {{ video.title }} </br> 
             <i>2:30</i> 
           </div>
         </div>
       </div>
     </div>
+    {% endif %}
+    {% endfor %}
   </div>
 
 
   <div class="content" id="content_3"> 
    <div class="row">
 
+{%for video in site.videos %}
+    {% if video.category == "developersTips" %}
+    <div class="row">
       <div class="col-md-4 feature-block2">
         <div class="single-block">
-          <img src="/images/bg4-3.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
+          <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
+           -webkit-border-radius: 4px;"></a>
           
           </br> 
           </br> 
           <div width="260">
-            How to configure your Beacons </br> 
+            {{ video.title }} </br> 
             <i>2:30</i> 
           </div>
         </div>
       </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
 
-      <div class="col-md-4 feature-block2">
-        <div class="single-block">
-          <img src="/images/bg_darkness-blues.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
-          
-          </br> 
-          </br> 
-          <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 feature-block2">
-        <div class="single-block">
-          <img src="/images/bg4-3.jpg" alt="Beacons" width="260" height="150" style ="border-radius: 4px; -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;">   
-          
-          </br> 
-          </br> 
-          <div width="260">
-            How to configure your Beacons </br> 
-            <i>2:30</i> 
-          </div>
-        </div>
-      </div>
     </div>
 </div>
 
