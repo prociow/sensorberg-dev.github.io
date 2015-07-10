@@ -39,3 +39,15 @@ Let us know how we can support you with developing awesome applications that inc
 ## Bugs
 
 If you encounter any bugs, please [report them](https://github.com/sensorberg-dev/ios-sdk/issues).
+
+<div class="callout callout-info">
+    <h1><i class='fa fa-info-circle'/></i>Tip: Edit the default beacon regions</h1>
+    <p>By default, the SDK will monitor all <a href="https://sensorberg.zendesk.com/hc/en-us/articles/201635021-How-is-a-Beacon-ID-structured-">the Sensorberg beacon</a> regions and all the regions you specify at manage.sensorberg.com. If you want to only use the actual regions of your active beacons set the default regions to an empty array:<br> 
+    <pre><code class="language-text" data-lang="text">SBSDKManager.setDefaultRegions(@[])</code></pre>
+    Please note, you need the <a href="http://sensorberg-dev.github.io/ios-sdk/1.0.2/">1.0.2</a> release to use this feature</p>    
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+
