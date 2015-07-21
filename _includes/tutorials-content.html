@@ -126,9 +126,9 @@
         <div class="">
             <div class="col-md-4 feature-block2">
                 <div class="single-block">
-                    <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
+                    <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
                     <div class="video-title">
-                        <a href="{{ video.url }}">{{ video.title }}</a>, <i>{{ video.length }}</i>
+                        <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}>{{ video.title }}</a>, <i>{{ video.length }}</i>
                     </div>
                 </div>
             </div>
@@ -143,9 +143,9 @@
         <div class="">
             <div class="col-md-4 feature-block2">
                 <div class="single-block">
-                    <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
+                    <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
                     <div class="video-title">
-                        <a href="{{ video.url }}">{{ video.title }}</a>, <i>{{ video.length }}</i>
+                        <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}>{{ video.title }}</a>, <i>{{ video.length }}</i>
                     </div>
                 </div>
             </div>
@@ -162,9 +162,9 @@
             <div class="row">
                 <div class="col-md-4 feature-block2">
                     <div class="single-block">
-                        <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
+                        <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
                         <div class="video-title">
-                            <a href="{{ video.url }}">{{ video.title }}</a>, <i>{{ video.length }}</i>
+                            <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}>{{ video.title }}</a>, <i>{{ video.length }}</i>
                         </div>
                     </div>
                 </div>
