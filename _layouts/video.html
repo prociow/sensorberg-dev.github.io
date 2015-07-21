@@ -5,7 +5,7 @@
 <style type="text/css">
 
 .contents-block {
-    padding-top: 0px; 
+    padding-top: 0px;
     padding-left: 0px;
     text-align: justify;
 }
@@ -87,21 +87,24 @@ border-radius:6px;
       </div>
 
       <div  style="position: absolute; bottom: 0; text-align: justify;padding-right:20px;" >
-          <b>See also</b> </br>
+          {% if (page.see_also_image_path && page.see_also_link page.see_also_text) %}
+          <b>See also</b></br>
 
-          {{page.see_also_text}}
+          <a href="{{page.see_also_link}}">{{page.see_also_text}}</a>
 
           </br>
 
-          <a href="{{ site.baseurl}}{{page.see_also_link}}"><img src="../images/videos{{page.see_also_image_url}}" alt="Beacons" width="285" height="170" style ="border-radius: 4px; -moz-border-radius: 4px;
-            -webkit-border-radius: 4px;">  </a>
-          
+          <a href="{{page.see_also_link}}"><img src="{{page.see_also_image_path}}" alt="{{page.see_also_text}}" width="285" height="170" style ="border-radius: 4px; -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;"> </a>
+
 
           </br> </br>
+          {% endif %}
 
          <a href="/tutorials"><span style="font-weight:bold; float: right;"> Back to the tutorials' overview >> </span>
       </div>
-    </div>   
+
+    </div>
   </div>
 </div>
 

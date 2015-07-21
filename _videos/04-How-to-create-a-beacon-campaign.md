@@ -6,4 +6,9 @@ description: "This tutorial shows you how to manage the campaigns you want to de
 video_url: "https://www.youtube.com/embed/DqJdrziaQxE?rel=0&amp;showinfo=0"
 length : "3:16"
 category: gettingStarted
+
 ---
+
+see_also_text: "#2 How to register Beacons"
+see_also_image_path: "/images/videos/video02-how-to-register-beacons.png"
+see_also_link: "/videos/02-how-to-register-beacons/"

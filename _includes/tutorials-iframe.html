@@ -1,0 +1,180 @@
+<script type="text/javascript">
+    //<!--
+    var current_tab = 1;
+    function display(tab_id)
+    {
+        document.getElementById('tab_'+current_tab).className = 'tab';
+        document.getElementById('tab_'+tab_id).className = 'active tab';
+        document.getElementById('content_'+current_tab).style.display = 'none';
+        document.getElementById('content_'+tab_id).style.display = 'block';
+        current_tab = tab_id;
+    }
+    //-->
+</script>
+
+<style type="text/css">
+
+    .tutorials-headline {
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+    .nav-tabs {
+        border-bottom:0px;
+    }
+
+    .tab
+    {
+        display:inline-block;
+        margin:10px 10px 0 0px;
+        padding:12px 30px ;
+        border:1px solid #CFCFCF;
+        border-bottom:none;
+        border-radius:3px 3px 0 0;
+        color:#555;
+        cursor: pointer;
+        font-weight:bold;
+    }
+    .active
+    {
+        border:0px solid #AAA;
+
+        background:#f5f5f5;
+    }
+    .active:hover
+    {
+        background:#AAA;
+    }
+    .container2 {
+        max-width: 1000px;
+        min-width: 320px;
+        margin: 5px auto;
+        padding-top: 20px;
+    }
+    .content
+    {
+        background-color:#f5f5f5;
+        margin-top:0px;
+        padding:0px 20px;
+        padding-bottom:50px;
+        display:none;
+        border:0px solid #AAA;
+        border-radius:0px;
+        color:#555;
+    }
+    .content-init
+    {
+        overflow: hidden;
+        background-color:#f5f5f5;
+        margin-top:0px;
+        padding:0px 20px;
+        padding-bottom:50px;
+        border:0px solid #AAA;
+        border-radius:0px;
+        color:#555;
+    }
+
+    .feature-block2 {
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .single-block {
+        height: 190px;
+        padding: 20px 0;
+    }
+    .single-block>a>img{
+        border: 3px solid #f5f5f5;
+    }
+    .single-block>a>img:hover{
+        border: 3px solid rgba(125, 162, 177, 1);
+    }
+
+    .video-thumb{
+        width: 260px;
+        height: 150px;
+    }
+    .video-title{
+        width: 260px;
+        margin: 10px auto 0 auto;
+    }
+    .video-title a {
+        color: #49697d;
+        font-size: 18px;
+    }
+    .video-title a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</br></br></br></br>
+<div>
+    <div class="container2">
+        <h1 class="tutorials-headline">Sensorberg tutorials</h1>
+    </div>
+</div>
+
+<div class="container2">
+
+    <ul class="nav nav-tabs">
+        <!--<li class="active tab"  id="tab_1" onclick="javascript:display('1');">Getting started</li>-->
+        <!--<li class="tab"         id="tab_2" onclick="javascript:display('2');">Sensorberg's Cloud Services</li>-->
+        <!--<li class="tab"         id="tab_3" onclick="javascript:display('3');">Developer's tipps</li>-->
+    </ul>
+
+    <div class="content-init" id="content_1">
+        {%for video in site.videos %}
+        {% if video.category == "gettingStarted" %}
+        <div class="">
+            <div class="col-md-4 feature-block2">
+                <div class="single-block">
+                    <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
+                    <div class="video-title">
+                        <a href="{{ video.url }}">{{ video.title }}</a>, <i>{{ video.length }}</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="content " id="content_2">
+        {%for video in site.videos %}
+        {% if video.category == "sbCloudServices" %}
+        <div class="">
+            <div class="col-md-4 feature-block2">
+                <div class="single-block">
+                    <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
+                    <div class="video-title">
+                        <a href="{{ video.url }}">{{ video.title }}</a>, <i>{{ video.length }}</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="content" id="content_3">
+        <div class="">
+
+            {%for video in site.videos %}
+            {% if video.category == "developersTips" %}
+            <div class="row">
+                <div class="col-md-4 feature-block2">
+                    <div class="single-block">
+                        <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
+                        <div class="video-title">
+                            <a href="{{ video.url }}">{{ video.title }}</a>, <i>{{ video.length }}</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+</br></br></br></br></br>
