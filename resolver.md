@@ -11,20 +11,13 @@ additionalNavigation : [
 
 #How to install the Resolver  <img src="https://travis-ci.org/sensorberg-dev/resolver.svg?branch=master" style="float:right" alt="Resolver Microservice Build Status">
 
-The Resolver is a microservice that you can run in your own infrastructure or hosted by us, responsible for delivering all necessary data to the SDKs in order for them to map a beacon the attached content.
+The Resolver is a microservice that you can run in your own infrastructure or hosted by us, resposible for delivering all neccesary data to the SDKs in order for them to map a beacon the the attached content.
 
-The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring-boot/) application. 
-
-<div class="callout callout-info">
-    <h1><i class='fa fa-info-circle'/></i>Sensorberg Cloud Account needed</h1>
-    <p>Currently you need a <a href="http://manage.sensorberg.com">Sensorberg Cloud Services account</a> which you can register for free at <a href="https://manage.sensorberg.com/#/signup">manage.sensorberg.com/#/signup</a>.</p>
-</div> 
+The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring-boot/) application.
 
 Simply run
 
 ```
-git clone git@github.com:sensorberg-dev/resolver.git
-cd resolver
 ./gradlew run
 ```
 to have your own instance.
@@ -33,7 +26,7 @@ to have your own instance.
 
 Only an instance of [elastic search](https://www.elastic.co) needs to be available on your machine, or available to your machine.
 
-{% highlight bash %}
+```
 brew install elasticsearch
 elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
 [1990-01-01 00:00:59,300][INFO ][node                     ] [Deacon Frost] version[1.5.1], pid[49391], build[5e38401/2015-04-09T13:41:35Z]
@@ -47,7 +40,7 @@ elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
 [1990-01-01 00:00:05,491][INFO ][http                     ] [Deacon Frost] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
 [1990-01-01 00:00:05,491][INFO ][node                     ] [Deacon Frost] started
 
-{% endhighlight %}
+```
 You might need to change the connection string in the Resolver in */src/main/resources/application.properties*
 
 ```
@@ -60,7 +53,7 @@ The name of the cluster, when installing from brew is elasticsearch_brew
 #Standalone
 
 Once build, the jar artifact can be run standalone. *java -jar service-resolve.jar* and off you go!
-{% highlight bash %}
+```
  ./gradlew build
 :compileJava UP-TO-DATE
 :compileGroovy UP-TO-DATE
@@ -90,18 +83,19 @@ Total time: 7.354 secs
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.2.2.RELEASE)
  [...]
-{% endhighlight %}
+```
 
 #API endpoints:
 
-For a full list, visit our [readme.io live API page](https://sensorberg-cloud.readme.io/) 
+For a full list, visit our [readme.io live API page](https://sensorberg.readme.io/)
 
 To get started quickly, here is a list of the most important endpoints:
 
 ##GET /ping
 ###return value:
 Get stats about the running service
-{% highlight json %}
+
+```
 {
     "version": null,
     "beacon": 0,
@@ -112,61 +106,55 @@ Get stats about the running service
     "monitoringLog": 0,
     "layoutLog": 0
 }
-{% endhighlight %}
-
+```
 
 ##POST /synchronizations
 Setup a synchronization configuration. The resolver will keep in sync with your changes.
 ###*headers*
-{% highlight json %}
+```
 {
     "content-type" : "application/json"
 }
-{% endhighlight %}
+```
 ###*body*
-{% highlight json %}
+```
 {
-	"host" : "https://connect.sensorberg.com",
-	"apiKey" : "852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904"
+    "id": "choose an ID or send null and one will be generated",
+    "url": "https://connect.sensorberg.com/api/synchronizations/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
+    "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"               
 }
-{% endhighlight %}
+```
 With your apiKey from [manage.sensorberg.com/#/applications](https://manage.sensorberg.com/#/applications)
 ###*return value*
-{% highlight json %}
+```
 {
-    "host": "https://connect.sensorberg.com",
-    "apiKey": "852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
-    "token": null,
-    "environment": "https://connect.sensorberg.com/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904"
+    "id": "choose an ID or send null and one will be generated",
+    "url": "https://connect.sensorberg.com/api/synchronizations/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
+    "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"               
 }
-{% endhighlight %}
-*You can get an account for free at [manage.sensorberg.com/#/signup](https://manage.sensorberg.com/#/signup)*
-
+```
 ##GET /synchronizations
 Get a list of all the synchronizations that are set up for this host:
 ###return value:
-{% highlight json %}
+```
 [
     {
-        "host": "https://connect.sensorberg.com",
-        "apiKey": "852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
-        "token": null,
-        "environment": "https://connect.sensorberg.com/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904"
+        "id": "foo",
+        "url": "https://connect.sensorberg.com/api/synchronizations/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
+        "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"               
     }
 ]
-{% endhighlight %}
-
-
+```
 ##GET /layout
 Return the beacon layout for the api key
 ###headers:
-{% highlight json %}
+```
 {
     "X-Api-Key" : "852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904"
 }
-{% endhighlight %}
+```
 ###return value
-{% highlight json %}
+```
 {
      "accountProximityUUIDs": [
          "7367672374000000ffff0000ffff0000"
@@ -196,14 +184,11 @@ Return the beacon layout for the api key
          }
      ]
 }
-{% endhighlight %}
+```
 
-If you want to use your own resolver in your own application with the [Android SDK](/android) add this line to your AndroidManifest.xml:
-{% highlight json %}
+If you want to use your own resolver in your owm application with the [Android SDK](/android-sdk) add this line to your AndroidManifest.xml:
+```
 <meta-data
     android:name="com.sensorberg.sdk.resolverURL"
     android:value="http://<your-ip-address>:8080/layout" />
-{% endhighlight %}
-<br/>
-<br/>
-<br/>
+```
