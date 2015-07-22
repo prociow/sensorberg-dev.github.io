@@ -14,6 +14,10 @@
 
 <style type="text/css">
 
+    .float-left {
+    float: left;
+    }
+
     .tutorials-headline {
         font-size: 32px;
         font-weight: 400;
@@ -73,6 +77,8 @@
         color:#555;
     }
 
+    div .col-md-4 {float:left;}
+
     .feature-block3 {
         padding: 20px 0px;
         text-align: center;
@@ -90,7 +96,7 @@
     }
 
     .video-thumb{
-        width: 100%;
+        width: 250px;
     }
     .video-title{
         width: 260px;
@@ -133,9 +139,9 @@
     <div class="content" id="content_2">
         {%for video in site.videos %}
         {% if video.category == "sbCloudServices" %}
-        <div class="col-md-4">
+        <div class="col-md-4 float-left">
             <div class="feature-block3">
-                <div class="single-block">
+                <div class="thumbnail-width">
                     <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
                     <div class="video-title">
                         <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}>{{ video.title }}</a>, <i>{{ video.length }}</i>
@@ -150,9 +156,9 @@
     <div class="content" id="content_3">
         {%for video in site.videos %}
         {% if video.category == "developersTips" %}
-        <div class="col-md-4">
+        <div class="col-md-4 float-left">
             <div class="feature-block3">
-                <div class="single-block">
+                <div class="thumbnail-width">
                     <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
                     <div class="video-title">
                         <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}>{{ video.title }}</a>, <i>{{ video.length }}</i>
