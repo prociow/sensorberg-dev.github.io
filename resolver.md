@@ -186,7 +186,7 @@ Return the beacon layout for the api key
 }
 ```
 
-If you want to use your own resolver in your owm application with the [Android SDK](/android-sdk) add this line to your AndroidManifest.xml:
+If you want to use your own resolver in your owm application with the [Android SDK](/android) add this line to your AndroidManifest.xml:
 ```
 <meta-data
     android:name="com.sensorberg.sdk.resolverURL"
