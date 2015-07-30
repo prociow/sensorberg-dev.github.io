@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/js/theme.js"></script>
+    <link rel="icon" href="/images/favicon4.png" type="image/png">
+    <link rel="alternate" type="text/xml" title="RSS .92" href="{{ site.baseurl }}/feed.xml">
+    <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+<style type="text/css">
+
+.contents-block {
+    padding-top: 0px;
+    padding-left: 0px;
+    text-align: justify;
+}
+
+.content
+{
+background-color:#f5f5f5;
+margin-top:0px;
+padding:0px 20px;
+padding-bottom:50px;
+display:none;
+border:0px solid #AAA;
+border-radius:0px;
+color:#555;
+}
+
+.content-init
+{
+background-color:#f5f5f5;
+margin-top:0px;
+padding:0px 20px;
+padding-bottom:50px;
+border:0px solid #AAA;
+border-radius:0px;
+color:#555;
+}
+
+.container_video
+{
+background-color:#f5f5f5;
+padding-top: 10px;
+padding-left: 40px;
+padding-right: 60px;
+padding-bottom: 30px;
+}
+
+.container3 {
+max-width: 1100px;
+min-width: 320px;
+margin: 5px auto;
+margin-top: 40px ;
+margin-bottom: 30px ;
+border-radius:6px;
+}
+
+</style>
+
+<div class="container3 container_video" >
+  <div class="row">
+    <div class="col-md-8">
+      <h2 style= "font-size: 1.8em;text-align: justify; "> {{page.title}}</h2>
+    </div>
+  </div>
+
+  </br>
+
+  <div class="row">
+    <div class="col-md-8">
+      <iframe width="658" height="400" src="{{page.video_url}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="col-md-4" style="position: relative; height:405px; padding-left:40px;">
+
+      <div class="contents-block">
+
+        <b>Description</b></br>
+            {{page.description}}
+      </div>
+
+      <div  style="position: absolute; bottom: 0; text-align: justify;padding-right:20px;" >
+          {% if (page.see_also_image_path && page.see_also_link page.see_also_text) %}
+          <b>See also</b></br>
+
+          <a href="{{page.see_also_link}}">{{page.see_also_text}}</a>
+
+          </br>
+
+          <a href="{{page.see_also_link}}"><img src="{{page.see_also_image_path}}" alt="{{page.see_also_text}}" width="285" height="170" style ="border-radius: 4px; -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;"> </a>
+
+
+          </br> </br>
+          {% endif %}
+
+         <a href="/tutorials-iframe"><span style="font-weight:bold; float: right;"><i class="fa fa-long-arrow-left"></i> Back to the tutorials' overview <i class="fa fa-long-arrow-left"></i></span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% include analytics.html %}
+
+<script type="text/javascript">
+    setTimeout(function(){var a=document.createElement("script");
+        var b=document.getElementsByTagName("script")[0];
+        a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0035/6332.js?"+Math.floor(new Date().getTime()/3600000);
+        a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+</body>
+</html>
+
