@@ -10,6 +10,6 @@ category: gettingStarted
 
 see_also_text: "#2 How to register Beacons"
 see_also_image_path: "/images/videos/video02-how-to-register-beacons.png"
-see_also_link: "/videos-iframe/02-How-to-register-beacons/"
+see_also_link: "/videos-iframe/02-how-to-register-beacons/"
 
 ---
