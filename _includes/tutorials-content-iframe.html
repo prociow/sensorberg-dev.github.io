@@ -14,10 +14,6 @@
 
 <style type="text/css">
 
-    .float-left {
-    float: left;
-    }
-
     .tutorials-headline {
         font-size: 32px;
         font-weight: 400;
@@ -52,7 +48,7 @@
     .container-content {
         max-width: 940px;
         min-width: 320px;
-        margin: 0 auto;
+        margin: 0px auto;
     }
     .content
     {
@@ -77,8 +73,6 @@
         color:#555;
     }
 
-    div .col-md-4 {float:left;}
-
     .feature-block3 {
         padding: 20px 0px;
         text-align: center;
@@ -96,7 +90,7 @@
     }
 
     .video-thumb{
-        width: 260px;
+        width: 100%;
     }
     .video-title{
         width: 260px;
@@ -120,15 +114,15 @@
     </ul>
 
     <div class="content-init" id="content_1">
-        {%for video in site.videos %}
+        {%for video in site.videos-iframe %}
         {% if video.category == "gettingStarted" %}
 
         <div class="col-md-4">
             <div class="feature-block3">
                 <div class="thumbnail-width">
-                    <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
+                    <a href="{{ video.url }}" ><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
                     <div class="video-title">
-                        <a href="{{ video.url }}" {% if page.iframe %} target="_blank"{% endif %}>{{ video.title }}</a>, <i>{{ video.length }}</i>
+                        <a href="{{ video.url }}" >{{ video.title }}</a>, <i>{{ video.length }}</i>
                     </div>
                 </div>
             </div>
@@ -136,5 +130,4 @@
         {% endif %}
         {% endfor %}
     </div>
-
 </div>

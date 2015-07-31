@@ -40,4 +40,7 @@ collections:
   videos:
     output: true
     permalink: /videos/:path/
+  videos-iframe:
+    output: true
+    permalink: /videos-iframe/:path/
 
