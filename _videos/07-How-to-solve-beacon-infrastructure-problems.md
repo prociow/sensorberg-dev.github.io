@@ -1,6 +1,6 @@
 ---
 layout: video
-title: "#7 How to solve beacon infrastructure problems"
+title: "#7 How to solve Beacon infrastructure problems"
 previewImage: /images/videos/video07-how-to-solve-beacon-infrastructure-problems.png
 description: "This tutorial will give you some tips and technical insights to help you solve the problems you may encounter during your first steps with Beacons and Sensorberg Cloud Services."
 
@@ -10,6 +10,6 @@ category: gettingStarted
 
 ---
 
-see_also_text: "#5 How to test you beacon-based campaigns"
+see_also_text: "#5 How to test you Beacon-based campaigns"
 see_also_image_path: "/images/videos/video05-how-to-test-beacon-based-campaigns.png"
 see_also_link: "/videos/05-How-to-test-your-beacon-based-campaigns/"
