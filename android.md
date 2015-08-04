@@ -6,8 +6,8 @@ additionalNavigation : [
     { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/android-sdk" },
     { "title" : "Android SDK Samples",      "link" : "https://github.com/sensorberg-dev/android-sdk-samples" },
     { "title" : "Android SDK Bugtracker",   "link" : "https://github.com/sensorberg-dev/android-sdk/issues" },
-    { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/android.md" },
-    { "title" : "JCenter files",            "link" : "http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/" }   
+    { "title" : "JCenter files",            "link" : "http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/" },   
+    { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/android.md" }
 ]
 ---
 
