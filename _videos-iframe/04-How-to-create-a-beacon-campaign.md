@@ -2,7 +2,7 @@
 layout: video-iframe
 title: "#4 How to create a Beacon campaign"
 previewImage: /images/videos/video04-how-to-create-a-beacon-campaign.png
-description: "This tutorial shows you how to manage the campaigns you want to deliver through your Beacons, using the Sensorberg Beacon Management Platform: scheduling the campaigns, designing their contents, and associating them to the Beacons that will deliver them."
+description: "This tutorial shows you how to manage the campaigns you want to deliver through your Beacons: scheduling the campaigns, designing their contents, and associating them to the Beacons that will deliver them."
 
 video_url: "https://www.youtube.com/embed/DqJdrziaQxE?rel=0&amp;showinfo=0"
 length : "3:16"
