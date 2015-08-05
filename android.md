@@ -41,9 +41,6 @@ Set your API key in your manifest and declare your <em>BroadcastReceiver</em>:
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <application>
-        <meta-data
-            android:name="com.sensorberg.sdk.ApiKey"
-            android:value="a8ab23e7f2c4fbdd07d0e0e14835db037d2f62584b976aa0026a671c60e0707f" />
         <receiver android:name="com.myCompany.MyActionPresenter"
             android:process=".sensorberg"
             android:exported:"false" >
@@ -73,7 +70,7 @@ public class DemoApplication extends Application {
 		super.onCreate();
 
         boot = new SensorbergApplicationBootstrapper(this);
-        boot.activateService();
+        boot.activateService("a8ab23e7f2c4fbdd07d0e0e14835db037d2f62584b976aa0026a671c60e0707f");
         boot.hostApplicationInForeground();
 
         detector = new BackgroundDetector(boot);
