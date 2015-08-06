@@ -34,7 +34,7 @@ dependencies {
 }
 {% endhighlight %}
 
-Set your API key in your manifest and declare your <em>BroadcastReceiver</em>:
+Declare your <em>BroadcastReceiver</em>:
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
