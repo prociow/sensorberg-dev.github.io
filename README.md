@@ -13,3 +13,16 @@ jekyll serve --drafts
 The drafts will not be visible on the actual website.
 
 NEVER EDIT IN ```_site```as the directory is generated and all changes are always overwritten.
+
+To install ```jekyll``` run:
+
+```
+bundle install
+```
+
+if you want to check all the links locally (including links in your drafts), run:
+
+```
+jekyll build --drafts
+htmlproof ./_site
+```
