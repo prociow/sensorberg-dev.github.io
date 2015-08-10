@@ -189,3 +189,5 @@ You can register and unregister the background task using <code>SDKManager</code
 <code>RegisterBackgroundTaskAsync</code> and <code>UnregisterBackgroundTask</code>.
 <p><br>
 <br></p>
+
+<b>foo</b>
