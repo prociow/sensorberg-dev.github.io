@@ -194,4 +194,9 @@ message dialog with the action content.
 It is also highly recommended to ask the user for the permission to enable the
 background task. Notifications are created automatically by the background task.
 You can register and unregister the background task using `SDKManager` methods
-`RegisterBackgroundTaskAsync` and `UnregisterBackgroundTask`.
+`RegisterBackgroundTaskAsync` and `UnregisterBackgroundTask`.#
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
