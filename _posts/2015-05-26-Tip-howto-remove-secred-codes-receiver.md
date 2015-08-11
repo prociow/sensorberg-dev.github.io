@@ -24,5 +24,5 @@ apktool d -s -f <your-apk-file>
 {% endhighlight %}
 </div>
 
-This Tip works with **all versions** of the Android SDK
+This tip works with **all versions** of the Android SDK.
 

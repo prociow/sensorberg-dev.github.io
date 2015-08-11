@@ -14,7 +14,7 @@ You can now enter the location of any of your Beacons on our Beacon Management P
 * Directly entering the latitude and longitude coordinates of your Beacon (up to 14 decimals after the comma, way more than what is needed for a millimeter precision...)
 
 
-* Searching a location using the textfield ; you can also move and zoom the map to manually find the location. You'll be able to add it by a click on the map
+* Searching a location using the textfield; you can also move and zoom the map to manually find the location. You'll be able to add it by a click on the map
 
 
 <!--more-->

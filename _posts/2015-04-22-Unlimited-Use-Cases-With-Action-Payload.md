@@ -10,7 +10,7 @@ tags: sdk
 The payload feature in the beacon management frontend enables you to implement virtually unlimited use-case posibilities with beacons. We will highlight one use case in this post:
 
 ##Use case description:
-We would like to show a notification when the application is in the background with a message, when tapping the notification, the app should be opened and a new Activity (screen) should be shown with a QR code and some text. This can be used to deliver a coupon code when entering a shop.
+We would like to show a notification when the application is in the background with a message. Upon tapping the notification, the app should be opened and a new Activity (screen) should be shown with a QR code and some text. This can be used to deliver a coupon code when entering a shop.
 
 <!--more-->
 **Setup your campaign**
