@@ -191,4 +191,10 @@ If you want to use your own resolver in your owm application with the [Android S
 <meta-data
     android:name="com.sensorberg.sdk.resolverURL"
     android:value="http://<your-ip-address>:8080/layout" />
+
 ```
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
