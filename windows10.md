@@ -11,8 +11,10 @@ additionalNavigation : [
 
 # Sensorberg SDK for Windows BETA #
 
-# Please note there is a BETA release. There is some issues that still need to be resolved.
-Check the list of [issues](https://github.com/sensorberg-dev/windows10-sdk/issues) to see all issues.
+<div class="callout callout-info">
+    <h1><i class='fa fa-info-circle'/></i>Please note there is a BETA release. There is some issues that still need to be resolved.</h1>
+    <p>Check the list of <a href="https://github.com/sensorberg-dev/windows10-sdk/issues">issues</a> to see all issues.</p>
+</div>
 
 ## Compatibility ##
 
