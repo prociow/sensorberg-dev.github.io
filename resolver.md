@@ -193,8 +193,3 @@ If you want to use your own resolver in your owm application with the [Android S
     android:value="http://<your-ip-address>:8080/layout" />
 
 ```
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
