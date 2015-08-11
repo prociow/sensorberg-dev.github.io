@@ -188,8 +188,14 @@ Return the beacon layout for the api key
 
 If you want to use your own resolver in your owm application with the [Android SDK](/android) add this line to your AndroidManifest.xml:
 ```
-<meta-data
+<pre><code>
     android:name="com.sensorberg.sdk.resolverURL"
-    android:value="http://<your-ip-address>:8080/layout" />
+    android:value="http://<your-ip-address>:8080/layout">
+    </code></pre>
 
-```
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
