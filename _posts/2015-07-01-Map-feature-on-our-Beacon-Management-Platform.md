@@ -31,7 +31,7 @@ You can now enter the location of any of your Beacons on our Beacon Management P
 <img alt="Zoom on the map" src="/images/map2.png"  style="width: 800px;"/>
 
 <br/><br/>
-We'll also release soon a tool to design building plans in order for you to visualize properly and optimize the location of you Beacons within your facilities...
+We'll also release soon a tool to design building plans in order for you to visualize properly and optimize the location of your Beacons within your facilities...
 <br/>
 We are eager for your Feedback!
 <br/><br/>
