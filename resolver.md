@@ -42,10 +42,10 @@ elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
 {% endhighlight %}
 
 If you want to use the maintenance tasks, you should edit your elasticsearch.yml configuration and add the dynamic scripting:
-```yml
+{% highlight yaml  %}
 #enabled scripting for the retry admin task (POST admin/failedRequests/)                                                    
 script.disable_dynamic: false 
-```
+{% endhighlight %}
 
 You might need to change the connection string in the Resolver in */src/main/resources/application.properties*
 
