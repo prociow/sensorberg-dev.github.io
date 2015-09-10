@@ -6,18 +6,19 @@ comments: true
 tags: ios sdk
 ---
 
-We have cleaned up the callbacks in the iOS SDK in the 1.0.5 release. We are now exposing the SBSDKBeaconAction directly which contains all the neccesary field you will need for your integration.
+We have cleaned up the callbacks in the iOS SDK in the [1.0.5 release](https://github.com/sensorberg-dev/ios-sdk/releases/tag/1.0.5). We are now exposing the [SBSDKBeaconAction](https://github.com/sensorberg-dev/ios-sdk/blob/master/SensorbergSDK/SBSDKBeaconAction.h) directly which contains all the necessary field you will need for your integration.
  
-The change will also imply, that the integration needs to take care of the application state. IF you app is in the background, show an UILocalNotification, when you app is open, you can choose to show custom UI. This sample shows an easy UIAlertView: 
+The change will also imply, that the integration needs to take care of the application state. If your app is in the background, show an ```UILocalNotification```, when you app is open, you can choose to show custom UI. This sample shows an easy UIAlertView: 
 
 The short version:
 
-1. beaconManager:didResolveAction receives the action
-  1. when the app is in the foreground, we show our In-App UI immediately.
-  2. when the app is in the background, we can only show a UILocalNotification
-2. application:didReceiveLocalNotification receives the local notification and the attached data when the app is opened. Get the metadata off the notification and show the same custom UI.
- 
-You should update existing Notifications. Use the action.actionId to identify the notification.  
+1. Your delegate receives the action in ```beaconManager:didResolveAction```
+  1. when the app is in the foreground, we show our in-app UI immediately.
+  2. when the app is in the background, we can only show a ```UILocalNotification```
+  3. when the action has a delay, schedule a notification
+2. ```application:didReceiveLocalNotification``` receives the local notification and the attached data when the app is opened. Get the metadata off the notification and show the same custom UI.
+
+Please check the latest sample implementation in the [SBSDKAppDelegate.m](https://github.com/sensorberg-dev/ios-sdk/blob/master/Example/Demo/SBSDKAppDelegate.m) on github, here are the relevant methods:    
 
 {% highlight objc %}
 #pragma mark - Local Notifications & actions
@@ -39,10 +40,6 @@ You should update existing Notifications. Use the action.actionId to identify th
 }
 
 - (void)displayLocalNotificationForAction:(SBSDKBeaconAction *)action {
-
-    // Check if we should invalidate older versions of the local notification.
-    [self cancelOldNotification:action];
-
     // Construct local notification.
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
 
@@ -60,17 +57,7 @@ You should update existing Notifications. Use the action.actionId to identify th
     self.localNotifications[action.actionId] = localNotification;
 }
 
-- (void)cancelOldNotification:(SBSDKBeaconAction *)action {
-    UILocalNotification *localNotification = self.localNotifications[action.actionId];
-    if (localNotification != nil) {
-        [[UIApplication sharedApplication] cancelLocalNotification:localNotification];
-    }
-}
-
 - (void)showActionAsAlertView:(SBSDKBeaconAction *)action {
-    //remove a notification showing the same content
-    [self cancelOldNotification:action];
-
     //show a boring notification:
     NSDictionary * payload = action.payload;
     //do something usefull with the payload, we´e boring and will just show an UIAlertView
