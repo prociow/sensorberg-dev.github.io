@@ -26,7 +26,7 @@ To install it, simply add the following line to your Podfile:
 
     pod "SensorbergSDK", "~> {{ site.latestiOSRelease }}"
                                                                            
-and follow the [latest instructions](http://cocoadocs.org/docsets/SensorbergSDK/1.0.6/)
+and follow the [latest instructions](http://cocoadocs.org/docsets/SensorbergSDK/{{site.latestiOSRelease}}/)
 
 ## Support
 
