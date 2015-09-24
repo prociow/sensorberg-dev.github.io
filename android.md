@@ -71,7 +71,7 @@ public class DemoApplication extends Application {
 		super.onCreate();
 
         boot = new SensorbergApplicationBootstrapper(this);
-        boot.activateService("a8ab23e7f2c4fbdd07d0e0e14835db037d2f62584b976aa0026a671c60e0707f");
+        boot.activateService("<your-API-key>");
         boot.hostApplicationInForeground();
 
         detector = new BackgroundDetector(boot);
