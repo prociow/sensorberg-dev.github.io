@@ -170,7 +170,7 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
     <p>As as developer, you can create an account for free at <a href="https://manage.sensorberg.com/#/signup">manage.sensorberg.com/#/signup</a></p>    
 </div>
 <div class="callout callout-info">
-    <h1><i class='fa fa-info-circle'/></i>Tip: Use the secred codes broadcastreceiver to add more debugging to your app.</h1> 
+    <h1><i class='fa fa-info-circle'/></i>Tip: Use the secret codes broadcastreceiver to add more debugging to your app.</h1> 
     <p>Read all about it in this <a href="/2015/06/Tip-howto-remove-secred-codes-receiver/">blog post</a>.</p>    
 </div>
 <br/>
