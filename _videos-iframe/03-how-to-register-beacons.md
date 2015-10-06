@@ -1,5 +1,5 @@
 ---
-layout: video
+layout: video-iframe
 title: "#3 How to register Beacons"
 previewImage: /images/videos/video03-how-to-register-beacons.png
 description: "This tutorial is meant to help you get started with linking your Beacons to your account on the Sensorberg cloud-based Beacon Management Platform, so that you’ll be able to deliver custom contents to your client apps in no time."
