@@ -64,7 +64,7 @@ public class DemoApplication extends Application
 }
 {% endhighlight %}
 
-There is another method, but it it feels wrong to iterate over all running processes. Also [it´s been reported](http://stackoverflow.com/questions/19631894/is-there-a-way-to-get-current-process-name-in-android) that this list might not yet contain your own process.
+There is another method, but it feels wrong to iterate over all running processes. Also [it´s been reported](http://stackoverflow.com/questions/19631894/is-there-a-way-to-get-current-process-name-in-android) that this list might not yet contain your own process.
   
 {% highlight java %}
 private String getProcessName(){

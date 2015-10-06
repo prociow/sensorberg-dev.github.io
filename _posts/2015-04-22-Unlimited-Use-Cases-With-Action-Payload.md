@@ -10,7 +10,7 @@ tags: sdk
 The payload feature in the beacon management frontend enables you to implement virtually unlimited use-case posibilities with beacons. We will highlight one use case in this post:
 
 ##Use case description:
-We would like to show a notification when the application is in the background with a message, when tapping the notification, the app should be opened and a new Activity (screen) should be shown with a QR code and some text. This can be used to deliver a coupon code when entering a shop.
+We would like to show a notification when the application is in the background with a message. Upon tapping the notification, the app should be opened and a new Activity (screen) should be shown with a QR code and some text. This can be used to deliver a coupon code when entering a shop.
 
 <!--more-->
 **Setup your campaign**
@@ -18,7 +18,7 @@ We would like to show a notification when the application is in the background w
 <img alt="Screenshot from manage.sensorberg.com" src="/images/posts/2015-04-22-Unlimited-Use-Cases-With-Action-Payload/management-setup_001.png"/ width="100%" style="img-responsive center-block">
 
 
-I´ve setup my campaign as an in-app campaign with some custon payload. The payload contains the actual content that will be rendered when you tap the notification, or when you´re using the app:
+I´ve setup my campaign as an in-app campaign with some custom payload. The payload contains the actual content that will be rendered when you tap the notification, or when you´re using the app:
 
 {% highlight json %}
 {

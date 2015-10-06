@@ -17,16 +17,16 @@ The Resolver runs standalone as a [Spring boot](http://projects.spring.io/spring
 
 Simply run
 
-```
+{% highlight bash %}
 ./gradlew run
-```
+{% endhighlight %}
 to have your own instance.
 
 #Dependencies
 
 Only an instance of [elastic search](https://www.elastic.co) needs to be available on your machine, or available to your machine.
 
-```
+{% highlight bash %}
 brew install elasticsearch
 elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
 [1990-01-01 00:00:59,300][INFO ][node                     ] [Deacon Frost] version[1.5.1], pid[49391], build[5e38401/2015-04-09T13:41:35Z]
@@ -39,21 +39,28 @@ elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
 [1990-01-01 00:00:05,470][INFO ][cluster.service          ] [Deacon Frost] new_master [Deacon Frost][Me5IaghuRIqvbuoohcb4fQ][retina-volker-book.local][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
 [1990-01-01 00:00:05,491][INFO ][http                     ] [Deacon Frost] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
 [1990-01-01 00:00:05,491][INFO ][node                     ] [Deacon Frost] started
+{% endhighlight %}
 
-```
+If you want to use the maintenance tasks, you should edit your elasticsearch.yml configuration and add the dynamic scripting:
+{% highlight yaml  %}
+#enabled scripting for the retry admin task (POST admin/failedRequests/)                                                    
+script.disable_dynamic: false 
+{% endhighlight %}
+
 You might need to change the connection string in the Resolver in */src/main/resources/application.properties*
 
-```
+{% highlight text %}
 elasticsearch.connectionString=http://localhost:9300/elasticsearch_brew
 spring.jackson.date-format=com.fasterxml.jackson.databind.util.ISO8601DateFormat
 apiKey.largeCompany=10000
-```
+{% endhighlight %}
+
 The name of the cluster, when installing from brew is elasticsearch_brew
 
 #Standalone
 
 Once build, the jar artifact can be run standalone. *java -jar service-resolve.jar* and off you go!
-```
+{% highlight bash %}
  ./gradlew build
 :compileJava UP-TO-DATE
 :compileGroovy UP-TO-DATE
@@ -83,7 +90,7 @@ Total time: 7.354 secs
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.2.2.RELEASE)
  [...]
-```
+{% endhighlight %}
 
 #API endpoints:
 
@@ -95,7 +102,7 @@ To get started quickly, here is a list of the most important endpoints:
 ###return value:
 Get stats about the running service
 
-```
+{% highlight json %}
 {
     "version": null,
     "beacon": 0,
@@ -106,37 +113,37 @@ Get stats about the running service
     "monitoringLog": 0,
     "layoutLog": 0
 }
-```
+{% endhighlight %}
 
 ##POST /synchronizations
 Setup a synchronization configuration. The resolver will keep in sync with your changes.
 ###*headers*
-```
+{% highlight json %}
 {
     "content-type" : "application/json"
 }
-```
+{% endhighlight %}
 ###*body*
-```
+{% highlight json %}
 {
     "id": "choose an ID or send null and one will be generated",
     "url": "https://connect.sensorberg.com/api/synchronizations/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
     "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"               
 }
-```
+{% endhighlight %}
 With your apiKey from [manage.sensorberg.com/#/applications](https://manage.sensorberg.com/#/applications)
 ###*return value*
-```
+{% highlight json %}
 {
     "id": "choose an ID or send null and one will be generated",
     "url": "https://connect.sensorberg.com/api/synchronizations/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
     "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"               
 }
-```
+{% endhighlight %}
 ##GET /synchronizations
 Get a list of all the synchronizations that are set up for this host:
 ###return value:
-```
+{% highlight json %}
 [
     {
         "id": "foo",
@@ -144,17 +151,17 @@ Get a list of all the synchronizations that are set up for this host:
         "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"               
     }
 ]
-```
+{% endhighlight %}
 ##GET /layout
 Return the beacon layout for the api key
 ###headers:
-```
+{% highlight json %}
 {
     "X-Api-Key" : "852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904"
 }
-```
+{% endhighlight %}
 ###return value
-```
+{% highlight json %}
 {
      "accountProximityUUIDs": [
          "7367672374000000ffff0000ffff0000"
@@ -184,11 +191,12 @@ Return the beacon layout for the api key
          }
      ]
 }
-```
+{% endhighlight %}
 
-If you want to use your own resolver in your owm application with the [Android SDK](/android) add this line to your AndroidManifest.xml:
-```
-<meta-data
-    android:name="com.sensorberg.sdk.resolverURL"
-    android:value="http://<your-ip-address>:8080/layout" />
-```
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+

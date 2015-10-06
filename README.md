@@ -12,16 +12,17 @@ jekyll serve --drafts
 ```
 The drafts will not be visible on the actual website.
 
-If you want to check all links on your computer run these commands:
+NEVER EDIT IN ```_site```as the directory is generated and all changes are always overwritten.
+
+To install ```jekyll``` run:
+
+```
+bundle install
+```
+
+if you want to check all the links locally (including links in your drafts), run:
 
 ```
 jekyll build --drafts
 htmlproof ./_site
-```
-
-You need to install ```jekyll``` and ```html-proofer``` once on your computer to enable this workflow. Jekyll should *NOT* run when you run this test!
-
-```
-sudo gem install jekyll
-sudo gem install html-proofer
 ```

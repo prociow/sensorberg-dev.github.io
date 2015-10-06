@@ -5,9 +5,10 @@ permalink: /android/
 additionalNavigation : [
     { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/android-sdk" },
     { "title" : "Android SDK Samples",      "link" : "https://github.com/sensorberg-dev/android-sdk-samples" },
+    { "title" : "Android SDK Bootstrapper", "link" : "https://github.com/sensorberg-dev/android-sdk-bootstrapper" },
     { "title" : "Android SDK Bugtracker",   "link" : "https://github.com/sensorberg-dev/android-sdk/issues" },
-    { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/android.md" },
-    { "title" : "JCenter files",            "link" : "http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/" }   
+    { "title" : "JCenter files",            "link" : "http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/" },   
+    { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/android.md" }
 ]
 ---
 
@@ -34,16 +35,13 @@ dependencies {
 }
 {% endhighlight %}
 
-Set your API key in your manifest and declare your <em>BroadcastReceiver</em>:
+Declare your <em>BroadcastReceiver</em>:
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <application>
-        <meta-data
-            android:name="com.sensorberg.sdk.ApiKey"
-            android:value="a8ab23e7f2c4fbdd07d0e0e14835db037d2f62584b976aa0026a671c60e0707f" />
         <receiver android:name="com.myCompany.MyActionPresenter"
             android:process=".sensorberg"
             android:exported:"false" >
@@ -73,7 +71,7 @@ public class DemoApplication extends Application {
 		super.onCreate();
 
         boot = new SensorbergApplicationBootstrapper(this);
-        boot.activateService();
+        boot.activateService("<your-API-key>");
         boot.hostApplicationInForeground();
 
         detector = new BackgroundDetector(boot);
@@ -172,7 +170,7 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
     <p>As as developer, you can create an account for free at <a href="https://manage.sensorberg.com/#/signup">manage.sensorberg.com/#/signup</a></p>    
 </div>
 <div class="callout callout-info">
-    <h1><i class='fa fa-info-circle'/></i>Tip: Use the secred codes broadcastreceiver to add more debugging to your app.</h1> 
+    <h1><i class='fa fa-info-circle'/></i>Tip: Use the secret codes broadcastreceiver to add more debugging to your app.</h1> 
     <p>Read all about it in this <a href="/2015/06/Tip-howto-remove-secred-codes-receiver/">blog post</a>.</p>    
 </div>
 <br/>

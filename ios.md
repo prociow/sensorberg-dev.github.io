@@ -26,7 +26,12 @@ To install it, simply add the following line to your Podfile:
 
     pod "SensorbergSDK", "~> {{ site.latestiOSRelease }}"
                                                                            
-and follow the [latest instructions](http://sensorberg-dev.github.io/ios-sdk/{{ site.latestiOSRelease }}/)
+
+and follow the implementation in the [Example app](https://github.com/sensorberg-dev/ios-sdk/tree/master/Example).
+
+Check the [SBSDKAppDelegate](https://github.com/sensorberg-dev/ios-sdk/blob/master/Example/Demo/SBSDKAppDelegate.m) ```application:application didFinishLaunchingWithOptions:launchOptions``` and ```beaconManager:manager didResolveAction:action``` methods for the minimal integration.
+
+also check the [cocoadocs documentation](http://cocoadocs.org/docsets/SensorbergSDK/{{site.latestiOSRelease}}/)
 
 ## Support
 
@@ -46,6 +51,7 @@ If you encounter any bugs, please [report them](https://github.com/sensorberg-de
     <pre><code class="language-text" data-lang="text">SBSDKManager.setDefaultRegions(@[])</code></pre>
     Please note, you need the <a href="http://sensorberg-dev.github.io/ios-sdk/1.0.2/">1.0.2</a> release to use this feature</p>    
 </div>
+<br/>
 <br/>
 <br/>
 <br/>

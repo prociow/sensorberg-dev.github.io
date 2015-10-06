@@ -6,7 +6,7 @@ comments: true
 tags: continous-integration
 ---
 
-#Software quality is important to us
+#Software quality is important for us
 
 We´re trying to keep you in the loop about the quality of our software. We have public continuous integration jobs for the majority of our open projects. Here is an overview of all the integration jobs and what they are doing:
  
