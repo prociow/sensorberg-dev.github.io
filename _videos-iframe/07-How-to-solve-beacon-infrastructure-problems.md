@@ -10,7 +10,7 @@ category: gettingStarted
 
 ---
 
-see_also_text: "#5 How to test you Beacon-based campaigns"
+see_also_text: "#5 How to test your Beacon-based campaigns"
 see_also_image_path: "/images/videos/video05-how-to-test-beacon-based-campaigns.png"
 see_also_link: "/videos-iframe/05-How-to-test-your-beacon-based-campaigns/"
 
