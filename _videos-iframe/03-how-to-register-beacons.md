@@ -10,6 +10,6 @@ category: gettingStarted
 
 see_also_text: "#4 How to create a Beacon campaign"
 see_also_image_path: "/images/videos/video04-how-to-create-a-beacon-campaign.png"
-see_also_link: "/videos/04-How-to-create-a-beacon-campaign/"
+see_also_link: "/videos-iframe/04-How-to-create-a-beacon-campaign/"
 
 ---
