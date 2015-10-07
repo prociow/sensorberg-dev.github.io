@@ -37,10 +37,14 @@ redcarpet:
 exclude: ['README.md', 'LICENSE']
 
 collections:
+  frontend-releases:
+    output: false
+    permalink: /frontend-releases/:path/
   videos:
     output: true
     permalink: /videos/:path/
   videos-iframe:
     output: true
     permalink: /videos-iframe/:path/
+
 
