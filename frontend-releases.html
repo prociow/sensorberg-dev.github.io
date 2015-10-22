@@ -8,7 +8,6 @@ permalink: /frontend-releases.html
     <div class="row">
         <div class="col-md-3 hidden-xs">
             <div class="sidebar well">
-
                 {{ site.description }}
             </div>
             {% include sidebar.html %}
@@ -18,12 +17,10 @@ permalink: /frontend-releases.html
                 <h1>Frontent Releases</h1>
                 {%for release in site.frontend-releases reversed %}
                 <div class="well">
-                    <h1><a href="{{ site.baseurl}}{{ release.url }}">{{ release.date | date: " %b %-d. %Y" }} - {{ release.version }} {% if release.title %}"{{release.title}}"{% endif %}</a></h1>
+                    <h1>{{ release.date | date: " %b %-d. %Y" }} - {{ release.version }} {% if release.title %}"{{release.title}}"{% endif %}</h1>
                     <div class="post-content">
                         {{ release.content }}
-
                     </div>
-
                 </div>
                 {% endfor %}
             </div>
