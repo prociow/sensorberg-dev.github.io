@@ -12,7 +12,7 @@ additionalNavigation : [
 # Sensorberg SDK for Windows BETA #
 
 <div class="callout callout-info">
-    <h1><i class='fa fa-info-circle'/></i>Please note there is a BETA release. There is some issues that still need to be resolved.</h1>
+    <h1><i class='fa fa-info-circle'/></i>Please note this is a BETA release. There are some issues that still need to be resolved.</h1>
     <p>Check the list of <a href="https://github.com/sensorberg-dev/windows10-sdk/issues">issues</a> to see all issues.</p>
 </div>
 
