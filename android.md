@@ -71,6 +71,7 @@ public class DemoApplication extends Application {
 		super.onCreate();
 
         boot = new SensorbergApplicationBootstrapper(this);
+        //boot = new SensorbergApplicationBootstrapper(this, true); 	use this call if you want presentBeaconEvent(BeaconEvent beaconEvent) in your Bootstrapper to be called
         boot.activateService("<your-API-key>");
         boot.hostApplicationInForeground();
 
@@ -133,7 +134,7 @@ This class receives a broadcast, if the SDK has detected a beacon and successful
 compile "com.android.support:support-v4:22.0.0"
 {% endhighlight %}
 
-If you want your own UI to react to detected beacons and actions, please extend the *Bootstrapper* and add your customisations:
+If you want your own UI to react to detected beacons and actions, please extend the *Bootstrapper*, make sure you initialize with [*enablePresentationDelegation*](https://github.com/sensorberg-dev/android-sdk-bootstrapper/blob/master/android-sdk-bootstrapper/src/main/java/com/sensorberg/sdk/bootstrapper/SensorbergApplicationBootstrapper.java#L46) set to true and add your customisations:
 
 {% highlight java %}
 public class MyBootstrapper extends SensorbergApplicationBootstrapper {
