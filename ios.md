@@ -12,11 +12,11 @@ additionalNavigation : [
 #How to install the Sensorberg iOS SDK
 ## Usage
 
-To run the example project, clone the repo, and open the Xcode project in the Example directory.
+To run the example project, clone the repo, and open the Xcode project in the SBDemoApp directory.
 
 ## Requirements
 
-The Sensorberg SDK requires iOS 7.0.
+The Sensorberg SDK requires iOS 8.0.
 
 ## Installation
 
@@ -27,11 +27,10 @@ To install it, simply add the following line to your Podfile:
     pod "SensorbergSDK", "~> {{ site.latestiOSRelease }}"
                                                                            
 
-and follow the implementation in the [Example app](https://github.com/sensorberg-dev/ios-sdk/tree/master/Example).
+and follow the implementation in the [Demo app](https://github.com/sensorberg-dev/ios-sdk/tree/master/SBDemoApp).
 
-Check the [SBSDKAppDelegate](https://github.com/sensorberg-dev/ios-sdk/blob/master/Example/Demo/SBSDKAppDelegate.m) ```application:application didFinishLaunchingWithOptions:launchOptions``` and ```beaconManager:manager didResolveAction:action``` methods for the minimal integration.
-
-also check the [cocoadocs documentation](http://cocoadocs.org/docsets/SensorbergSDK/{{site.latestiOSRelease}}/)
+Check the [BeaconsViewController](https://github.com/sensorberg-dev/ios-sdk/blob/master/SBDemoApp/BeaconsViewController.m) ```viewDidLoad``` method for the minimal integration.
+Also check the [cocoadocs documentation](http://cocoadocs.org/docsets/SensorbergSDK/{{site.latestiOSRelease}}/) and the included [documentaion](https://github.com/sensorberg-dev/ios-sdk/tree/master/docs)
 
 ## Support
 
