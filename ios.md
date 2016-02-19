@@ -30,7 +30,7 @@ To install it, simply add the following line to your Podfile:
 
 and follow the implementation in the [Demo app](https://github.com/sensorberg-dev/ios-sdk/tree/master/SBDemoApp).
 
-Check the [BeaconsViewController](https://github.com/sensorberg-dev/ios-sdk/blob/master/SBDemoApp/BeaconsViewController.m) ```viewDidLoad``` method for the minimal integration.
+Check the [BeaconsViewController](https://github.com/sensorberg-dev/ios-sdk/blob/master/SBDemoApp/BeaconsViewController.m#L27) ```viewDidLoad``` method for the minimal integration.
 Also check the [cocoadocs documentation](http://cocoadocs.org/docsets/SensorbergSDK/{{site.latestiOSRelease}}/) and the included [documentaion](https://github.com/sensorberg-dev/ios-sdk/tree/master/docs)
 
 ## Support
