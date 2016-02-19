@@ -25,7 +25,6 @@ Sensorberg SDK uses [CocoaPods](http://cocoapods.org).
 To install it, simply add the following line to your Podfile:
 
     pod "SensorbergSDK", "~> {{ site.latestiOSRelease }}"
-    pod "tolo", "~> 1.0"
                                                                            
 
 and follow the implementation in the [Demo app](https://github.com/sensorberg-dev/ios-sdk/tree/master/SBDemoApp).
