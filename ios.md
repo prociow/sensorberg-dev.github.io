@@ -66,7 +66,7 @@ SUBSCRIBE(SBEventPerformAction) {
 }
 ```
 
-You can find your API key on the [Beacon Managerment Platform](https://manage.sensorberg.com) in the "Apps" section.
+You can find your API key on the [Beacon Managerment Platform](https://manage.sensorberg.com/#/applications).
 
 The Sensorberg SDK uses an [event bus](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) for events dispatching.
 During setup, you pass the class instance that will receive the events as the `delegate`.  
