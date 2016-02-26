@@ -52,26 +52,40 @@ $ pod install
 $ open <YourProjectName>.xcworkspace    
 ````
 
-### 3. Using the SDK
-    
+### 3. Using the SDK  
+
+Import the SensorbergSDK  
+
 ```
-// Import the SensorbergSDK 
-#import <SensorbergSDK/SensorbergSDK.h>   
-// Setup the SBManager with an API key and a "delegate"
-[[SBManager sharedManager] setApiKey:<api> delegate:self];
-// Then simply SUBSCRIBE to the events you want to receive, like SBEventPerformAction, SBeventRegionEnter etc
-// See a full list of supported events @ http://cocoadocs.org/docsets/SensorbergSDK/2.0/
+#import <SensorbergSDK/SensorbergSDK.h>  
+```
+
+Setup the SBManager with an **API key** and a **delegate**   
+*You can find your API key on the [Beacon Managerment Platform](https://manage.sensorberg.com) in the "Apps" section.  
+The Sensorberg SDK uses an [event bus](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) for events dispatching.
+During setup, you pass the class instance that will receive the events as the `delegate`.*
+
+```  
+[[SBManager sharedManager] setApiKey:<api> delegate:self];  
+```  
+
+Start the scanner by requesting access to location services
+
+```  
+[SBManager sharedManager] requestLocationAuthorization];
+```
+**Important**: Be sure to add the `NSLocationAlwaysUsageDescription` key to your plist file and the corresponding string to explain to the user why the app requires access to location.  
+
+Then simply **SUBSCRIBE** to the events you want to receive, like *SBEventPerformAction*, *SBeventRegionEnter* etc  
+
+```
 SUBSCRIBE(SBEventPerformAction) {
-// have you can access the event object which will contain the action to be performed
+	// here you can access the event object which will contain the action to be performed
 }
 ```
+Check out the [documentation](http://cocoadocs.org/docsets/SensorbergSDK/) for a list of all supported protocols.  
+To receive events in other class instances besides the **delegate** call the `REGISTER()` macro and `SUBSCRIBE` to events.
 
-You can find your API key on the [Beacon Managerment Platform](https://manage.sensorberg.com) in the "Apps" section.
-
-The Sensorberg SDK uses an [event bus](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) for events dispatching.
-During setup, you pass the class instance that will receive the events as the `delegate`.  
-If you want to receive events in other class instances, simply call `REGISTER()` and subscribe to the relative events.  
-`SUBSCRIBE(<event name>)` to receive that event  
 
 ## Documentation
 Documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/SensorbergSDK).
