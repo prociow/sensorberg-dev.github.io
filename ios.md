@@ -9,10 +9,10 @@ additionalNavigation : [
 ]
 ---
 
-#How to install the Sensorberg iOS SDK
+#Sensorberg SDK Instalion
 ## Demo app
 
-Runing `pod try SensorbergSDK` in a terminal window will open the SBDemoApp demo project.  
+Runing `pod try SensorbergSDK` in a terminal window will open the Sensorberg demo project.  
 Select the `SBDemoApp` target and run on device.
 
 ## Quickstart
@@ -63,8 +63,6 @@ If you want to receive events in other class instances, simply call `REGISTER()`
 
 `[[SBManager sharedManager] setApiKey:<api> delegate:self];`
 
-
-
 ### 5. Using the Sensorberg SDK
 
 - `SUBSCRIBE(<event name>)` to receive that event (e.g. `SBEventPerformAction`, `SBEventRegionEnter`, `SBEventRegionExit` etc.)
@@ -75,7 +73,7 @@ Documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/Sensorber
 
 ## Dependencies
 
-The Sensorberg SDK requires iOS 8.0. Sensorberg SDK uses:
+The **Sensorberg SDK 2.0 requires iOS 8.0** and uses:
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) for network communication   
 - [JSONModel](https://github.com/icanzilb/JSONModel) for JSON parsing  
