@@ -10,27 +10,77 @@ additionalNavigation : [
 ---
 
 #How to install the Sensorberg iOS SDK
-## Usage
+## Demo app
 
-To run the example project, clone the repo, and open the Xcode project in the SBDemoApp directory.
+Runing `pod try SensorbergSDK` in a terminal window will open the SBDemoApp demo project.  
+Select the `SBDemoApp` target and run on device.
 
-## Requirements
+## Quickstart
 
-The Sensorberg SDK requires iOS 8.0.
+### 1. Create an account
 
-## Installation
+To get started with the Sensorberg SDK, [sign up for a free account](https://manage.sensorberg.com/#/signup)  
+*Read more about our [Beacon Management Platform](https://sensorberg.zendesk.com)*
 
-Sensorberg SDK uses [CocoaPods](http://cocoapods.org).
+### 2. CocoaPods setup
 
-To install it, simply add the following line to your Podfile:
+The easiest way to integrate the iOS SDK is via [CocoaPods](https://cocoapods.org/).  
+*If you're new to CocoaPods, visit their [getting started documentation](https://guides.cocoapods.org/using/getting-started.html).*
 
-    pod "SensorbergSDK", "~> {{ site.latestiOSRelease }}"
-                                                                           
+````
+cd your-project-directory    
+pod init
+````
 
-and follow the implementation in the [Demo app](https://github.com/sensorberg-dev/ios-sdk/tree/master/SBDemoApp).
+Once you've initialized CocoaPods, just add the [Sensorberg Pod](https://cocoapods.org/pods/SensorbergSDK) to your Podfile:
 
-Check the [BeaconsViewController](https://github.com/sensorberg-dev/ios-sdk/blob/master/SBDemoApp/BeaconsViewController.m#L27) ```viewDidLoad``` method for the minimal integration.
-Also check the [cocoadocs documentation](http://cocoadocs.org/docsets/SensorbergSDK/{{site.latestiOSRelease}}/) and the included [documentaion](https://github.com/sensorberg-dev/ios-sdk/tree/master/docs)
+````
+pod "SensorbergSDK", "~> {{ site.latestiOSRelease }}"
+````
+
+### 3. Getting started in Xcode
+
+**Objective-C**
+
+Include the Sensorberg SDK header in your app to get the necessary classes:
+
+`#import <SensorbergSDK/SensorbergSDK.h>`
+
+**Swift**
+
+You can use the Sensorberg SDK in your Swift class by simply importing the module:
+
+`import SensorbergSDK`
+
+### 4. Setting up the Sensorberg SDK
+
+Before using the SDK you need to do some basic configuration.  
+You can find your API key on the [Beacon Managerment Platform](https://manage.sensorberg.com) in the "Apps" section.
+
+The Sensorberg SDK uses an [event bus](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) for events dispatching.
+During setup, you pass the class instance that will receive the events as the `delegate`.
+If you want to receive events in other class instances, simply call `REGISTER()` and subscribe to the relative events.
+
+`[[SBManager sharedManager] setApiKey:<api> delegate:self];`
+
+
+
+### 5. Using the Sensorberg SDK
+
+- `SUBSCRIBE(<event name>)` to receive that event (e.g. `SBEventPerformAction`, `SBEventRegionEnter`, `SBEventRegionExit` etc.)
+
+## Documentation
+Documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/SensorbergSDK).
+
+
+## Dependencies
+
+The Sensorberg SDK requires iOS 8.0. Sensorberg SDK uses:
+
+- [AFNetworking](https://github.com/AFNetworking/AFNetworking) for network communication   
+- [JSONModel](https://github.com/icanzilb/JSONModel) for JSON parsing  
+- [UICKeyChainStore](https://github.com/kishikawakatsumi/UICKeyChainStore) for keychain access  
+- [tolo](https://github.com/genzeb/tolo) for event communication  
 
 ## Support
 
