@@ -24,7 +24,7 @@ comments: true
 permalink: /:year/:month/:title
 paginate: 3
 
-latestiOSRelease : "2.0"
+latestiOSRelease : "2.1"
 latestAndroidSDKRelease : "1.0.5RC4"
 latestAndroidBootstrapperRelease : "2.0.0"
 

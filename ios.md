@@ -69,12 +69,15 @@ During setup, you pass the class instance that will receive the events as the `d
 [[SBManager sharedManager] setApiKey:<api> delegate:self];  
 ```  
 
-Start the scanner by requesting access to location services
+Before starting the scanner, we need to ask permission to use the Location services.
+If you want to receive events while the app is innactive, you need to pass `YES` to the `requestLocationAuthorization`. If you pass `NO`, the app will receive events only when active.
 
 ```  
-[SBManager sharedManager] requestLocationAuthorization];
+[SBManager sharedManager] requestLocationAuthorization:YES];
 ```
-**Important**: Be sure to add the `NSLocationAlwaysUsageDescription` key to your plist file and the corresponding string to explain to the user why the app requires access to location.  
+**Important**: Be sure to add the `NSLocationAlwaysUsageDescription` (or `NSLocationWhenInUseUsageDescription`) key to your plist file and the corresponding string to explain to the user why the app requires access to location.  
+
+To start the scanner, simply call `[[SBManager sharedManager] startMonitoring]`.  
 
 Then simply **SUBSCRIBE** to the events you want to receive, like *SBEventPerformAction*, *SBeventRegionEnter* etc  
 
