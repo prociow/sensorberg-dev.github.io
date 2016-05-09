@@ -39,8 +39,8 @@ Along the same lines please pay attention to your delimiters.  Meaning that if t
 # CSV template example
 {% highlight csv %}
 name,description,proximityId,major,minor,latitude,longitude
-Entrance Beacon,South Entrance closest to parking,73676723-7400-0000-ffff-0000ffff0001,62169,12870,52.51946,13.39851
-Registration Beacon,Check-in desk where bracelets are handed out,73676723-7400-0000-ffff-0000ffff0001,62169,12873,52.51948,13.39855
+Entrance Beacon,South Entrance near parking,73676723-7400-0000-ffff-0000ffff0001,62169,12870,52.51946,13.39851
+Registration Beacon,Check-in desk,73676723-7400-0000-ffff-0000ffff0001,62169,12873,52.51948,13.39855
 {% endhighlight  %}
 
 So the next time you have a box full of new beacons to register, give the [Beacon Upload Tool](https://manage.sensorberg.com/#/beacon/upload) a try and let us know about your experience.
