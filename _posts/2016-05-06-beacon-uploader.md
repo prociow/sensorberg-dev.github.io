@@ -30,7 +30,7 @@ The Beacon Upload Tool takes a CSV file, goes through each line, and if all of t
 The Beacon Upload Tool is smart enough to generate valid entries for a beacon's `proximityId`, `major` and `minor`. The only field we actually require you to fill in is `name`, the rest is optional.
 
 # Acceptable Formats
-We recommend using CSV template below as a base for creating your csv data file. Note that the order of the columns in your file matters. The columns must be defined in the first line of your CSV, and they must match the example below.
+We recommend using the CSV template below as a base for creating your CSV data file. Note that the order of the columns in your file matters. The columns must be defined in the first line of your CSV, and they must match the example below.
 
 Please use decimal values for `latitude` and `longitude`: e.g. `52.51948`. Do not use military format coordinates, because our system does not understand them. If you need to convert your military formatted coordinates to decimal format, you may be able to do so using this [GPS Conversion Tool](http://www.findlatitudeandlongitude.com/gps-coordinates-converter/#.VwZwQRN97y8).
 
