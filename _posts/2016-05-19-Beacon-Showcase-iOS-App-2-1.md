@@ -29,7 +29,7 @@ tags: beacon showcase
 
 ####1. Login to manage portal : [Go to Portal](https://manage.sensorberg.com/#/applications)  
 
-####2. Click QR Code icon on the right of your API Key  
+####2. Click QR Code icon on the right of Your App Name  
 <img src="/images/show-APIKey-QRCode.png" alt="Click QR Code Icon" style="width:100%">    
 
 ####3. Open the App  
