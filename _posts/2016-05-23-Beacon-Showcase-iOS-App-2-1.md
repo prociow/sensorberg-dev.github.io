@@ -1,18 +1,18 @@
 ---
 layout: post
 title: "Beacon Showcase iOS App Ver.2.1"
-date: 2016-05-19
+date: 2016-05-13
 comments: true
 tags: beacon showcase
 ---
 
 **We did release new Showcase App on the AppStore. With this version you can change easily the APIKey for your Beacon Application.**
 
-<a href="https://itunes.apple.com/us/app/beacon-showcase/id1115128115?ls=1&mt=8">
- <img src="/images/showcase-app-icon.png" alt="New Theme for Sensorberg Showcase">
+<a href="https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8">
+ <img src="/images/showcase-app-icon.png" alt="Sensorberg Showcase">
 </a>
 
-####[Download on the AppStore](https://itunes.apple.com/us/app/sensorberg-showcase/id1115128115?ls=1&mt=8)
+####[Download on the AppStore](https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8)
 
 ###What's new!
 - Using Sensorberg SDK 2.1
