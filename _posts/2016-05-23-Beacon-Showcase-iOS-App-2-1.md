@@ -10,6 +10,7 @@ tags: beacon showcase
 
 <a href="https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8">
  <img src="/images/showcase-app-icon.png" alt="Sensorberg Showcase">
+ <iframe width="420" height="315" src="https://www.youtube.com/embed/gBkjVnd5lEU" frameborder="0" allowfullscreen></iframe>
 </a>
 
 ####[Download on the AppStore](https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8)
