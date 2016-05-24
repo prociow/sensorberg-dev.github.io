@@ -26,7 +26,7 @@ You can download the latest nuget package from https://github.com/sensorberg-dev
 
 Add the SDK to your application project:
 
-![Add nuget package](images/site/add_nuget_package.png)
+![Add nuget package](/images/site/add_nuget_package.png)
 
 #### 1.2 VSIX ####
 
@@ -35,12 +35,12 @@ You can download the latest VSIX package from https://github.com/sensorberg-dev/
 Add the SDK to your application project as references. Right click
 **References** under your application project and select **Add Reference...**
 
-![Add vsix package](images/site/add_vsix_package.png)
+![Add vsix package](/images/site/add_vsix_package.png)
 
 Locate the SDK project and make sure that the check boxes in front of them
 are checked and click **OK**.
  
-![Add vsix reference](images/site/add_vsix_reference.png)
+![Add vsix reference](/images/site/add_vsix_reference.png)
 
 
 ### 3. Create BackgroundTasks (optional) ###
@@ -52,7 +52,7 @@ If your app need to be running in as a BackgroundTask, you have to create a spec
 Create a new project **Windows Runtime Component (Universal Windows)**.
 For the full support of the SDK are two BackgroundTasks needed.
 
-![Add BackgroundTask project](images/site/add_background_task_project.png)
+![Add BackgroundTask project](/images/site/add_background_task_project.png)
 
 ##### 3.2 TimedBackgroundTask #####
 
@@ -105,10 +105,10 @@ The BeaconActionResolved is fired for every Event and will notify your app about
 
 Edit the `Package.appxmanifest` file, create two new `Background Task` declarations.
 * Triggered by Timer and enter as entry point your  TimedBackgroundTask `<Namespace>.<TimerClassName>`
-![Add timer BackgroundTask declaration configuration](images/site/add_background_task_declaration_timed.png)
+![Add timer BackgroundTask declaration configuration](/images/site/add_background_task_declaration_timed.png)
 
 * Triggered by Bluetooth and enter as entry point your AdvertisementWatcherBackgroundTask '<Namespace>.<AdvertisementClassName>`
-![Add advertisement BackgroundTask declaration configuration](images/site/add_background_task_declaration_advertisement.png)
+![Add advertisement BackgroundTask declaration configuration](/images/site/add_background_task_declaration_advertisement.png)
 
 ### 4. Declare capabilities in manifest file ###
 
@@ -126,7 +126,7 @@ declared in your `Package.appxmanifest` file:
   </Capabilities>
 </Package>
 ```
-![capabilities](images/site/capabilities.png)
+![capabilities](/images/site/capabilities.png)
 
 
 ### 5. Take SDKManager into use ###
