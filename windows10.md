@@ -5,6 +5,7 @@ permalink: /windows10/
 additionalNavigation : [
 { "title" : "Win10 SDK",                "link" : "https://github.com/sensorberg-dev/windows10-sdk" },
 { "title" : "Win10 Bugtracker",         "link" : "https://github.com/sensorberg-dev/windows10-sdk/issues" },
+{ "title" : "Beaconplayback App",       "link" : "https://github.com/sensorberg-dev/windows10-beaconplayback" },
 { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/windows10.md" }
 ]
 ---
