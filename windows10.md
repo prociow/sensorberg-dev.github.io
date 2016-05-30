@@ -4,7 +4,7 @@ title: Windows10 SDK Integration
 permalink: /windows10/
 additionalNavigation : [
 { "title" : "Win10 SDK",                "link" : "https://github.com/sensorberg-dev/windows10-sdk" },
-{ "title" : "Win10 Documentation",      "link" : "/windows10-sdk/documentation/index.html" },
+{ "title" : "Win10 Documentation",      "link" : "windows10-sdk/documentation/index.html" },
 { "title" : "Win10 Bugtracker",         "link" : "https://github.com/sensorberg-dev/windows10-sdk/issues" },
 { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/windows10.md" }
 ]
@@ -91,7 +91,7 @@ Edit the `Package.appxmanifest` file, create two new `Background Task` declarati
 * Triggered by Timer and enter as entry point your  TimedBackgroundTask `<Namespace>.<TimerClassName>`
 ![Add timer BackgroundTask declaration configuration](/images/site/add_background_task_declaration_timed.png)
 
-* Triggered by Bluetooth and enter as entry point your AdvertisementWatcherBackgroundTask '<Namespace>.<AdvertisementClassName>`
+* Triggered by Bluetooth and enter as entry point your AdvertisementWatcherBackgroundTask `<Namespace>.<AdvertisementClassName>`
 ![Add advertisement BackgroundTask declaration configuration](/images/site/add_background_task_declaration_advertisement.png)
 
 ### 3. Declare capabilities in manifest file ###
@@ -183,3 +183,7 @@ message dialog with the action content.
 It is also highly recommended to ask the user for the permission to enable the
 background task. You can register and unregister the background task using `SDKManager` methods
 `RegisterBackgroundTaskAsync` and `UnregisterBackgroundTask`.
+
+### 5. Showcase App ###
+You can download the app from https://www.microsoft.com/en-us/store/apps/sensorberg-showcase/9nblggh0drgl
+![QR Code Shocase App](https://chart.googleapis.com/chart?cht=qr&chl=https://www.microsoft.com/en-us/store/apps/sensorberg-showcase/9nblggh0drgl&chs=100x100&choe=UTF-8&chld=L|2)
