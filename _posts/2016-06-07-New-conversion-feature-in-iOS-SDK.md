@@ -6,15 +6,18 @@ comments: true
 tags: beacon iOS tracking conversion SDK
 ---
 
-#Track Your User Actions with New Conversion Feature.
+#Tracking User Actions with the Sensorberg Conversion Feature.
 
-The "Conversion" feature enables you to track user actions with beacons and campaigns. with this feature you can get the information how many users were around the beacon region, how many campaign were delivered to the app and how many campaigns were performed by users.
+The "Conversion" feature enables you to track user actions with beacons and campaigns. With this feature you can track the following information 
+- how many users were around the beacon region
+- how many campaigns were delivered to the app 
+- how many campaign actions were performed by users
 
 <!--more-->
 
 **New "action" property in  SBMCampaignAction**
 
-This "action" property is unique id to report conversion information.
+This "action" property is a unique id to report conversion information.
 
 {% highlight objective-c %}
 
@@ -26,8 +29,8 @@ This "action" property is unique id to report conversion information.
 
 {% endhighlight %}
 
-When you receive "SBEventPerformAction" event from SDK, 'SBMCampaignAction' object is set in the event (if it doesn't have error :D).
-Now you can use new 'action' parameter to report conversion through 'SBManager'
+When you receive an "SBEventPerformAction" event from the SDK, it will contain an 'SBMCampaignAction' object (assuming it doesn't have an error :D).
+Now you can use new 'action' parameter to report this conversion through 'SBManager'
 
 **Currently we have following 4 conversion types.**
 
@@ -61,7 +64,7 @@ typedef enum : NSUInteger {
 
 ```
 
-**Example for kSBConversionUnavailable : when you cannot notify action to current user**
+**Example for kSBConversionUnavailable : when the user cannot be notified.**
 
 {% highlight objective-c %}
 
@@ -79,7 +82,7 @@ SUBSCRIBE(SBEventPerformAction)
 
 {% endhighlight }
 
-**Example for kSBConversionSuccessful :  When user did react with notification**
+**Example for kSBConversionSuccessful :  When user has interacted with the notification**
 
 {% highlight objective-c %}
 
@@ -97,12 +100,12 @@ SUBSCRIBE(SBEventPerformAction)
 
 {% endhighlight }
 
-In this case you can also show alert and let your customer decide to do action or not.
+In this case you can also show an alert and let your customer decide whether to perform an action or not.
 
 **Default Conversion value for campaign action is "kSBConversionIgnored". **
 **We overwrite conversion value when you report conversion through 'SBManager' **
 
-Enjoy the Beacon !!
+Enjoy the Conversions !!
 
 Sensorberg Tech
 
