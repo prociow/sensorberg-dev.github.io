@@ -7,36 +7,36 @@ tags: beacon showcase iOS
 ---
 #Customise Your notification with Payload
 
-Since 2015 April, we have payload feature[[see this](http://sensorberg-dev.github.io/2015/04/Unlimited-Use-Cases-With-Action-Payload)] in [management platform](https://manage.sensorberg.com/#/applications).  
-In this post we will highlight the usage of payload for [actionable notification on iOS](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIMutableUserNotificationAction_class/) and show different kind of usages of payload.
+Since 2015 April, we have had a payload feature[[see here](http://sensorberg-dev.github.io/2015/04/Unlimited-Use-Cases-With-Action-Payload)] in the [Sensorberg Management Platform](https://manage.sensorberg.com/#/applications).  
+In this post we will highlight the usage of the payload object for [actionable notifications on iOS devices](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIMutableUserNotificationAction_class/) and show different usages of the payload object.
 
-##Use case description:
-We'd like to show an actionable notification with custom contents from the payload which user edited on [management platform](https://manage.sensorberg.com/#/applications).  With this article you can see how to set actionable notification with custom payload and handle it.  
+##Use Case:
+We would like to show an actionable notification with custom content to our users based on the payload which we have entered user into the [management platform](https://manage.sensorberg.com/#/applications).  Using this article you can see how to set an actionable notification with a custom payload and how to handle it.  
 
 <!--more-->
 **Add content in payload of your campaign**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/36ZR_Metkrw" frameborder="0" allowfullscreen></iframe>
 1. Select a campaign first.
-2. Select Advanced option.
-3. Write custom payload contents
+2. Select the Advanced option.
+3. Enter your custom payload contents
 4. Save the Campaign.
 
-"onEnter" key to use the contents for actionable notification.
+"onEnter" is the object which contains the content for one actionable notification.
 
-- "onEnter" object will contain contents for the action which has triggerType "On Enter"
-- "onExit" object will contain contents for the action which has triggerType "On Exit"
+- "onEnter" object will contain contents for any actions which have triggerType "On Enter"
+- "onExit" object will contain contents for any actions which have triggerType "On Exit"
 
 "confirmationAction" can have one of following 2 options : *open*, *share*  
 
 - open	: open the URL which is given in campaign.
-- share : share the URL, which is given in campaign, on Facebook or other.
+- share : share the URL, which is given in campaign, on Facebook or elsewhere.
 
-"actInForeground" is boolean value
+"actInForeground" is a boolean value
 
-- if it's true, app will be in foreground and do something when user did select 'ok' button or tab directly on the notification. otherwise app will process "confirmationAction" in background.
+- if it's true, the app will come to the foreground and do its required actions when the user taps the 'ok' button or taps directly on the notification. Otherwise the app will do the specified "confirmationAction" in the background.
 
-Following 3 ("de", "en", "ko") objects are localised strings for notification. Of course you can add more languages with [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language codes.
+The following 3 language objects ("de", "en", "ko") are localised strings for notification. Of course you can add more languages with [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language codes.
 
 - "okButtonTitle" : ok button title on notification.
 - "cancelButtonTitle" : cancel button title on notification.
@@ -78,11 +78,11 @@ To get SBMCampaignAction, you need to subscribe "SBEventPerformAction" with Tolo
 
 - <code> SUBSCRIBE(SBEventPerformAction){ SBMCampaignAction *action = event.campaign; } </code>
 
-And check payload in SBMCampaigAnction
+And check for a payload in the SBMCampaignAction object
 
 - <code> if (action.payload) { ... } </code>
 
-Get "onEnter" content from payload
+Get the "onEnter" content from the payload
 
 - % highlight objective-c % NSDictionary *actionDict =  [action.payload @"onEnter"] % endhighlight %
 
@@ -121,7 +121,7 @@ Register UserNotificationSettings.
 % endhighlight %
 
 
-Create Local notification with notification category and schedule notification.
+Create a local notification with a "notification category" and then schedule the  notification.
 
 
 % highlight objective-c %
@@ -146,7 +146,7 @@ else
 
 #The Result
 
-Let's see how it is working on iPhone :D
+Let's see how it works on iPhone :D
 
 <iframe width="375" height="667" src="https://www.youtube.com/embed/2xqAm41u08E" frameborder="0" allowfullscreen></iframe><iframe width="375" height="667" src="https://www.youtube.com/embed/9lDainFUTZs" frameborder="0" allowfullscreen></iframe>
 
