@@ -1,29 +1,29 @@
 ---
 layout: post
-title: "Set Custom Resolver URL, API Key and Proximity UUIDs for Beacon Simulation"
+title: "Setting Custom API Keys, Resolver URLs, and Proximity UUIDs for Campaign Simulation"
 date: 2016-06-10
 comments: true
 tags: beacon showcase iOS
 ---
-#Set API Key and Resolver URL manually, and Simulate Beacon with Custom Proximity UUIDs on iOS Showcase App
+#Setting Custom API Keys, Resolver URLs, and Proximity UUIDs for Campaign Simulation on the iOS Showcase App
 
-iOS Showcase app is able to do following 3 actions.
+The iOS Showcase app has the following 3 features.
   
-1. Simulate a beacon with custom proximity UUIDs
-2. Change the Resolver URL on the App
-3. Set the API Key Manually on the App instead of scanning QR-Code
+1. Simulating a beacon with a custom proximity UUID
+2. Changing the Resolver URL for the App
+3. Setting the Application API Key manually on the App instead of scanning QR-Code
   
 <!--more-->
   
-### Simulate beacon with custom proximity UUIDs
+### Simulating beacons with custom proximity UUIDs
   
-In Showcase app, we have the 'Beacon Simulation' functionality. And it was available to simulate beacon just with predefined proximity UUID in the app.  But now we can add custom proximity UUID and simulate beacon with it.
+In the Showcase app we have the 'Beacon Simulation' functionality. Previously it was only possible to simulate beacons with the predefined proximity UUIDs in the app.  With our latest release it is now posible to add a custom proximity UUID and simulate any beacon associated with it.
   
 **Add custom proximity UUIDs in 'Advanced option' of your application**
   
 1. Select your application.
 2. Select the Advanced option.
-3. Enter your custom UUIDs with name.
+3. Enter a custom proximity UUID and associate a name to it.
 4. Save the iOS Settings.
 5. Save Application.
   
@@ -40,7 +40,7 @@ Ex : custom UUIDs
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZIMk9KxAW4k" frameborder="0" allowfullscreen></iframe>
 
   
-*And now you can see your custom proximity UUID in the app.*
+*To use the new proximity UUID, scan the API Key for this app on your phone. Click on the ID field in the beacon simulator view, the new proximity UUID's name should appear in the list of available IDs.*
 
 <iframe width="375" height="667" src="https://www.youtube.com/embed/nqwsBmGphQw" frameborder="0" allowfullscreen></iframe>
   
@@ -48,9 +48,9 @@ Ex : custom UUIDs
   
 1. Open the App.
 2. Switch to Status Screen.
-3. Tab on 'Reachable' Item in 'Sensorberg Platform' section.
-4. Enter your own Resolver URL on the Textfield of Alert.
-5. Select 'Ok' button on Alert.
+3. Tap on 'Reachable' Item in 'Sensorberg Platform' section.
+4. Enter your own Resolver URL in the textfield of the dialog.
+5. Select 'Ok' button.
   
 <iframe width="375" height="667" src="https://www.youtube.com/embed/AAtOiItxLeg" frameborder="0" allowfullscreen></iframe>
     
@@ -58,9 +58,9 @@ Ex : custom UUIDs
   
 1. Open the App.
 2. Switch to Status Screen.
-3. Tab on 'Valid API Key' Item in 'Sensorberg Platform' section.
-4. Or tab on 'Scan QR Code For API Key' item in 'Application' section. when the scanner comes up, tab 'Enter manually' button.
-5. Enter or Paste 'API Key' on the Textfield of Alert.
-6. Select 'Ok' button on Alert.
+3. Tap on 'Valid API Key' Item in 'Sensorberg Platform' section.
+4. Or tap on 'Scan QR Code For API Key' item in 'Application' section. When the scanner comes up, tap 'Enter manually' button.
+5. Enter or paste your 'API Key' in the textfield of dialog box.
+6. Select 'Ok' button.
   
 <iframe width="375" height="667" src="https://www.youtube.com/embed/Ej6XP8K_WsI" frameborder="0" allowfullscreen></iframe><iframe width="375" height="667" src="https://www.youtube.com/embed/ZyvCgHSvpO0" frameborder="0" allowfullscreen></iframe>
