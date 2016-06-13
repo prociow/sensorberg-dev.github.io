@@ -9,7 +9,7 @@ tags: beacon showcase iOS
 
 The iOS Showcase app has the following 3 features.
   
-1. Simulating a beacon with a custom proximity UUID's
+1. Simulating a beacon with a custom proximity UUID
 2. Changing the Resolver URL for the App
 3. Setting the Application API Key manually on the App instead of scanning QR-Code
   
