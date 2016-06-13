@@ -8,10 +8,11 @@ tags: beacon iOS tracking conversion SDK
 
 #Tracking User Actions with the Sensorberg Conversion Feature.
 
-The "Conversion" feature enables you to track user actions with beacons and campaigns. With this feature you can track the following information 
-- how many users were around the beacon region
-- how many campaigns were delivered to the app 
-- how many campaign actions were performed by users
+The "Conversion" feature enables you to measure user interactions with beacons and campaigns.  
+With this feature you can track the following informations:  
+- how many users were around the beacon region  
+- how many campaigns were delivered to the app  
+- how many campaign actions were performed by users  
 
 <!--more-->
 
@@ -33,9 +34,7 @@ When you receive an "SBEventPerformAction" event from the SDK, it will contain a
 Now you can use new 'action' parameter to report this conversion through 'SBManager'
 
 **Currently we have following 4 conversion types.**
-
-```
-
+{% highlight objective-c %}
 /**
  SBConversionType
  Represents the conversion type for a specific campaign action
@@ -60,27 +59,9 @@ typedef enum : NSUInteger {
      *  The campaign action has been performed successfully
      */
     kSBConversionSuccessful = 1
-} SBConversionType;
+} SBConversionType;  
 
-```
-
-**Example for kSBConversionUnavailable : when the user cannot be notified.**
-
-{% highlight objective-c %}
-
-SUBSCRIBE(SBEventPerformAction)
-{
-	if (![[SBManager sharedManager] canReceiveNotifications])
-    {
-        [[SBManager sharedManager] reportConversion:kSBConversionUnavailable forCampaignAction:[action.action copy]];
-    }
-    else
-    {
-	    // schedule notification
-   }
-}
-
-{% endhighlight }
+{% endhighlight %}
 
 **Example for kSBConversionSuccessful :  When user has interacted with the notification**
 
@@ -98,12 +79,33 @@ SUBSCRIBE(SBEventPerformAction)
    }
 }
 
-{% endhighlight }
+{% endhighlight %}
 
-In this case you can also show an alert and let your customer decide whether to perform an action or not.
+**Example for kSBConversionUnavailable : when the user cannot be notified.**
 
-**Default Conversion value for campaign action is "kSBConversionIgnored". **
-**We overwrite conversion value when you report conversion through 'SBManager' **
+{% highlight objective-c %}
+
+SUBSCRIBE(SBEventPerformAction)
+{
+	if (![[SBManager sharedManager] canReceiveNotifications])
+    {
+        [[SBManager sharedManager] reportConversion:kSBConversionUnavailable forCampaignAction:[action.action copy]];
+    }
+    else
+    {
+	    // schedule notification
+   }
+}
+
+{% endhighlight %}
+
+In this case you can also show an alert and let your customer decide whether to perform an action or not.  
+
+Default Conversion value for campaign action is "**ignored**" (kSBConversionIgnored) - we overwrite conversion value when you report conversion through   
+
+{% highlight objective-c %} 
+[[SBManager sharedManager] reportConversion:SBConversionType forCampaignAction:action];  
+{% endhighlight %}
 
 Enjoy the Conversions !!
 
