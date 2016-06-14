@@ -30,8 +30,11 @@ latestAndroidBootstrapperRelease : "2.0.0"
 
 excerpt_separator: <!--more-->
 highlighter: rouge
-markdown: kramdown
+# markdown: kramdown
+# kramdown:
+#   input: GFM
 gems: [jekyll-paginate, html-proofer]
+markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
