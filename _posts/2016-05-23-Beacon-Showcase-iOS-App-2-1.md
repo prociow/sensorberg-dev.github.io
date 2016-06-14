@@ -6,7 +6,7 @@ comments: true
 tags: beacon showcase
 ---
 
-###**Hello AppStore**
+### **Hello AppStore**
 
 Today we released a new [Showcase app on the AppStore](https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8)
 
@@ -17,7 +17,7 @@ Here's a short video of how it works:
 <iframe width="420" height="315" src="https://www.youtube.com/embed/gBkjVnd5lEU" frameborder="0" allowfullscreen></iframe>
 
 
-###What's new!
+### What's new!
 
 - Easily change the API key, just by scanning a QR code
 - New (and beautiful) Sensorberg theme colors 
@@ -34,11 +34,11 @@ Here's a short video of how it works:
   
 ### How (easy it is) to change API Key?  
 
-#####1. Login on the [Sensorberg Management Portal](https://manage.sensorberg.com/#/applications)    
+##### 1. Login on the [Sensorberg Management Portal](https://manage.sensorberg.com/#/applications)    
 
-#####2. Open the [QR Code for your app](/images/show-APIKey-QRCode.png)  
+##### 2. Open the [QR Code for your app](/images/show-APIKey-QRCode.png)  
 
-#####3. In the Showcase app, on the [status page](/images/showcase-select-status-item.png), select the [Scan QR Code](/images/showcase-screen-select-scanner.png) option  
+##### 3. In the Showcase app, on the [status page](/images/showcase-select-status-item.png), select the [Scan QR Code](/images/showcase-screen-select-scanner.png) option  
 
 [Download the Showcase App](https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8)
 
