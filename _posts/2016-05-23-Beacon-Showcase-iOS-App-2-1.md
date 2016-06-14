@@ -6,45 +6,40 @@ comments: true
 tags: beacon showcase
 ---
 
-**We did release new Showcase App on the AppStore. With this version you can change easily the APIKey for your Beacon Application.**
+###**Hello AppStore**
 
-<a href="https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8">
- <img src="/images/showcase-app-icon.png" alt="Sensorberg Showcase">
- <iframe width="420" height="315" src="https://www.youtube.com/embed/gBkjVnd5lEU" frameborder="0" allowfullscreen></iframe>
-</a>
+Today we released a new [Showcase app on the AppStore](https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8)
 
-####[Download on the AppStore](https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8)
+This is a complete re-write of the app, and, going forward, we will continue to update it with the latest features from our [Sensorberg iOS SDK](https://github.com/sensorberg-dev/ios-sdk).
+
+Here's a short video of how it works:
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/gBkjVnd5lEU" frameborder="0" allowfullscreen></iframe>
+
 
 ###What's new!
-- Using Sensorberg SDK 2.1
-- [New beautiful Sensorberg Theme!]
-- Load different campaign dynamically with scanning new APIKey!
+
+- Easily change the API key, just by scanning a QR code
+- New (and beautiful) Sensorberg theme colors 
+- Campaign notifications or in-app alerts for your beacon related actions
 
 ### New Sensorberg Theme
 
 #### - Notifications / Search Beacons / App Status
 
-<img src="/images/showcase-screen-notification.png" alt="Fired Notifications Screen" style="width:30%"> <img src="/images/showcase-screen-detected-beacons.png" alt="Looking for Beacon" style="width:30%"> <img src="/images/showcase-screen-status.png" alt="Checking Current App Status" style="width:30%">
+<a href="/images/showcase-screen-notification.png"> <img src="/images/showcase-screen-notification.png" alt="Fired Notifications Screen" style="width:30%"> <a/>
+<a href="/images/showcase-screen-detected-beacons.png"> <img src="/images/showcase-screen-detected-beacons.png" alt="Scanning for beacons" style="width:30%"> <a/>
+<a href="/images/showcase-screen-status.png"> <img src="/images/showcase-screen-status.png" alt="Status" style="width:30%"> <a/>
+
   
-### How to change API Key?  
+### How (easy it is) to change API Key?  
 
-####1. Login to manage portal : [Go to Portal](https://manage.sensorberg.com/#/applications)  
+#####1. Login on the [Sensorberg Management Portal](https://manage.sensorberg.com/#/applications)    
 
-####2. Click QR Code icon on the right of Your App Name  
-<img src="/images/show-APIKey-QRCode.png" alt="Click QR Code Icon" style="width:100%">    
+#####2. Open the [QR Code for your app](/images/show-APIKey-QRCode.png)  
 
-####3. Open the App  
+#####3. In the Showcase app, on the [status page](/images/showcase-select-status-item.png), select the [Scan QR Code](/images/showcase-screen-select-scanner.png) option  
 
-####4. Go to Status Tab  
-<img src="/images/showcase-select-status-item.png" alt="Select Status Tabbar Item" style="width:25%">  
+[Download the Showcase App](https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8)
 
-####5. Select "Scan QR Code For API Key"  
-<img src="/images/showcase-screen-select-scanner.png" alt="Select 'Scan QR Code' Item" style="width:25%">  
-
-####6. And Scan Code with Phone.  
-<img src="/images/showcase-scan-APIKey.png" alt="Scan QR Code" style="width:25%">  
-
-####7. Done!  
-- After Scanning, App will automatically update all campaigns for the app.  
-
-Sensorberg Tech
+Greetings from Berlin!
