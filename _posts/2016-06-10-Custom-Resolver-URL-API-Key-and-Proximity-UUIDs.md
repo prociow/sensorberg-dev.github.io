@@ -5,7 +5,7 @@ date: 2016-06-10
 comments: true
 tags: beacon showcase iOS
 ---
-#Setting Custom API Keys, Resolver URLs, and Proximity UUIDs for Campaign Simulation on the iOS Showcase App
+# Setting Custom API Keys, Resolver URLs, and Proximity UUIDs for Campaign Simulation on the iOS Showcase App
 
 The iOS Showcase app has the following 3 features.
   
