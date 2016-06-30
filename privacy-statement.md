@@ -5,7 +5,7 @@ permalink: /privacy-statement/
 ---
 
 
-#Privacy statement
+# Privacy statement
 
 Betreiber der Website unter der Domain [sensorberg.com](http://sensorberg.com) ist die Sensorberg GmbH, Köpenicker Str. 154, 10997, Berlin (nachfolgend „Wir“). Wir sind die verantwortliche Stelle im Sinne des Bundesdatenschutzgesetzes (nachfolgend „BDSG“) für die Erhebung, Verarbeitung und Nutzung von personenbezogenen Daten der Nutzer unserer Website (nachfolgend „Sie“).
 

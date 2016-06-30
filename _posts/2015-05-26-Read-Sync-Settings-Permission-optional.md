@@ -20,14 +20,14 @@ Read all about the tools:remove feature in the <a href="http://tools.android.com
 
 
 <div class="callout callout-alert">
-    <h1><i class='fa fa-exclamation-triangle'/></i>Don´t remove before 1.0.1</h1>
+    <h1><i class='fa fa-exclamation-triangle'></i>Don´t remove before 1.0.1</h1>
     <p>Don´t follow this tip unless you´re using 1.0.1. Previous versions of the SDK do not know about this optional permission and will crash.</p>
 </div>
 
 <!--more-->
 
 <div class="callout callout-info">
-    <h1><i class='fa fa-info-circle'/></i>Check your manifest with apktool</h1>
+    <h1><i class='fa fa-info-circle'></i>Check your manifest with apktool</h1>
     <p>To make sure this worked, test your final APK with <a href="http://ibotpeaches.github.io/Apktool/">apktool</a>:</p>
 {% highlight bash %}
 apktool d -s -f <your-apk-file>

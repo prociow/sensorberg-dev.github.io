@@ -5,11 +5,11 @@ date: 2015-04-22 17:20:00 +1
 comments: true
 tags: sdk
 ---
-#Payload feature is your developers best friend
+# Payload feature is your developers best friend
 
 The payload feature in the beacon management frontend enables you to implement virtually unlimited use-case posibilities with beacons. We will highlight one use case in this post:
 
-##Use case description:
+## Use case description:
 We would like to show a notification when the application is in the background with a message. Upon tapping the notification, the app should be opened and a new Activity (screen) should be shown with a QR code and some text. This can be used to deliver a coupon code when entering a shop.
 
 <!--more-->
@@ -29,13 +29,13 @@ I´ve setup my campaign as an in-app campaign with some custom payload. The payl
 {% endhighlight %}
 The **Subject** and **Body** will be used to construct the Notification. I use the URL *coupon://redeem* to identify this use-case.
 
-#The Result
+# The Result
 
 Here is how it looks when the app is in the foreground and background:
 
 <iframe width="400" height="600" src="https://www.youtube.com/embed/8T7g2m5nRFM?autoplay=1&loop=1&rel=0&playlist=8T7g2m5nRFM" frameborder="0" allowfullscreen></iframe><iframe width="400" height="600" src="https://www.youtube.com/embed/7ltTuaSC8uI?autoplay=1&loop=1&rel=0&playlist=7ltTuaSC8uI" frameborder="0" allowfullscreen></iframe>
 
-#The code
+# The code
 
 The most complicated part propably is the notification:
 {% highlight java %}

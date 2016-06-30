@@ -5,7 +5,7 @@ date: 2015-04-28 12:00:00 +1
 comments: true
 tags: sdk
 ---
-#Detect the process your **Application** objects are running in.
+# Detect the process your **Application** objects are running in.
 
 When integrating the Sensorberg SDK you probably did notice, that we run in a separate process. This also means that our SDK process has its *own* Application instance.
 
@@ -23,8 +23,8 @@ public class DemoApplication extends Application
     @Override
 	public void onCreate() {
 		super.onCreate();
-		      
-        String currentProcName = getProcessName(); 		      
+
+        String currentProcName = getProcessName();
         if (currentProcName != null && currentProcName.endsWith(":sensorberg")){
             Log.d(TAG, "we´re the Service process, so we´re ending here");
             return;
@@ -65,7 +65,7 @@ public class DemoApplication extends Application
 {% endhighlight %}
 
 There is another method, but it feels wrong to iterate over all running processes. Also [it´s been reported](http://stackoverflow.com/questions/19631894/is-there-a-way-to-get-current-process-name-in-android) that this list might not yet contain your own process.
-  
+
 {% highlight java %}
 private String getProcessName(){
     int pid = android.os.Process.myPid();
@@ -78,7 +78,7 @@ private String getProcessName(){
         }
     }
     return null
-{% endhighlight %}    
+{% endhighlight %}
 
 
 

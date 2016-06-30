@@ -5,11 +5,11 @@ permalink: /resolver/
 additionalNavigation : [
     { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/resolver" },
     { "title" : "Cloud documentation",      "link" : "http://sensorberg-cloud.readme.io/" },
-    { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/resolver.md" }              
+    { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/resolver.md" }
 ]
 ---
 
-#How to install the Resolver  <img src="https://travis-ci.org/sensorberg-dev/resolver.svg?branch=master" style="float:right" alt="Resolver Microservice Build Status">
+# How to install the Resolver  <img src="https://travis-ci.org/sensorberg-dev/resolver.svg?branch=master" style="float:right" alt="Resolver Microservice Build Status">
 
 The Resolver is a microservice that you can run in your own infrastructure or hosted by us, resposible for delivering all neccesary data to the SDKs in order for them to map a beacon the the attached content.
 
@@ -22,7 +22,7 @@ Simply run
 {% endhighlight %}
 to have your own instance.
 
-#Dependencies
+# Dependencies
 
 Only an instance of [elastic search](https://www.elastic.co) needs to be available on your machine, or available to your machine.
 
@@ -43,8 +43,8 @@ elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
 
 If you want to use the maintenance tasks, you should edit your elasticsearch.yml configuration and add the dynamic scripting:
 {% highlight yaml  %}
-#enabled scripting for the retry admin task (POST admin/failedRequests/)                                                    
-script.disable_dynamic: false 
+# enabled scripting for the retry admin task (POST admin/failedRequests/)
+script.disable_dynamic: false
 {% endhighlight %}
 
 You might need to change the connection string in the Resolver in */src/main/resources/application.properties*
@@ -57,7 +57,7 @@ apiKey.largeCompany=10000
 
 The name of the cluster, when installing from brew is elasticsearch_brew
 
-#Standalone
+# Standalone
 
 Once build, the jar artifact can be run standalone. *java -jar service-resolve.jar* and off you go!
 {% highlight bash %}
@@ -92,14 +92,14 @@ Total time: 7.354 secs
  [...]
 {% endhighlight %}
 
-#API endpoints:
+# API endpoints:
 
 For a full list, visit our [readme.io live API page](https://sensorberg.readme.io/)
 
 To get started quickly, here is a list of the most important endpoints:
 
-##GET /ping
-###return value:
+## GET /ping
+### return value:
 Get stats about the running service
 
 {% highlight json %}
@@ -115,52 +115,52 @@ Get stats about the running service
 }
 {% endhighlight %}
 
-##POST /synchronizations
+## POST /synchronizations
 Setup a synchronization configuration. The resolver will keep in sync with your changes.
-###*headers*
+### *headers*
 {% highlight json %}
 {
     "content-type" : "application/json"
 }
 {% endhighlight %}
-###*body*
+### *body*
 {% highlight json %}
 {
     "id": "choose an ID or send null and one will be generated",
     "url": "https://connect.sensorberg.com/api/synchronizations/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
-    "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"               
+    "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"
 }
 {% endhighlight %}
 With your apiKey from [manage.sensorberg.com/#/applications](https://manage.sensorberg.com/#/applications)
-###*return value*
+### *return value*
 {% highlight json %}
 {
     "id": "choose an ID or send null and one will be generated",
     "url": "https://connect.sensorberg.com/api/synchronizations/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
-    "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"               
+    "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"
 }
 {% endhighlight %}
-##GET /synchronizations
+## GET /synchronizations
 Get a list of all the synchronizations that are set up for this host:
-###return value:
+### return value:
 {% highlight json %}
 [
     {
         "id": "foo",
         "url": "https://connect.sensorberg.com/api/synchronizations/852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904",
-        "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"               
+        "backchannelUrl" : "https://connect.sensorberg.com/api/beacon/resolve/_bulk"
     }
 ]
 {% endhighlight %}
-##GET /layout
+## GET /layout
 Return the beacon layout for the api key
-###headers:
+### headers:
 {% highlight json %}
 {
     "X-Api-Key" : "852d6a72cb8980ddadf0355ece37fa1c90ac9359b6ffc6accb47847f43eaf904"
 }
 {% endhighlight %}
-###return value
+### return value
 {% highlight json %}
 {
      "accountProximityUUIDs": [

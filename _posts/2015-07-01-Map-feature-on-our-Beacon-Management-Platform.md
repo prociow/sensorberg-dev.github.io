@@ -3,11 +3,11 @@ layout: post
 title: "New feature on the platform: Maps"
 date: 2015-07-01 12:00:00 +1
 comments: true
-tags: feature beacon management platform 
+tags: feature beacon management platform
 ---
 
 
-#Get a quick overview of the location of your Beacons<br/>
+# Get a quick overview of the location of your Beacons<br/>
 
 You can now enter the location of any of your Beacons on our Beacon Management Platform. While adding or editing a Beacon, you can do that by:
 

@@ -6,13 +6,13 @@ comments: true
 tags: beacon iOS tracking conversion SDK
 ---
 
-#Tracking User Actions with the Sensorberg Conversion Feature.
+# Tracking User Actions with the Sensorberg Conversion Feature.
 
-The "Conversion" feature enables you to measure user interactions with beacons and campaigns.  
-With this feature you can track the following informations:  
-- how many users were around the beacon region  
-- how many campaigns were delivered to the app  
-- how many campaign actions were performed by users  
+The "Conversion" feature enables you to measure user interactions with beacons and campaigns.
+With this feature you can track the following informations:
+- how many users were around the beacon region
+- how many campaigns were delivered to the app
+- how many campaign actions were performed by users
 
 <!--more-->
 
@@ -25,7 +25,7 @@ This "action" property is a unique id to report conversion information.
 @interface SBMCampaignAction : NSObject
 ...
 // action : unique action fire event identifier
-@property (strong, nonatomic) NSString      *action; 
+@property (strong, nonatomic) NSString      *action;
 @end
 
 {% endhighlight %}
@@ -59,7 +59,7 @@ typedef enum : NSUInteger {
      *  The campaign action has been performed successfully
      */
     kSBConversionSuccessful = 1
-} SBConversionType;  
+} SBConversionType;
 
 {% endhighlight %}
 
@@ -99,12 +99,12 @@ SUBSCRIBE(SBEventPerformAction)
 
 {% endhighlight %}
 
-In this case you can also show an alert and let your customer decide whether to perform an action or not.  
+In this case you can also show an alert and let your customer decide whether to perform an action or not.
 
-Default Conversion value for campaign action is "**ignored**" (kSBConversionIgnored) - we overwrite conversion value when you report conversion through   
+Default Conversion value for campaign action is "**ignored**" (kSBConversionIgnored) - we overwrite conversion value when you report conversion through
 
-{% highlight objective-c %} 
-[[SBManager sharedManager] reportConversion:SBConversionType forCampaignAction:action];  
+{% highlight objective-c %}
+[[SBManager sharedManager] reportConversion:SBConversionType forCampaignAction:action];
 {% endhighlight %}
 
 Enjoy the Conversions !!

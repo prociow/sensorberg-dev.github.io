@@ -17,7 +17,7 @@ If you don´t want to ship the secret codes feature of the SDK, add this to your
 <!--more-->
 
 <div class="callout callout-info">
-    <h1><i class='fa fa-info-circle'/></i>Check your manifest with apktool</h1>
+    <h1><i class='fa fa-info-circle'></i>Check your manifest with apktool</h1>
     <p>To make sure this worked, test your final APK with <a href="http://ibotpeaches.github.io/Apktool/">apktool</a>:</p>
 {% highlight bash %}
 apktool d -s -f <your-apk-file>
