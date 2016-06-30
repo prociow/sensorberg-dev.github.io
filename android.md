@@ -148,7 +148,6 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
     <p>The Bootstrapper runs in your own process, so you are free to access any singletons or statics that you use in your Application. Push the BeaconEvent to your EventBus, Otto and react as you wish.</p>
 </div>
 
-<span id="tips"/>
 ### Development Tips
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'></i>Tip: HTTP Debugging</h1>
