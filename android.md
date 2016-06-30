@@ -149,7 +149,7 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
 </div>
 
 <span id="tips"/>
-###Development Tips
+### Development Tips
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'></i>Tip: HTTP Debugging</h1>
     <p>You can debug the HTTP communication by enabling the VolleyLog:</p>
