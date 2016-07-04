@@ -172,5 +172,3 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
 </div>
 <br/>
 <br/>
-<br/>
-<br/>
