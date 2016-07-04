@@ -170,5 +170,4 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
     <h1><i class='fa fa-info-circle'/> Tip: Use the secret codes broadcastreceiver to add more debugging to your app.</i></h1> 
     <p>Read all about it in this <a href="/2015/06/Tip-howto-remove-secred-codes-receiver/">blog post</a>.</p>    
 </div>
-<br/>
-<br/>
+</br>
