@@ -192,11 +192,3 @@ Return the beacon layout for the api key
      ]
 }
 {% endhighlight %}
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-

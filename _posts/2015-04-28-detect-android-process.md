@@ -79,6 +79,3 @@ private String getProcessName(){
     }
     return null
 {% endhighlight %}
-
-
-

@@ -34,7 +34,7 @@ We recommend using the CSV template below as a base for creating your CSV data f
 
 Please use decimal values for `latitude` and `longitude`: e.g. `52.51948`. Do not use military format coordinates, because our system does not understand them. If you need to convert your military formatted coordinates to decimal format, you may be able to do so using this [GPS Conversion Tool](http://www.findlatitudeandlongitude.com/gps-coordinates-converter/#.VwZwQRN97y8).
 
-Along the same lines please pay attention to your delimiters.  Meaning that if there are commas in your descriptions, or in your numbers please use semicolons as the delimiter for your file. 
+Along the same lines please pay attention to your delimiters.  Meaning that if there are commas in your descriptions, or in your numbers please use semicolons as the delimiter for your file.
 
 # CSV template example
 {% highlight csv %}

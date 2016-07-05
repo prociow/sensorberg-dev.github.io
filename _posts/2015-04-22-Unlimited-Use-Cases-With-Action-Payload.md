@@ -203,6 +203,3 @@ And the layout for this Activity:
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
 {% endhighlight %}
-
-
-

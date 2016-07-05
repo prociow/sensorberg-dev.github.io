@@ -52,14 +52,3 @@ If you want to setup the resolver to sync with the Sensorberg Cloud backend, fol
         <pre>ssh -L 8080:localhost:8080 ${your-ssh-user}@${your-appliance-name}.cloudapp.net -p ${your-ssh-port}</pre>
     </p>
 </div>
-
-
-
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-

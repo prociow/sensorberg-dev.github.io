@@ -33,9 +33,3 @@ Read all about the tools:remove feature in the <a href="http://tools.android.com
 apktool d -s -f <your-apk-file>
 {% endhighlight %}
 </div>
-
-
-
-
-
-

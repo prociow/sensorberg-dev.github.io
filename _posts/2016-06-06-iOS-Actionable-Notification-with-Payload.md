@@ -152,4 +152,3 @@ else
 Let's see how it works on iPhone :D
 
 <iframe width="375" height="667" src="https://www.youtube.com/embed/2xqAm41u08E" frameborder="0" allowfullscreen></iframe><iframe width="375" height="667" src="https://www.youtube.com/embed/9lDainFUTZs" frameborder="0" allowfullscreen></iframe>
-

@@ -94,8 +94,3 @@ Please check the latest sample implementation in the [SBSDKAppDelegate.m](https:
 }
 
 {% endhighlight  %}
-<br/>
-<br/>
-<br/>
-
-

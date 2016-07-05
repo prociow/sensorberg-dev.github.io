@@ -25,4 +25,3 @@ apktool d -s -f <your-apk-file>
 </div>
 
 This tip works with **all versions** of the Android SDK.
-

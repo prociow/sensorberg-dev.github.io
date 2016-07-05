@@ -6,7 +6,7 @@ body {
     font-size: 18px;
     font-size: 1.0rem;
     line-height: 1.2;
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -237,17 +237,17 @@ a:hover {
 }
 
 .feature-content {
-    max-width: 1000px; 
+    max-width: 1000px;
     margin: 100px auto;
     text-align: center;
 }
 
 .feature-block {
-    padding: 40px 15px; 
+    padding: 40px 15px;
     text-align: center;
 }
 .feature-block2 {
-    padding: 20px 15px; 
+    padding: 20px 15px;
     text-align: center;
 }
 
@@ -268,7 +268,7 @@ a:hover {
 }
 
 .col-md-4>img {
-    max-width:100%; 
+    max-width:100%;
     position: relative;
     padding: 20px 15px;
 }
@@ -373,9 +373,9 @@ a:hover {
 }
 
 #newsletter {
-    background-color: #2e2e2e; 
-    padding: 70px 0 100px 0; 
-    text-align: center; 
+    background-color: #2e2e2e;
+    padding: 70px 0 100px 0;
+    text-align: center;
     color: white;
 }
 
@@ -422,7 +422,7 @@ form#mc-form-onsite{
                 height: 49px;
   }
   @media only screen and (min-width: 0px) and (max-width: 769px) {
-    
+
     form#mc-form-onsite #mc-embedded-subscribe { width: 35%; }
     form#mc-form-onsite input#mce-EMAIL { width: 50%; }
   }
@@ -614,16 +614,16 @@ table.sdk-table-small th:last-child {
 /* Table on desktop */
 @media (max-width: 959px){
     table.sdk-table.responsive-table{
-      box-shadow: none;  
+      box-shadow: none;
     }
     table.sdk-table.responsive-table {
-      display: none; 
+      display: none;
     }
   table.display th,
   table.display td{
     padding: .5em;
   }
-    
+
   table.sdk-table.responsive-table td:nth-child(1),
   table.sdk-table.responsive-table td:nth-child(2){
     padding-left: 25%;
@@ -634,7 +634,7 @@ table.sdk-table-small th:last-child {
     left: .5em;
     font-weight: bold;
   }
-  
+
     table.sdk-table.responsive-table tr,
     table.sdk-table.responsive-table td{
         display: block;
@@ -652,16 +652,16 @@ table.sdk-table-small th:last-child {
 /* Table on mobile */
 @media (min-width: 958px){
     table.sdk-table-small.responsive-table{
-      box-shadow: none;  
+      box-shadow: none;
     }
     table.sdk-table-small.responsive-table {
-      display: none; 
+      display: none;
     }
   table.display th,
   table.display td{
     padding: .5em;
   }
-    
+
   table.sdk-table-small.responsive-table td:nth-child(1),
   table.sdk-table-small.responsive-table td:nth-child(2){
     padding-left: 25%;
@@ -672,7 +672,7 @@ table.sdk-table-small th:last-child {
     left: .5em;
     font-weight: bold;
   }
-  
+
     table.sdk-table-small.responsive-table tr,
     table.sdk-table-small.responsive-table td{
         display: block;

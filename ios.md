@@ -126,11 +126,3 @@ If you encounter any bugs, please [report them](https://github.com/sensorberg-de
     <h1><i class='fa fa-info-circle'></i>Dependency collosions?</h1>
     <p>If you have a dependency collision or you don´t want to integrate the sources of our SDK into your project, <a href="mailto:support@sensorbergcom">contact us</a>. We have <a href="https://github.com/sensorberg-dev/ios-sdk/tree/v2m">a packaged version of the SDK</a> which might be the solution to your problem. <strong>We only recommend to use it in very rare cases!</strong></p>
 </div>
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
