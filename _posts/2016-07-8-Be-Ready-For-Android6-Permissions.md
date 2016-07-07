@@ -9,7 +9,7 @@ tags: beacon sdk android
 
 Google is changing how Android will handle permissions. Unfortunately, these changes
 will affect the Sensorberg SDK. In this article we will first explain the new Android permission framework, 
-we will then discuss how this affects the Sensorberg sdk, finally we will explain how you can update 
+we will then discuss how this affects the Sensorberg SDK, finally we will explain how you can update 
 your app to work with Android 6 permissions. 
 
 The major difference between permissions in previous versions of Android and 
@@ -21,7 +21,7 @@ requirement now is that at Run-Time, not just at install, the user will be asked
 they want or still want to grant the permission you have defined. Though all permissions
 are not created equally. 
 
-Google as decided to categorise permissions into "dangerous" and "normal" permissions.
+Google as decided to categories permissions into "dangerous" and "normal" permissions.
 Dangerous permissions are simply those permissions which (could) put the user's security/data
 at risk. And this is why our SDK is affected. 
 This doesn't appear to be intuitive at first, we will get to that shortly.
@@ -100,9 +100,9 @@ your users for the Fine Location Services.  So how to do this.. see the example 
      }
 ```
 
-You will notice two things.. There is a method we call from the application class and we have two constants.
+You will notice two things. There is a method we call from the application class and we have two constants.
 These two constants are only flags to tell the method in the application class whether the location
-permission requested was granted. The method can be called what ever you want, but what is key is you need
+permission requested was granted. The method can be called whatever you want, but what is key is you need
 to use our method ```sendLocationFlagToReceiver``` in the ```SensorbergSdk``` class in your application class.
 
 ```java
@@ -115,7 +115,7 @@ Type parameter is whether the permission is set or not. The call will be receive
 
 And that is it. Not so difficult. Please be nice to your users and only ask for the permissions when you
 will be scanning.  Don't over ask, also try to explain to your users why you need the permission,
-some people will not understand why they need location. Be friendly, descriptive and helpful.
+some people will not understand why they need the location permission. Be friendly, descriptive and helpful.
 
 If you have any questions, don't hesitate to reach out.
 
