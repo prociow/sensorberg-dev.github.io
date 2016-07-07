@@ -4,7 +4,7 @@ title: Windows10 SDK Integration
 permalink: /windows10/
 additionalNavigation : [
 { "title" : "Win10 SDK",                "link" : "https://github.com/sensorberg-dev/windows10-sdk" },
-{ "title" : "Win10 Documentation",      "link" : "windows10-sdk/documentation/index.html" },
+{ "title" : "Win10 Documentation",      "link" : "/windows10-sdk/documentation/index.html" },
 { "title" : "Win10 Bugtracker",         "link" : "https://github.com/sensorberg-dev/windows10-sdk/issues" },
 { "title" : "Beaconplayback App",       "link" : "https://github.com/sensorberg-dev/windows10-beaconplayback" },
 { "title" : "Edit this page",           "link" : "https://github.com/sensorberg-dev/sensorberg-dev.github.io/edit/master/windows10.md" }
@@ -102,7 +102,7 @@ declared in your `Package.appxmanifest` file:
 
 ```xml
   ...
-  
+
   </Applications>
 
   <Capabilities>
@@ -135,13 +135,13 @@ namespace MySensorbergApp
         private const string ApiKey = "04a709a208c83e2bc0ec66871c46d35af49efde5151032b3e865768bbf878db8";
         private const ushort ManufacturerId = 0x004c;
         private const ushort BeaconCode = 0x0215;
-        
+
         public MainPage()
         {
             this.InitializeComponent();
 
             _sdkManager = SDKManager.Instance();
-            
+
             _sdkManager.BeaconActionResolved += OnBeaconActionResolvedAsync;
             Window.Current.VisibilityChanged += SDKManager.Instance.OnApplicationVisibilityChanged;
             _sdkManager.InitializeAsync(new SdkConfiguration()
@@ -160,7 +160,7 @@ namespace MySensorbergApp
             base.OnNavigatedTo(e);
 
         }
-        
+
         private async void OnBeaconActionResolvedAsync(object sender, BeaconAction e)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
@@ -171,7 +171,7 @@ namespace MySensorbergApp
                 });
         }
     }
-}        
+}
 ```
 
 Sensorberg SDK is initialized with `InitializeAsync` method, which takes the configuration of the SDK.

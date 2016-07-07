@@ -9,7 +9,7 @@ permalink: /blog/
     <div class="row">
         <div class="col-md-3 hidden-xs">
             <div class="sidebar well">
-                
+
                     {{ site.description }}
              </div>
             {% include sidebar.html %}
@@ -21,10 +21,9 @@ permalink: /blog/
                         <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d" }} - {{ post.title }}</a></h1>
                         <div class="post-content">
                             {{ post.excerpt }}
-
                         </div>
                         <div style="text-align:right;">
-                            <a href="{{ site.baseurl}}{{ post.url }}"></i>Read more »</a>
+                            <a href="{{ site.baseurl}}{{ post.url }}">Read more »</a>
                         </div>
                     </div>
                 {% endfor %}

@@ -4,8 +4,7 @@
     <div class="row">
         <div class="col-md-3 hidden-xs">
           <div class="sidebar well">
-                
-                    {{ site.description }}
+              {{ site.description }}
           </div>
             {% include sidebar.html %}
         </div>
@@ -29,17 +28,14 @@
           </div>
           <div class="pagination">
               {% if page.next %}
-                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">Newer Post</a>
+                <a class="btn btn-default next" href="{{ site.baseurl}}{{ page.next.url }}">Newer Post</a>
               {% endif %}
               {% if page.previous %}
-                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">Older Post</a>
+                <a class="btn btn-default previous" href="{{ site.baseurl}}{{ page.previous.url }}">Older Post</a>
               {% endif %}
-</div>
-
+          </div>
         </div>
     </div>
-    </br>
-    </br>
 </div>
 
 {% include disqus-comments.html %}

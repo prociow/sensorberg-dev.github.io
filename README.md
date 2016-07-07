@@ -20,9 +20,4 @@ To install ```jekyll``` run:
 bundle install
 ```
 
-if you want to check all the links locally (including links in your drafts), run:
-
-```
-jekyll build --drafts
-htmlproof ./_site
-```
+if you want to check all the links locally (including links in your drafts), run: ```rake```

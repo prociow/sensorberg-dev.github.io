@@ -21,7 +21,7 @@ github: 'sensorberg-dev'
 disqus: 'sensorberg-dev'
 comments: true
 
-permalink: /:year/:month/:title
+permalink: /:year/:month/:title/
 paginate: 3
 
 latestiOSRelease : "2.1"
@@ -38,7 +38,7 @@ markdown: kramdown
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
-exclude: ['README.md', 'LICENSE']
+exclude: ['README.md', 'LICENSE', 'Rakefile', 'Gemfile', 'Gemfile.lock']
 
 collections:
   frontend-releases:
@@ -50,5 +50,3 @@ collections:
   videos-iframe:
     output: true
     permalink: /videos-iframe/:path/
-
-

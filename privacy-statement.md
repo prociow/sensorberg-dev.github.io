@@ -93,7 +93,7 @@ Generell können Sie das Speichern von Cookies verhindern, indem Sie in Ihren Br
 
 1. Auf dieser Website nutzen wir für Feedback unserer Nutzer und Kunden ein System der Zendesk, Inc., 989 Market Street #300, San Francisco, CA 94102, USA (nachfolgend “Zendesk“). Die Nutzung des Systems ist optional und dient der Verbesserung und Beschleunigung unseres Kundenservice. Zur Verwendung des Systems ist mindestens die Angabe einer korrekten E-Mail-Adresse und eines Namens notwendig. Im Verlauf der Bearbeitung von Service-Anfragen, kann es notwendig sein, dass (z.B. zur Zusendung von Dokumenten oder Ersatzteilen) weitere Daten erhoben werden (v.a. Ihre Anschrift).
 
-2. Zendesk ist dem Datenschutzabkommen Safe Harbor zwischen den Vereinigten Staaten von Amerika und der Europäischen Union beigetreten und kann eine entsprechende Selbstzertifizierung vorweisen und erfüllt somit die Mindestvoraussetzungen für eine gesetzeskonforme Verarbeitung von Daten. Weitere Informationen zur Verwendung und Nutzung personenbezogener Daten durch Zendesk erhalten Sie in der Datenschutzerklärung von Zendesk, abrufbar unter[https://www.zendesk.de/datenschutzrichtlinie](https://www.zendesk.de/datenschutzrichtlinie).
+2. Zendesk ist dem Datenschutzabkommen Safe Harbor zwischen den Vereinigten Staaten von Amerika und der Europäischen Union beigetreten und kann eine entsprechende Selbstzertifizierung vorweisen und erfüllt somit die Mindestvoraussetzungen für eine gesetzeskonforme Verarbeitung von Daten. Weitere Informationen zur Verwendung und Nutzung personenbezogener Daten durch Zendesk erhalten Sie in der Datenschutzerklärung von Zendesk, abrufbar unter[https://www.zendesk.de/company/privacy/](https://www.zendesk.de/company/privacy/).
 
 #### V. Social Media-Plugins
 

@@ -47,8 +47,6 @@ If you want to setup the resolver to sync with the Sensorberg Cloud backend, fol
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'></i>Some APIs are not exposed</h1>
     <p>Please note, not all APIs are exposed publicly on this image. Only /layout and /ping are available from outside of the machine. If you need to access any other endpoints, SSH in on the machine or create an SSH tunnel so you can work as if it is deployed locally</p>
-    <p>If you want to map port remote:8080 to localhost:8080:
-    <p>
-        <pre>ssh -L 8080:localhost:8080 ${your-ssh-user}@${your-appliance-name}.cloudapp.net -p ${your-ssh-port}</pre>
-    </p>
+    <p>If you want to map port remote:8080 to localhost:8080:</p>
+    <pre>ssh -L 8080:localhost:8080 ${your-ssh-user}@${your-appliance-name}.cloudapp.net -p ${your-ssh-port}</pre>
 </div>

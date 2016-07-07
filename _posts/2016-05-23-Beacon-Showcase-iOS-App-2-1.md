@@ -20,25 +20,26 @@ Here's a short video of how it works:
 ### What's new!
 
 - Easily change the API key, just by scanning a QR code
-- New (and beautiful) Sensorberg theme colors 
+- New (and beautiful) Sensorberg theme colors
 - Campaign notifications or in-app alerts for your beacon related actions
 
 ### New Sensorberg Theme
 
 #### - Notifications / Search Beacons / App Status
 
-<a href="/images/showcase-screen-notification.png"> <img src="/images/showcase-screen-notification.png" alt="Fired Notifications Screen" style="width:30%"> <a/>
-<a href="/images/showcase-screen-detected-beacons.png"> <img src="/images/showcase-screen-detected-beacons.png" alt="Scanning for beacons" style="width:30%"> <a/>
-<a href="/images/showcase-screen-status.png"> <img src="/images/showcase-screen-status.png" alt="Status" style="width:30%"> <a/>
+<p>
+  <a href="/images/showcase-screen-notification.png"><img src="/images/showcase-screen-notification.png" alt="Fired Notifications Screen" style="width:30%"></a>
+  <a href="/images/showcase-screen-detected-beacons.png"><img src="/images/showcase-screen-detected-beacons.png" alt="Scanning for beacons" style="width:30%"></a>
+  <a href="/images/showcase-screen-status.png"><img src="/images/showcase-screen-status.png" alt="Status" style="width:30%"></a>
+</p>
 
-  
-### How (easy it is) to change API Key?  
+### How (easy it is) to change API Key?
 
-##### 1. Login on the [Sensorberg Management Portal](https://manage.sensorberg.com/#/applications)    
+##### 1. Login on the [Sensorberg Management Portal](https://manage.sensorberg.com/#/applications)
 
-##### 2. Open the [QR Code for your app](/images/show-APIKey-QRCode.png)  
+##### 2. Open the [QR Code for your app](/images/show-APIKey-QRCode.png)
 
-##### 3. In the Showcase app, on the [status page](/images/showcase-select-status-item.png), select the [Scan QR Code](/images/showcase-screen-select-scanner.png) option  
+##### 3. In the Showcase app, on the [status page](/images/showcase-select-status-item.png), select the [Scan QR Code](/images/showcase-screen-select-scanner.png) option
 
 [Download the Showcase App](https://itunes.apple.com/de/app/beacon-showcase/id1115128115?mt=8)
 
