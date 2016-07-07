@@ -14,37 +14,38 @@ your app to work with Android 6 permissions.
 
 The major difference between permissions in previous versions of Android and 
 Android 6 is quite simple. In Android 6 there is the addition of Run-time permissions.
-What does this exactly mean? Well, if you remember in previous Android versions when 
+What does this exactly mean? Well, if you remember in previous Android versions when the 
 user downloaded your applications they would be asked if they accept the permissions 
-you have defined in your Android Manifest. This still is in place. The additional 
+you have defined in your Android Manifest. This remains. The additional 
 requirement now is that at Run-Time, not just at install, the user will be asked if 
 they want or still want to grant the permission you have defined. Though all permissions
 are not created equally. 
 
-Google as decided to categorise permissions into "dangerous" and "non-dangerous" permissions.
-Dangerous permissions are simply those permissions which put the user's security
-at risk or rather could put the user at risk. And this is why our SDK is affected. 
+Google as decided to categorise permissions into "dangerous" and "normal" permissions.
+Dangerous permissions are simply those permissions which (could) put the user's security/data
+at risk. And this is why our SDK is affected. 
 This doesn't appear to be intuitive at first, we will get to that shortly.
 
 Ok. Here is the secret. Your app will continue to scan for beacons in Android 6, but
 here is the kicker, if you want it to scan in the background, which for a beacon is precisely
 what we want, then you need to update your permissions in Android 6.
 Bluetooth LE though is not actually a dangerous permission. So in theory you should not have to ask for a permission.
-Bluetooth, in theory can give away your position,location, so Google has decided to make it mandatory for
- when using BLE, to require one of the two location permissions, (fine or coarse grain) so users are 
- can made aware of the issues surrounding Bluetooth LE.
+Bluetooth LE, in theory can give away your location, so Google has decided to make it mandatory for
+when using BLE, to require one of the two location permissions, (fine or coarse grain) so users are 
+can made aware of the issues surrounding Bluetooth LE.
  
- So, we now don't actually have to worry about Bluetooth, the previous permissions still stand. Now we have to ask for one of two location permissions for beacon scanning to work properly. Before we discuss how to do that,
- we should first explain how we now support location services in our SDK. We basically receive an intent which flags
- the scanner to stop or start based on whether location permissions are set. If your app does target Android 6 or above or your users
- are using such devices, the will send the developer a log message that they need to ask the user for their permission 
- to use Location Services. The sdk will not crash the app, simply no beacons will be found. 
-  Yes, it is true that in the foreground even without the location permission beacons may be found,
-  we decided to just disable scanning to avoid problems and confusion. Wow, that was a lot,
-  but we have one more topic to discuss, implementation from your side.
+So, we now don't actually have to worry about Bluetooth, the previous permissions still stand. 
+Now we have to ask for one of two location permissions for beacon scanning to work properly. Before we discuss how to do that,
+we should first explain how we now support location services in our SDK. We basically receive an intent which flags
+the scanner to stop or start based on whether location permissions are set. If your app does targets Android 6, 
+the SDK will send the developer a log message that they need to ask the user for their permission 
+to use Location Services. The sdk will not crash the app, simply no beacons will be found. 
+Yes, it is true that in the foreground even without the location permission beacons may be found,
+though we decided to just disable scanning to avoid problems and confusion. Wow, that was a lot,
+but we have one more topic to discuss, implementation from your side.
   
-  As an user of our SDK you need to do one thing, you need to at some point before scanning is to occur to ask
-  your users for the Fine Location Services.  So how to do this.. see the example below from the developer test app.
+As an user of our SDK you need to do one thing; you need to at some point before scanning is to occur to ask
+your users for the Fine Location Services.  So how to do this.. see the example below from the developer test app.
   
   
 ```java
@@ -78,7 +79,7 @@ Bluetooth, in theory can give away your position,location, so Google has decided
         }
 ```
  
- Finally we need to receive the callback from the requestPermission call. 
+ Finally we need to receive the callback from the ```requestPermissions()``` call. 
  
  
 ```java
@@ -100,9 +101,9 @@ Bluetooth, in theory can give away your position,location, so Google has decided
 ```
 
 You will notice two things.. There is a method we call from the application class and we have two constants.
-These two constants are only flags to tell the method in the application calls whether the location
+These two constants are only flags to tell the method in the application class whether the location
 permission requested was granted. The method can be called what ever you want, but what is key is you need
-to use our method ```sendLocationFlagToReceiver``` in the ```SensorbergSdk``` class.
+to use our method ```sendLocationFlagToReceiver``` in the ```SensorbergSdk``` class in your application class.
 
 ```java
  public void setLocationPermissionGranted(int type) {
@@ -110,7 +111,7 @@ to use our method ```sendLocationFlagToReceiver``` in the ```SensorbergSdk``` cl
     }
 ```
 
-The type is the whether it is set or not. Then these will be received by the ```PermissionBroadcastReceiver``` class and processed.
+Type parameter is whether the permission is set or not. The call will be received by the ```PermissionBroadcastReceiver``` class and processed.
 
 And that is it. Not so difficult. Please be nice to your users and only ask for the permissions when you
 will be scanning.  Don't over ask, also try to explain to your users why you need the permission,
