@@ -6,7 +6,7 @@ comments: true
 tags: ios sdk
 ---
 
-We have cleaned up the callbacks in the iOS SDK in the [1.0.5 release](https://github.com/sensorberg-dev/ios-sdk/releases/tag/1.0.5). We are now exposing the [SBSDKBeaconAction](https://github.com/sensorberg-dev/ios-sdk/blob/master/SensorbergSDK/SBSDKBeaconAction.h) directly which contains all the necessary field you will need for your integration.
+We have cleaned up the callbacks in the iOS SDK in the [1.0.5 release](https://github.com/sensorberg-dev/ios-sdk/releases/tag/1.0.5). We are now exposing the [SBSDKBeaconAction](https://github.com/sensorberg-dev/ios-sdk/blob/v1/SensorbergSDK/SBSDKBeaconAction.h) directly which contains all the necessary field you will need for your integration.
 
 The change will also imply, that the integration needs to take care of the application state. If your app is in the background, show an ```UILocalNotification```, when you app is open, you can choose to show custom UI. This sample shows an easy UIAlertView:
 
@@ -18,7 +18,7 @@ The short version:
   3. when the action has a delay, schedule a notification
 2. ```application:didReceiveLocalNotification``` receives the local notification and the attached data when the app is opened. Get the metadata off the notification and show the same custom UI.
 
-Please check the latest sample implementation in the [SBSDKAppDelegate.m](https://github.com/sensorberg-dev/ios-sdk/blob/master/Example/Demo/SBSDKAppDelegate.m) on github, here are the relevant methods:
+Please check the latest sample implementation in the [SBSDKAppDelegate.m](https://github.com/sensorberg-dev/ios-sdk/blob/v1/Example/Demo/SBSDKAppDelegate.m) on github, here are the relevant methods:
 
 {% highlight objc %}
 # pragma mark - Local Notifications & actions
