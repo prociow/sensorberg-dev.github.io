@@ -6,7 +6,7 @@ comments: true
 tags: beacon SDK iOS SensorbergSDK
 ---
   
-### We released new version (2.1.2) of Sensorberg iOS SDK! [[see Github](https://github.com/sensorberg-dev/ios-sdk)]  
+### We released [version 2.1.2 of the Sensorberg iOS SDK](https://github.com/sensorberg-dev/ios-sdk)  
 
 # Improvements  
 
@@ -25,3 +25,5 @@ tags: beacon SDK iOS SensorbergSDK
 - Remote configurations for Campaign  
 	- [Actionable Notification with Campaign Payload](http://sensorberg-dev.github.io/2016/06/iOS-Actionable-Notification-with-Payload/)  
 	- [Custom Proximity UUIDs for Campaign Simulation](http://sensorberg-dev.github.io/2016/06/Custom-Resolver-URL-API-Key-and-Proximity-UUIDs/)  
+
+Greetings from Berlin!
