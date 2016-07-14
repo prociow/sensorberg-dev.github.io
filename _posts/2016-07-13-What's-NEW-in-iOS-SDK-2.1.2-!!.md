@@ -19,7 +19,7 @@ tags: beacon SDK iOS SensorbergSDK
 
 - Fixed CBUUID generation.  
 
-#Related Posts  
+# Related Posts  
 
 - [Conversion measurement[Beta WIP].](http://sensorberg-dev.github.io/2016/06/New-conversion-feature-in-iOS-SDK/)  
 - Remote configurations for Campaign  
