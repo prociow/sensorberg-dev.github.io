@@ -144,6 +144,68 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
     <p>The Bootstrapper will run in your own process, so you are free to access any singletons or statics that you use in your Application. Push the BeaconEvent to your EventBus, Otto and react as you wish.</p>
 </div>
 
+
+
+<div class="callout callout-alert">
+    <h1><i class="fa fa-exclamation-triangle"></i> Android 6 Permissions</h1>
+    <p>If you app will target android 6 you will need to prompt the user for location permissions before scanning will work - this should be down in the activity. For 
+       a more in-depth discussion please see <a href="https://developer.sensorberg.com/2016/07/Be-Ready-For-Android6-Permissions">the Android 6 blog</a>.</p>
+
+
+In your activity which would use the scanner you would have to ask for the run time permissions:
+
+{% highlight java %}
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+                final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Functionality limited");
+                builder.setMessage("Since location access has not been granted, " +
+                        "this app will not be able to discover beacons when in the background.");
+                builder.setPositiveButton(android.R.string.ok, null);
+                builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+
+                    @Override
+                    public void onDismiss(DialogInterface dialog) {
+                        ActivityCompat.requestPermissions(DemoActivity.this,
+                                new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                MY_PERMISSION_REQUEST_LOCATION_SERVICES);
+                    }
+
+                });
+                builder.show();
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSION_REQUEST_LOCATION_SERVICES);
+            }
+        }
+
+{% endhighlight %}
+
+Then you must receive the callback. 
+
+{% highlight java %}
+     @Override
+     public void onRequestPermissionsResult(int requestCode,
+                                            String permissions[], int[] grantResults) {
+         switch (requestCode) {
+             case MY_PERMISSION_REQUEST_LOCATION_SERVICES: {
+                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                     Log.d("Scanner Message", "coarse location permission granted");
+                     ((DemoApplication) getApplication()).setLocationPermissionGranted(SensorbergServiceMessage.MSG_LOCATION_SET);
+                 } else {
+                     ((DemoApplication) getApplication()).setLocationPermissionGranted(SensorbergServiceMessage.MSG_LOCATION_NOT_SET_WHEN_NEEDED);
+                 }
+                 return;
+             }
+         }
+     }
+{% endhighlight %}
+</div>
 ### Development Tips
 
 <div class="callout callout-info">
