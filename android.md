@@ -152,7 +152,7 @@ public class MyBootstrapper extends SensorbergApplicationBootstrapper {
        a more in-depth discussion please see <a href="https://developer.sensorberg.com/2016/07/Be-Ready-For-Android6-Permissions">the Android 6 blog</a>.</p>
 
 
-In your activity which would use the scanner you would have to ask for the run time permissions:
+In your activity which would use the scanner you need to ask for (location permission) at runtime:
 
 {% highlight java %}
         if (ContextCompat.checkSelfPermission(this,
