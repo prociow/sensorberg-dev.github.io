@@ -206,6 +206,7 @@ Then you must receive the callback.
      }
 {% endhighlight %}
 </div>
+
 ### Development Tips
 
 <div class="callout callout-info">
