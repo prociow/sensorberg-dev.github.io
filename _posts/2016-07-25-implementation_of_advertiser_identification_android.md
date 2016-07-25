@@ -6,7 +6,7 @@ comments: true
 tags: beacon sdk android
 ---
 For the Advertiser Identifier there are multiple ways of implementing the Google identifier depending on your application. We
-will show an example of what can be done. Of course the most important thing is to set, and to get the Id, how 
+will show an example of what can be done. Of course the most important thing is to set and unset the ID, how 
 you do that is where the implementation can differ.
 
 
