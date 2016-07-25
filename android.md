@@ -30,7 +30,6 @@ repositories {
 }
 
 dependencies {
-       compile 'com.sensorberg.sdk:android-sdk-bootstrapper:{{ site.latestAndroidBootstrapperRelease }}'
        compile 'com.sensorberg.sdk:android-sdk:{{ site.latestAndroidSDKRelease }}'
 }
 {% endhighlight %}
@@ -128,23 +127,6 @@ public class MyActionPresenter extends BroadcastReceiver {
 {% endhighlight %}
 
 This class receives a broadcast, if the SDK has detected a beacon and successfully resolved an associated Action.
-
-If you want your own UI to react to detected beacons and actions, please extend the *Bootstrapper*, make sure you initialize with [*enablePresentationDelegation*](https://github.com/sensorberg-dev/android-sdk-bootstrapper/blob/master/android-sdk-bootstrapper/src/main/java/com/sensorberg/sdk/bootstrapper/SensorbergApplicationBootstrapper.java#L46) by setting to true and adding your customisations:
-
-{% highlight java %}
-public class MyBootstrapper extends SensorbergApplicationBootstrapper {
-  public void presentBeaconEvent(BeaconEvent beaconEvent) {
-      //your custom code
-    }
-}
-{% endhighlight %}
-
-<div class="callout callout-alert">
-    <h1><i class="fa fa-exclamation-triangle"></i> Process</h1>
-    <p>The Bootstrapper will run in your own process, so you are free to access any singletons or statics that you use in your Application. Push the BeaconEvent to your EventBus, Otto and react as you wish.</p>
-</div>
-
-
 
 <div class="callout callout-alert">
     <h1><i class="fa fa-exclamation-triangle"></i> Android 6 Permissions</h1>

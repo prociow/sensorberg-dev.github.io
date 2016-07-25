@@ -26,7 +26,6 @@ paginate: 3
 
 latestiOSRelease : "2.1"
 latestAndroidSDKRelease : "2.0.0"
-latestAndroidBootstrapperRelease : "2.2.0RC1"
 
 excerpt_separator: <!--more-->
 highlighter: rouge
