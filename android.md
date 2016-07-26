@@ -60,6 +60,7 @@ Declare your <em>BroadcastReceiver</em>:
 
 Enable the SDK in your [Application](http://developer.android.com/reference/android/app/Application.html) object and register foreground/background notifications:
 
+# New 2.0.0 SDK implemention
 {% highlight java %}
 public class DemoApplication extends Application {
     private SensorbergApplicationBootstrapper boot;
@@ -69,11 +70,18 @@ public class DemoApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 
-        boot = new SensorbergApplicationBootstrapper(this);
-        //boot = new SensorbergApplicationBootstrapper(this, true); 	use this call if you want presentBeaconEvent(BeaconEvent beaconEvent) in your Bootstrapper to be called
-        boot.activateService("<your-API-key>");
-        boot.hostApplicationInForeground();
-
+        boot = new SensorbergSdk(this, API_KEY);//the context object and your api key.
+                boot.setLogging(BuildConfig.DEBUG);
+                boot.registerEventListener(new SensorbergSdkEventListener() {
+                    @Override
+                    public void presentBeaconEvent(BeaconEvent beaconEvent) { //your presentBeaconEvent action.
+                        showAlert(beaconEvent.getAction(), beaconEvent.trigger);
+                        Log.i("beaconevent", beaconEvent.getBeaconId().toString());
+                        Action action = beaconEvent.getAction();
+                        showAlert(action, beaconEvent.trigger);
+                    }
+                });
+                
         detector = new BackgroundDetector(boot);
         registerActivityLifecycleCallbacks(detector);
 	}
