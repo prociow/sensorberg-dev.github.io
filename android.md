@@ -12,14 +12,9 @@ additionalNavigation : [
 ]
 ---
 
-#How to install the Sensorberg Android SDK
+# How to install the Sensorberg Android SDK
 
-<div class="callout callout-info">
-    <h1><i class="fa fa-info-circle"></i> Gradle only</h1>
-    <p>Gradle is the generally accepted standard for building Android projects, therefore we will only support gradle based integrations. That being said maven technically could be utilised, but we can not provide support</p>
-</div>
-
-You need to have the jcenter artifactory in your list of repositories and declare the dependency to our <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk-bootstrapper/{{site.latestAndroidBootstrapperRelease}}/">bootstrapper</a> and the <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/{{site.latestAndroidSDKRelease}}/">sdk</a> library.
+You need to have the jcenter artifactory in your list of repositories and declare the dependency to our <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/{{site.latestAndroidSDKRelease}}/">sdk</a>.
 
 {% highlight groovy %}
 repositories {
@@ -60,19 +55,19 @@ Declare your <em>BroadcastReceiver</em>:
 
 Enable the SDK in your [Application](http://developer.android.com/reference/android/app/Application.html) object and register foreground/background notifications:
 
-# New 2.0.0 SDK implemention
+# New 2.X SDK Implemention
 {% highlight java %}
 public class DemoApplication extends Application {
-    private SensorbergApplicationBootstrapper boot;
+    private SensorbergSdk sdk;
     private BackgroundDetector detector;
 
     @Override
 	public void onCreate() {
 		super.onCreate();
 
-        boot = new SensorbergSdk(this, API_KEY);//the context object and your api key.
-                boot.setLogging(BuildConfig.DEBUG);
-                boot.registerEventListener(new SensorbergSdkEventListener() {
+        sdk = new SensorbergSdk(this, API_KEY);//the context object and your api key.
+                sdk.setLogging(BuildConfig.DEBUG);
+                sdk.registerEventListener(new SensorbergSdkEventListener() {
                     @Override
                     public void presentBeaconEvent(BeaconEvent beaconEvent) { //your presentBeaconEvent action.
                         showAlert(beaconEvent.getAction(), beaconEvent.trigger);
