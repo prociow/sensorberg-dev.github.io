@@ -14,7 +14,7 @@ additionalNavigation : [
 
 # How to install the Sensorberg Android SDK
 
-You need to have the jcenter artifactory in your list of repositories and declare the dependency to our <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/{{site.latestAndroidSDKRelease}}/">sdk</a>.
+You will need to have the jcenter artifactory in your list of repositories and declare the dependency to our <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/{{site.latestAndroidSDKRelease}}/">sdk</a>.
 
 {% highlight groovy %}
 repositories {
