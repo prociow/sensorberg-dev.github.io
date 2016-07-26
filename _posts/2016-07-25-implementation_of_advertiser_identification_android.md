@@ -37,12 +37,12 @@ In the example below we used a switch, below is the switch listener.
                     }
                 }
             }).start();
-            Crouton.showText(getActivity(), ShowcaseTracking.ADVERTISER_IDENTIFIER_ENABLED, Style.INFO);
+            Toast.makeText(getActivity(), ShowcaseTracking.ADVERTISER_IDENTIFIER_ENABLED, Toast.LENGTH_LONG).show();
         } else {
             Logger.log.logSettingsUpdateState(ShowcaseTracking.ADVERTISER_IDENTIFIER_DISABLED);
             ShowcaseApplication.getInstance().boot.setAdvertisingIdentifier(null); //set to null ie. turn off.
-            Crouton.showText(getActivity(), ShowcaseTracking.ADVERTISER_IDENTIFIER_DISABLED, Style.ALERT);
-        }
+            Toast.makeText(getActivity(), ShowcaseTracking.ADVERTISER_IDENTIFIER_DISABLED, Toast.LENGTH_LONG).show();
+                    }
     }
 {% endhighlight %}
 
