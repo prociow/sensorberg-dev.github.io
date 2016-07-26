@@ -16,7 +16,7 @@ tags: beacon SDK Android SensorbergSDK
 # Known Issues
 <div class="callout callout-alert">
     <h1><i class="fa fa-exclamation-triangle"></i>Please do not use release 2.0.0</h1>
-    <p>There was an issue found in the 2.0.0 release; regarding statistics. <br /> <em> Please only use subsequent releases... THANK YOU</em></p>
+    <p>There were issues found in regards to statistics. <br /> <em> Please only use subsequent releases... THANK YOU</em></p>
 </div>
 
 -Sensorberg Android Team
