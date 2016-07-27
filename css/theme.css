@@ -112,10 +112,6 @@ a:hover {
     width: 100%;
 }
 
-.navbar-brand {
-    height: 82px;
-}
-
 .nav>li>a:hover, .nav>li>a:focus{
     background-color: #49697d;
 }
@@ -147,8 +143,7 @@ a:hover {
 }
 
 .sb_logo {
-    max-width: 250px;*
-    float: left;
+    width: 200px;
 }
 
 .navbar {
