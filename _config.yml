@@ -25,7 +25,8 @@ permalink: /:year/:month/:title/
 paginate: 3
 
 latestiOSRelease : "2.1"
-latestAndroidSDKRelease : "2.0.2"
+latestAndroidSDKRelease : "1.2.0"
+latestAndroidBootstrapperRelease : "2.2.0RC1"
 
 excerpt_separator: <!--more-->
 highlighter: rouge
