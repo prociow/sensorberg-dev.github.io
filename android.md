@@ -14,7 +14,12 @@ additionalNavigation : [
 
 # How to install the Sensorberg Android SDK
 
-You will need to have the jcenter artifactory in your list of repositories and declare the dependency to our <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/{{site.latestAndroidSDKRelease}}/">sdk</a>.
+<div class="callout callout-info">
+    <h1><i class="fa fa-info-circle"></i> Gradle only</h1>
+    <p>Gradle is the generally accepted standard for building Android projects, therefore we will only support gradle based integrations. That being said maven technically could be utilised, but we can not provide support</p>
+</div>
+
+You need to have the jcenter artifactory in your list of repositories and declare the dependency to our <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk-bootstrapper/{{site.latestAndroidBootstrapperRelease}}/">bootstrapper</a> and the <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/{{site.latestAndroidSDKRelease}}/">sdk</a> library.
 
 {% highlight groovy %}
 repositories {
@@ -25,6 +30,7 @@ repositories {
 }
 
 dependencies {
+       compile 'com.sensorberg.sdk:android-sdk-bootstrapper:{{ site.latestAndroidBootstrapperRelease }}'
        compile 'com.sensorberg.sdk:android-sdk:{{ site.latestAndroidSDKRelease }}'
 }
 {% endhighlight %}
@@ -55,28 +61,20 @@ Declare your <em>BroadcastReceiver</em>:
 
 Enable the SDK in your [Application](http://developer.android.com/reference/android/app/Application.html) object and register foreground/background notifications:
 
-# New 2.X SDK Implemention
 {% highlight java %}
 public class DemoApplication extends Application {
-    private SensorbergSdk sdk;
+    private SensorbergApplicationBootstrapper boot;
     private BackgroundDetector detector;
 
     @Override
 	public void onCreate() {
 		super.onCreate();
 
-        sdk = new SensorbergSdk(this, API_KEY);//the context object and your api key.
-                sdk.setLogging(BuildConfig.DEBUG);
-                sdk.registerEventListener(new SensorbergSdkEventListener() {
-                    @Override
-                    public void presentBeaconEvent(BeaconEvent beaconEvent) { //your presentBeaconEvent action.
-                        showAlert(beaconEvent.getAction(), beaconEvent.trigger);
-                        Log.i("beaconevent", beaconEvent.getBeaconId().toString());
-                        Action action = beaconEvent.getAction();
-                        showAlert(action, beaconEvent.trigger);
-                    }
-                });
-                
+        boot = new SensorbergApplicationBootstrapper(this);
+        //boot = new SensorbergApplicationBootstrapper(this, true); 	use this call if you want presentBeaconEvent(BeaconEvent beaconEvent) in your Bootstrapper to be called
+        boot.activateService("<your-API-key>");
+        boot.hostApplicationInForeground();
+s
         detector = new BackgroundDetector(boot);
         registerActivityLifecycleCallbacks(detector);
 	}
@@ -131,65 +129,19 @@ public class MyActionPresenter extends BroadcastReceiver {
 
 This class receives a broadcast, if the SDK has detected a beacon and successfully resolved an associated Action.
 
+If you want your own UI to react to detected beacons and actions, please extend the *Bootstrapper*, make sure you initialize with [*enablePresentationDelegation*](https://github.com/sensorberg-dev/android-sdk-bootstrapper/blob/master/android-sdk-bootstrapper/src/main/java/com/sensorberg/sdk/bootstrapper/SensorbergApplicationBootstrapper.java#L46) by setting to true and adding your customisations:
+
+{% highlight java %}
+public class MyBootstrapper extends SensorbergApplicationBootstrapper {
+  public void presentBeaconEvent(BeaconEvent beaconEvent) {
+      //your custom code
+    }
+}
+{% endhighlight %}
+
 <div class="callout callout-alert">
-    <h1><i class="fa fa-exclamation-triangle"></i> Android 6 Permissions</h1>
-    <p>If you app will target android 6 you will need to prompt the user for location permissions before scanning will work - this should be down in the activity. For 
-       a more in-depth discussion please see <a href="https://developer.sensorberg.com/2016/07/Be-Ready-For-Android6-Permissions">the Android 6 blog</a>.</p>
-
-
-In your activity which would use the scanner you need to ask for (location permission) at runtime:
-
-{% highlight java %}
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Functionality limited");
-                builder.setMessage("Since location access has not been granted, " +
-                        "this app will not be able to discover beacons when in the background.");
-                builder.setPositiveButton(android.R.string.ok, null);
-                builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-
-                    @Override
-                    public void onDismiss(DialogInterface dialog) {
-                        ActivityCompat.requestPermissions(DemoActivity.this,
-                                new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                                MY_PERMISSION_REQUEST_LOCATION_SERVICES);
-                    }
-
-                });
-                builder.show();
-            } else {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        MY_PERMISSION_REQUEST_LOCATION_SERVICES);
-            }
-        }
-
-{% endhighlight %}
-
-Then you must receive the callback. 
-
-{% highlight java %}
-     @Override
-     public void onRequestPermissionsResult(int requestCode,
-                                            String permissions[], int[] grantResults) {
-         switch (requestCode) {
-             case MY_PERMISSION_REQUEST_LOCATION_SERVICES: {
-                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                     Log.d("Scanner Message", "coarse location permission granted");
-                     ((DemoApplication) getApplication()).setLocationPermissionGranted(SensorbergServiceMessage.MSG_LOCATION_SET);
-                 } else {
-                     ((DemoApplication) getApplication()).setLocationPermissionGranted(SensorbergServiceMessage.MSG_LOCATION_NOT_SET_WHEN_NEEDED);
-                 }
-                 return;
-             }
-         }
-     }
-{% endhighlight %}
+    <h1><i class="fa fa-exclamation-triangle"></i> Process</h1>
+    <p>The Bootstrapper will run in your own process, so you are free to access any singletons or statics that you use in your Application. Push the BeaconEvent to your EventBus, Otto and react as you wish.</p>
 </div>
 
 ### Development Tips
