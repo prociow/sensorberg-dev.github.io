@@ -11,9 +11,6 @@ additionalNavigation : [
 
 # Getting started with the Sensorberg SDK
 
-*This is a guide to help developers get up to speed with AFNetworking. It is geared primarily towards anyone who is new to Mac or iOS development, or has not worked extensively with 3rd-party libraries before.
-These step-by-step instructions are written for Xcode 7, using the iOS 8 SDK. If you are using a previous version of Xcode, you may want to update before starting.*
-
 ## Demo app
 
 Runing `pod try SensorbergSDK` in a terminal window will open the Sensorberg demo project.
@@ -96,12 +93,11 @@ Documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/Sensorber
 
 ## Dependencies
 
-The **Sensorberg SDK 2.0 requires iOS 8.0** and uses:
+The **Sensorberg SDK {{ site.latestiOSRelease }} requires iOS 8.0** and uses:
 
-- [AFNetworking](https://github.com/AFNetworking/AFNetworking) for network communication
+- [tolo](https://github.com/genzeb/tolo) for event communication
 - [JSONModel](https://github.com/icanzilb/JSONModel) for JSON parsing
 - [UICKeyChainStore](https://github.com/kishikawakatsumi/UICKeyChainStore) for keychain access
-- [tolo](https://github.com/genzeb/tolo) for event communication
 
 ## Support
 
