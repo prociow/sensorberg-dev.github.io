@@ -96,12 +96,12 @@ Documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/Sensorber
 
 ## Dependencies
 
-The **Sensorberg SDK 2.0 requires iOS 8.0** and uses:
+The **Sensorberg SDK 2.1.3 requires iOS 8.0** and uses:
 
-- [AFNetworking](https://github.com/AFNetworking/AFNetworking) for network communication
-- [JSONModel](https://github.com/icanzilb/JSONModel) for JSON parsing
-- [UICKeyChainStore](https://github.com/kishikawakatsumi/UICKeyChainStore) for keychain access
-- [tolo](https://github.com/genzeb/tolo) for event communication
+- [JSONModel](https://github.com/icanzilb/JSONModel) version 1.1 for JSON parsing
+- [UICKeyChainStore](https://github.com/kishikawakatsumi/UICKeyChainStore) version 2.0 for keychain access
+- [tolo](https://github.com/genzeb/tolo) version 1.0.1 for event communication
+- [objc-geohash](https://github.com/lyokato/objc-geohash) version 0.0.2 for geocoding system
 
 ## Support
 
