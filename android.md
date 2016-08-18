@@ -19,9 +19,6 @@ You will need to have the jcenter artifactory in your list of repositories and d
 {% highlight groovy %}
 repositories {
     jcenter()
-    maven {//add this just to be sure, if jcenter is not up to date yet.
-        url "https://dl.bintray.com/sensorberg/maven/"
-    }
 }
 
 dependencies {
@@ -55,7 +52,7 @@ Declare your <em>BroadcastReceiver</em>:
 
 Enable the SDK in your [Application](http://developer.android.com/reference/android/app/Application.html) object and register foreground/background notifications:
 
-# New 2.X SDK Implemention
+# Integration
 {% highlight java %}
 public class DemoApplication extends Application {
     private SensorbergSdk sdk;
@@ -66,16 +63,16 @@ public class DemoApplication extends Application {
 		super.onCreate();
 
         sdk = new SensorbergSdk(this, API_KEY);//the context object and your api key.
-                sdk.setLogging(BuildConfig.DEBUG);
-                sdk.registerEventListener(new SensorbergSdkEventListener() {
-                    @Override
-                    public void presentBeaconEvent(BeaconEvent beaconEvent) { //your presentBeaconEvent action.
-                        showAlert(beaconEvent.getAction(), beaconEvent.trigger);
-                        Log.i("beaconevent", beaconEvent.getBeaconId().toString());
-                        Action action = beaconEvent.getAction();
-                        showAlert(action, beaconEvent.trigger);
-                    }
-                });
+        sdk.setLogging(BuildConfig.DEBUG);
+        sdk.registerEventListener(new SensorbergSdkEventListener() {
+            @Override
+            public void presentBeaconEvent(BeaconEvent beaconEvent) { //your presentBeaconEvent action.
+                showAlert(beaconEvent.getAction(), beaconEvent.trigger);
+                Log.i("beaconevent", beaconEvent.getBeaconId().toString());
+                Action action = beaconEvent.getAction();
+                showAlert(action, beaconEvent.trigger);
+            }
+        });
                 
         detector = new BackgroundDetector(sdk);
         registerActivityLifecycleCallbacks(detector);
@@ -193,14 +190,6 @@ Then you must receive the callback.
 </div>
 
 ### Development Tips
-
-<div class="callout callout-info">
-    <h1><i class="fa fa-info-circle"></i> Tip: HTTP Debugging</h1>
-    <p>You can debug the HTTP communication by enabling the VolleyLog:</p>
-    {% highlight bash %}
-    adb -shell setprop log.tag.SensorbergVolley VERBOSE
-    {% endhighlight %}
-</div>
 
 <div class="callout callout-info">
     <h1><i class="fa fa-info-circle"></i> Tip: Pretty ADB log with Android Bluetooth messages hidden</h1>
