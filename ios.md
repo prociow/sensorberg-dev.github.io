@@ -11,12 +11,12 @@ additionalNavigation : [
 
 # Getting started with the Sensorberg SDK
 
-*This is a guide to help developers get up to speed with AFNetworking. It is geared primarily towards anyone who is new to Mac or iOS development, or has not worked extensively with 3rd-party libraries before.
-These step-by-step instructions are written for Xcode 7, using the iOS 8 SDK. If you are using a previous version of Xcode, you may want to update before starting.*
+*This is a guide to help developers get up to speed with Sensorberg iOS SDK. These step-by-step instructions are written for Xcode 7, using the iOS 8 SDK. If you are using a previous version of Xcode, you may want to update before starting.*
 
 ## Demo app
 
-Runing `pod try SensorbergSDK` in a terminal window will open the Sensorberg demo project.
+Clone the Repository from our [GitHub](https://github.com/sensorberg-dev/ios-sdk).  
+Or runing `pod try SensorbergSDK` in a terminal will open the Sensorberg demo project.  
 Select the `SBDemoApp` target and run on device.
 
 ## Quickstart
