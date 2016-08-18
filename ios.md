@@ -11,12 +11,12 @@ additionalNavigation : [
 
 # Getting started with the Sensorberg SDK
 
-*This is a guide to help developers get up to speed with AFNetworking. It is geared primarily towards anyone who is new to Mac or iOS development, or has not worked extensively with 3rd-party libraries before.
-These step-by-step instructions are written for Xcode 7, using the iOS 8 SDK. If you are using a previous version of Xcode, you may want to update before starting.*
+*This is a guide to help developers get up to speed with Sensorberg iOS SDK. These step-by-step instructions are written for Xcode 7, using the iOS 8 SDK. If you are using a previous version of Xcode, you may want to update before starting.*
 
 ## Demo app
 
-Runing `pod try SensorbergSDK` in a terminal window will open the Sensorberg demo project.
+Clone the Repository from our [GitHub](https://github.com/sensorberg-dev/ios-sdk).  
+Or runing `pod try SensorbergSDK` in a terminal will open the Sensorberg demo project.  
 Select the `SBDemoApp` target and run on device.
 
 ## Quickstart
@@ -96,12 +96,12 @@ Documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/Sensorber
 
 ## Dependencies
 
-The **Sensorberg SDK 2.0 requires iOS 8.0** and uses:
+The **Sensorberg SDK 2.1.3 requires iOS 8.0** and uses:
 
-- [AFNetworking](https://github.com/AFNetworking/AFNetworking) for network communication
-- [JSONModel](https://github.com/icanzilb/JSONModel) for JSON parsing
-- [UICKeyChainStore](https://github.com/kishikawakatsumi/UICKeyChainStore) for keychain access
-- [tolo](https://github.com/genzeb/tolo) for event communication
+- [JSONModel](https://github.com/icanzilb/JSONModel) version 1.1 for JSON parsing
+- [UICKeyChainStore](https://github.com/kishikawakatsumi/UICKeyChainStore) version 2.0 for keychain access
+- [tolo](https://github.com/genzeb/tolo) version 1.0.1 for event communication
+- [objc-geohash](https://github.com/lyokato/objc-geohash) version 0.0.2 for geocoding system
 
 ## Support
 
