@@ -57,13 +57,18 @@ Enable the SDK in your [Application](http://developer.android.com/reference/andr
 public class DemoApplication extends Application {
     private SensorbergSdk sdk;
     private BackgroundDetector detector;
+    
+    static {
+    	if (BuildConfig.DEBUG){
+    		Logger.enableVerboseLogging();
+    	}
+    }
 
     @Override
 	public void onCreate() {
 		super.onCreate();
 
         sdk = new SensorbergSdk(this, API_KEY);//the context object and your api key.
-        sdk.setLogging(BuildConfig.DEBUG);
         sdk.registerEventListener(new SensorbergSdkEventListener() {
             @Override
             public void presentBeaconEvent(BeaconEvent beaconEvent) { //your presentBeaconEvent action.
