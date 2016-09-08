@@ -89,10 +89,10 @@ your users for the Fine Location Services.  So how to do this.. see the example 
          switch (requestCode) {
              case MY_PERMISSION_REQUEST_LOCATION_SERVICES: {
                  if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                     Log.d("Scanner Message", "coarse location permission granted");
+                     Log.d("Scanner Message", "location permission granted");
                      ((DemoApplication) getApplication()).setLocationPermissionGranted(SensorbergServiceMessage.MSG_LOCATION_SET);
                  } else {
-                     ((DemoApplication) getApplication()).setLocationPermissionGranted(SensorbergServiceMessage.MSG_LOCATION_NOT_SET_WHEN_NEEDED);
+                     ((MyApplicati) getApplication()).setLocationPermissionGranted(SensorbergServiceMessage.MSG_LOCATION_NOT_SET_WHEN_NEEDED);
                  }
                  return;
              }
