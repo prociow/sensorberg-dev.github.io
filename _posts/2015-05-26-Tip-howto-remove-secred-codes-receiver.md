@@ -14,6 +14,14 @@ If you don´t want to ship the secret codes feature of the SDK, add this to your
    tools:selector="com.sensorberg.sdk" />
 {% endhighlight %}
 
+If you leave the receiver active you can also trigger it using adb:
+{% highlight bash %}
+#enable logging
+adb shell am broadcast -W -a android.provider.Telephony.SECRET_CODE -d android_secret_code://73676723741
+#disable logging
+adb shell am broadcast -W -a android.provider.Telephony.SECRET_CODE -d android_secret_code://73676723740
+
+{% endhighlight %}
 <!--more-->
 
 <div class="callout callout-info">
