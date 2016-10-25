@@ -32,217 +32,203 @@ To get started with the Sensorberg SDK, [sign up for a free account](https://man
 The easiest way to integrate the iOS SDK is via [CocoaPods](https://cocoapods.org/).
 *If you're new to CocoaPods, visit their [getting started documentation](https://guides.cocoapods.org/using/getting-started.html).*
 
-````
-$ cd your-project-directory
-$ pod init
-$ open -a Xcode Podfile
-````
+
+    $ cd your-project-directory
+    $ pod init
+    $ open -a Xcode Podfile
+
 
 Once you've initialized CocoaPods, just add the [Sensorberg Pod](https://cocoapods.org/pods/SensorbergSDK) pod to your target:  
 
-````
-target 'YourApp' do
-	pod "SensorbergSDK", "~> {{ site.latestiOSRelease }}"
-end
-````  
+    target 'YourApp' do
+    	pod "SensorbergSDK", "~> {{ site.latestiOSRelease }}"
+    end
 
 Now you can install the dependencies in your project:  
 
-````
-$ pod install
-$ open <YourProjectName>.xcworkspace
-````  
+
+    $ pod install
+    $ open <YourProjectName>.xcworkspace
+  
 
 ### 3. Using the SDK   
 
 Import the SensorbergSDK  
 
 *ObjC :*  
-```
-# import <SensorbergSDK/SensorbergSDK.h>
-```  
+
+    # import <SensorbergSDK/SensorbergSDK.h>
+  
 
 *Swift :*  
-```
-import SensorbergSDK
-```  
+
+    import SensorbergSDK
+  
 Setup the SBManager with an **API key** and a **delegate**
 *You can find your API key on the [Beacon Managerment Platform](https://manage.sensorberg.com) in the "Apps" section.
 The Sensorberg SDK uses an [event bus](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) for events dispatching.
 During setup, you pass the class instance that will receive the events as the `delegate`.*  
 
 *ObjC :*  
-```
-[[SBManager sharedManager] setApiKey:kAPIKey delegate:self];
-```  
+
+    [[SBManager sharedManager] setApiKey:kAPIKey delegate:self];
 
 *Swift :*  
-```
-SBManager.sharedManager().setApiKey(kAPIKey, delegate: self)
-```  
+
+    SBManager.sharedManager().setApiKey(kAPIKey, delegate: self)
 
 Before starting the scanner, we need to ask permission to use the Location services.
 If you want to receive events while the app is innactive, you need to pass `YES` to the `requestLocationAuthorization`. If you pass `NO`, the app will receive events only when active.  
 
 *ObjC :*
-```
-[SBManager sharedManager] requestLocationAuthorization:YES];
-```  
+
+    [SBManager sharedManager] requestLocationAuthorization:YES];
 
 *Swift :*
-```
-SBManager.sharedManager().requestLocationAuthorization(true)
-```
+
+    SBManager.sharedManager().requestLocationAuthorization(true)
 
 > **Important**: Be sure to add the `NSLocationAlwaysUsageDescription` (or `NSLocationWhenInUseUsageDescription`) key to your plist file and the corresponding string to explain to the user why the app requires access to location.
 
 Keep in mind that the SDK also requires the Bluetooth radio to be turned ON. You can check the status of the radio by calling:  
 
 *ObjC :*
-```
-[[SBManager sharedManager] bluetoothAuthorization] //returns SBBluetoothStatus
-```  
 
+    [[SBManager sharedManager] bluetoothAuthorization] //returns SBBluetoothStatus
+  
 *Swift :*
-```
-SBManager.sharedManager().bluetoothAuthorization() //returns SBBluetoothStatus
-```  
 
-The SDK also includes convenience methods to request the user to turn the Bluetooth radio on:  
+    SBManager.sharedManager().bluetoothAuthorization() //returns SBBluetoothStatus
+  
+    The SDK also includes convenience methods to request the user to turn the Bluetooth radio on:  
 
 *ObjC :*
-```
-[[SBManager sharedManager] requestBluetoothAuthorization];
-```  
+
+    [[SBManager sharedManager] requestBluetoothAuthorization];
 
 *Swift :*
-```
-SBManager.sharedManager().requestBluetoothAuthorization() 
-```  
+
+    SBManager.sharedManager().requestBluetoothAuthorization()  
 
 To be informed when there's a change in the Bluetooth radio status, SUBSCRIBE to SBEventBluetoothAuthorization:
 
 *ObjC :*
-```
-SUBSCRIBE(SBEventBluetoothAuthorization)
-{
-    if (event.bluetoothAuthorization==SBBluetoothOn)
+
+    SUBSCRIBE(SBEventBluetoothAuthorization)
     {
-        NSLog(@"Bluetooth ON, starting monitoring");
-        [[SBManager sharedManager] startMonitoring];
+        if (event.bluetoothAuthorization==SBBluetoothOn)
+        {
+            NSLog(@"Bluetooth ON, starting monitoring");
+            [[SBManager sharedManager] startMonitoring];
+        }
+        else
+        {
+            NSLog(@"Bluetooth OFF, stopping monitoring");
+            [[SBManager sharedManager] stopMonitoring];
+        }
     }
-    else
-    {
-        NSLog(@"Bluetooth OFF, stopping monitoring");
-        [[SBManager sharedManager] stopMonitoring];
-    }
-}
-```  
 
 *Swift :*
-```
-func onSBEventBluetoothAuthorization(event:SBEventBluetoothAuthorization)
-{
-    if (event.bluetoothAuthorization == SBBluetoothOn)
+
+    func onSBEventBluetoothAuthorization(event:SBEventBluetoothAuthorization)
     {
-	    print("Bluetooth ON, starting monitoring")
-        SBManager.sharedManager().startMonitoring()
-    } 
-    else
-    {
-	    print("Bluetooth OFF, stopping monitoring")
-        SBManager.sharedManager().stopMonitoring()
+        if (event.bluetoothAuthorization == SBBluetoothOn)
+        {
+    	    print("Bluetooth ON, starting monitoring")
+            SBManager.sharedManager().startMonitoring()
+        } 
+        else
+        {
+    	    print("Bluetooth OFF, stopping monitoring")
+            SBManager.sharedManager().stopMonitoring()
+        }
     }
-}
-```  
+  
 
 Once you setup the API key and the SDK starts monitoring, SUBSCRIBE to *SBEventPerformAction*:  
 
 *ObjC :*
-```
-SUBSCRIBE(SBEventPerformAction)
-{
-	UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.alertTitle = event.campaign.subject;
-    notification.alertBody = event.campaign.body;
-	notification.alertAction = event.campaign.trigger == kSBTriggerEnter ? @"Enter" : @"Exit";
-	notification.alertAction = event.campaign.trigger == kSBTriggerEnterExit ? @"Enter&Exit" : notification.alertAction;
-    if (event.campaign.fireDate)
+
+    SUBSCRIBE(SBEventPerformAction)
     {
-        notification.fireDate = event.campaign.fireDate;
+    	UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertTitle = event.campaign.subject;
+        notification.alertBody = event.campaign.body;
+    	notification.alertAction = event.campaign.trigger == kSBTriggerEnter ? @"Enter" : @"Exit";
+    	notification.alertAction = event.campaign.trigger == kSBTriggerEnterExit ? @"Enter&Exit" : notification.alertAction;
+        if (event.campaign.fireDate)
+        {
+            notification.fireDate = event.campaign.fireDate;
+        }
+        else
+        {
+    	    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:1];
+        }
+
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+
     }
-    else
-    {
-	    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:1];
-    }
-
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-
-}
-```  
-
+  
 *Swift :*
-```
-func onSBEventPerformAction(event:SBEventPerformAction)
-{
-    let notification = UILocalNotification()
-    notification.alertTitle = event.campaign.subject
-    notification.alertBody = event.campaign.body
-    notification.alertAction = event.campaign.trigger == kSBTriggerEnter ? "Enter" : "Exit"
-    notification.alertAction = event.campaign.trigger == kSBTriggerEnterExit ? "Enter&Exit" : notification.alertAction
-        
-    if (event.campaign.fireDate != nil)
+
+    func onSBEventPerformAction(event:SBEventPerformAction)
     {
-        notification.fireDate = event.campaign.fireDate
+        let notification = UILocalNotification()
+        notification.alertTitle = event.campaign.subject
+        notification.alertBody = event.campaign.body
+        notification.alertAction = event.campaign.trigger == kSBTriggerEnter ? "Enter" : "Exit"
+        notification.alertAction = event.campaign.trigger == kSBTriggerEnterExit ? "Enter&Exit" : notification.alertAction
+            
+        if (event.campaign.fireDate != nil)
+        {
+            notification.fireDate = event.campaign.fireDate
+        }
+        else
+        {
+            notification.fireDate = NSDate.init(timeIntervalSinceNow: 1)
+        }
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
-    else
-    {
-        notification.fireDate = NSDate.init(timeIntervalSinceNow: 1)
-    }
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-}
-```  
 
 Check out the [documentation](http://cocoadocs.org/docsets/SensorbergSDK/) for a list of all supported protocols.
 
 To receive events in other class instances besides the **delegate**, the listener object  has to be registered on Event Bus like following example.  
 
 *ObjC :*
-```
-- (instancetype)init
-{
-    if (self = [super init])
+
+    - (instancetype)init
     {
-        REGISTER();
+        if (self = [super init])
+        {
+            REGISTER();
+        }
+        
+        return self;
     }
-    
-    return self;
-}
 
-// or
+or
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	REGISTER();
-}
-```  
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+    	REGISTER();
+    }
+  
 
 *Swift :*
-```
-required init()
-{
-    Tolo.sharedInstance().subscribe(self)
-}
 
-// or
+    required init()
+    {
+        Tolo.sharedInstance().subscribe(self)
+    }
 
-override func viewDidLoad()
-{
-    super.viewDidLoad()
-    Tolo.sharedInstance().subscribe(self)
-}
-```  
+or
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        Tolo.sharedInstance().subscribe(self)
+    }  
 
 ## Documentation  
 Documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/SensorbergSDK).  
@@ -288,5 +274,5 @@ If you encounter any bugs, please [report them](https://github.com/sensorberg-de
 
 <div class="callout callout-info">
     <h1><i class='fa fa-info-circle'></i>Dependency collosions?</h1>
-    <p>If you have a dependency collision or you don´t want to integrate the sources of our SDK into your project, <a href="mailto:support@sensorbergcom">contact us</a>. We have <a href="https://github.com/sensorberg-dev/ios-sdk/tree/v2m">a packaged version of the SDK</a> which might be the solution to your problem. <strong>We only recommend to use it in very rare cases!</strong></p>
+    <p>If you have a dependency collision or you don´t want to integrate the sources of our SDK into your project, <a href="mailto:support@sensorbergcom">contact us</a>. We have <a href="https://github.com/sensorberg-dev/ios-sdk/tree/v2m">a script</a> which generates a "mangled" library, with obfuscated symbols.<strong>We only recommend to use it in very rare cases!</strong></p>
 </div>
