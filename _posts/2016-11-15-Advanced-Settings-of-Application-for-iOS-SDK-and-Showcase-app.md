@@ -33,7 +33,8 @@ tags: beacon iOS SDK showcase management
 |---|---|---|---|
   
 Example:  
-<code:javascript>
+
+```json
 {
 	"monitoringDelay" : 120,
 	"postSuppression" : 300,
@@ -44,9 +45,7 @@ Example:
 			 "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6" : "Custom2"
 		 }
 }
-</code>
-
-
+```
 
 
 ##Settings for Showcase
@@ -61,7 +60,8 @@ Example:
 |---|---|---|---|
 
 Example :  
-<code:javascript>
+
+```json
 {
 	"theme" : {
 		"navigationBarColor":"#00AAFF",
@@ -69,7 +69,7 @@ Example :
 		"navigationBarLogoColor" : "#FFFFFF"
 	}
 }
-</code>
+```
 
 ###Theme Object
 
@@ -103,7 +103,8 @@ Example :
 |---|---|---|---|
 
 Example :   
-<code:javascript>
+
+```json
 {
 	"navigationBarColor":"#RRGGBB",
 	"navigationBarTitleFont ":  {
@@ -114,7 +115,7 @@ Example :
 	"navigationBarLogoImage" : "http://www.sensorberg.com/logo.png",
 	"navigationBarLogoColor" : "#FFFFFF"
 }
-</code>
+```
 
 ###Font Object :
 
@@ -125,19 +126,22 @@ Example :
 |---|---|
 
 Example :   
-<code:javascript>
+
+```json
 "navigationBarTitleFont" : 
 {
 	"fontName" : "Helvetica",
 	"fontSize":21
 }
-</code>
+```
 
 ###Color String 
 
 :  "#RRGGBB"  formated string
 
 Example :   
-<code:javascript>
+
+```json
 "navigationBarLogoColor" : "#FF5500"
-</code>
+```
+
