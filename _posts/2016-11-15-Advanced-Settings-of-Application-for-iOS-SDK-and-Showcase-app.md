@@ -29,7 +29,7 @@ tags: beacon iOS SDK showcase management
 |monitoringDelay|number (seconds)|time interval to fire beacon exit event when beacon is disappeared.|
 |postSuppression|number(seconds)|time interval to send statistic and conversion data to Sensorberg platform|
 |resolverURL|string|endpoint of beacon management platform|
-|customProximityUUID|key-value hash table|custom beacon uuid to detect beacons in given beacon region. This setting enables scanning beacons which are not include in any associated campaigns.|
+|customBeaconRegions|key-value hash table|custom beacon uuid to detect beacons in given beacon region. This setting enables scanning beacons which are not include in any associated campaigns.|
 |---|---|---|---|
   
 Example:  
@@ -39,7 +39,7 @@ Example:
 	"monitoringDelay" : 120,
 	"postSuppression" : 300,
 	"resolverURL" :  "https://manage.sensorberg.com",
-	"customProximityUUID" : {
+	"customBeaconRegions" : {
 			 "B9407F30-F5F8-466E-AFF9-25556B57FE6D" : "Custom0",
 			 "F7826DA6-4FA2-4E98-8024-BC5B71E0893E" : "Custom1",
 			 "2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6" : "Custom2"
