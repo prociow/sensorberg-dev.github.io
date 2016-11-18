@@ -133,6 +133,38 @@ public class MyActionPresenter extends BroadcastReceiver {
 
 This class receives a broadcast, if the SDK has detected a beacon and successfully resolved an associated Action.
 
+## Advertiser ID
+
+There're several ways of acquiring Advertiser ID which varies per platform. Here we'll show for the Google ID.
+
+{% highlight java %}
+// running on a background thread due to networking
+new Thread(new Runnable() {
+    @Override
+    public void run() {
+        try {
+            AdvertisingIdClient.Info info = AdvertisingIdClient.getAdvertisingIdInfo(context);
+            // boot is the instance of ShowcaseBootstrapper instantiated during Application.onCreate()
+            MyApp.getInstance().bootStrapper.setAdvertisingIdentifier(info.getId());
+        } catch (IOException e) {
+            Log.e(TAG, "Could not fetch advertising id", e);
+        } catch (GooglePlayServicesNotAvailableException e) {
+            Log.e(TAG, "Could not fetch advertising id, Google Play Service not available", e);
+        } catch (GooglePlayServicesRepairableException e) {
+            Log.e(TAG, "Could not fetch advertising id, Google Play Service need repairing", e);
+        } catch (Exception e) {
+            Log.e(TAG, "Could not fetch advertising id", e);
+        }
+    }
+}).start();
+{% endhighlight %}
+
+And of course, if you need to remove it, just call it null
+
+{% highlight java %}
+MyApp.getInstance().bootStrapper.setAdvertisingIdentifier(null);
+{% endhighlight %}
+
 <div class="callout callout-alert">
     <h1><i class="fa fa-exclamation-triangle"></i> Android 6 Permissions</h1>
     <p>If you app will target android 6 you will need to prompt the user for location permissions before scanning will work - this should be down in the activity. For 
