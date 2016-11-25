@@ -6,10 +6,25 @@ comments: true
 tags: beacon SDK iOS SensorbergSDK
 ---
   
-### We released [version 2.3.1 of the Sensorberg iOS SDK](https://github.com/sensorberg-dev/ios-sdk)  
+### Monitoring Beacon Regions in iOS
 
-With the launch of iOS 10, Apple made some **important** changes to the way CLLocation monitors for beacon regions[^1].  
-The biggest change prevents ranging beacons in background - which was possible in previous iOS
+Beacon monitoring uses the Bluetooth radio on your iOS device to detect nearby beacons. You need to create a `CLBeaconRegion` and tell the `CLLocationManager` to "monitor" for that region.  
+You can create a `CLBeaconRegion` via 3 different initializers:  
+
+1. `initWithProximityUUID:identifier:`  
+This allows your app to monitor for *all* the beacons which have a specific proximity UUID. This seems like the best option and it's what most iBeacon SDKs and apps do.  
+
+2. `initWithProximityUUID:major:identifier:`  
+Very similar to the previous initializer, this allows you to monitor for all iBeacons with a specific Proximity UUID and a major.
+
+3. `initWithProximityUUID:major:minor:identifier:`  
+This creates a CLBeaconRegion for a specific beacon, by 
+
+
+
+More precisely, monitoring for beacon regions[^1] will no longer trigger exit events (and subsequently enter events) will not trigger consistently.
+With version 2.3.1 of our SDK we changed the behaviour of our SDK to handle this and, if you campaign monitors for 20 beacons or less, we monitor for those specific beacons.  
+Monitoring for a specific beacon is more accurate and also helps 
 
 
 # Improvements  
@@ -31,5 +46,3 @@ The biggest change prevents ranging beacons in background - which was possible i
 	- [Custom Proximity UUIDs for Campaign Simulation](http://sensorberg-dev.github.io/2016/06/Custom-Resolver-URL-API-Key-and-Proximity-UUIDs/)  
 
 Greetings from Berlin!
-
-[^1]: A beacon region is defined only by a UUID, without providing a major or minor for a specific beacon
