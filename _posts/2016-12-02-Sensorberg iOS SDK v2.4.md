@@ -51,6 +51,8 @@ In [version 2.4](https://github.com/sensorberg-dev/ios-sdk) we switched to monit
 We filed a radar (bug report) with Apple and we hope that a future iOS version will actually fix this behaviour.  
 On the same note, be sure to update your iOS device to the latest version (currently 10.1.1) as 10.0 and 10.1 have some other bluetooth issues :)
 
+Greetings from Berlin!
+
 # Related Posts  
 
 - [Conversion measurement[Beta WIP].](http://sensorberg-dev.github.io/2016/06/New-conversion-feature-in-iOS-SDK/)  
@@ -58,4 +60,3 @@ On the same note, be sure to update your iOS device to the latest version (curre
 	- [Actionable Notification with Campaign Payload](http://sensorberg-dev.github.io/2016/06/iOS-Actionable-Notification-with-Payload/)  
 	- [Custom Proximity UUIDs for Campaign Simulation](http://sensorberg-dev.github.io/2016/06/Custom-Resolver-URL-API-Key-and-Proximity-UUIDs/)  
 
-Greetings from Berlin!
