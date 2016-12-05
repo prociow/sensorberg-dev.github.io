@@ -7,7 +7,7 @@ tags: beacon iOS SDK showcase management
 ---
 
 
-#Advanced Settings 
+# Advanced Settings 
 
 Our SDKs have a little-known feature - the Advanced Settings - that allow more fine customizations of the SDKs functionality.  
 In this post we go over some of keys you can add/edit to customize the [Sensorberg](https://itunes.apple.com/us/app/sensorberg/id1115128115?mt=8) app.
@@ -21,7 +21,7 @@ In this post we go over some of keys you can add/edit to customize the [Sensorbe
 ----------  
 
 
-##Settings for iOS SDK
+## Settings for iOS SDK
 
 Following keys are used to configure the behaviour of iOS SDK  
 
@@ -48,7 +48,7 @@ Example:
 ```
 
 
-##Settings for Showcase
+## Settings for Showcase
 
 In the [Sensorberg](https://itunes.apple.com/us/app/sensorberg/id1115128115?mt=8) app you can also edit the appearance of the UI using the `theme` attribute:
   
@@ -69,7 +69,7 @@ Example :
 }
 ```
 
-###Theme Object
+### Theme Object
 
 >|key|type|description|
 >|---|---|---|---|
@@ -114,7 +114,7 @@ Example :
 }
 ```
 
-###Font Object :
+### Font Object :
 
 >|key|type|
 >|---|---|
@@ -131,7 +131,7 @@ Example :
 }
 ```
 
-###Color String 
+### Color String 
 
 > "#RRGGBB"  formated string
 
