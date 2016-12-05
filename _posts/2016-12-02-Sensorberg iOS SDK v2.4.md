@@ -49,7 +49,7 @@ Answer: Actually no. The OS is already receiving the advertisement packets from 
 In [version 2.4](https://github.com/sensorberg-dev/ios-sdk) we switched to monitoring for specific beacons, by creating the `CLBeaconRegion` using the Proximity UUID, major and minor. This continues to work as expected, though it does have a big caveat: **you can only monitor a maximum of 20 regions**.
 
 We filed a radar (bug report) with Apple and we hope that a future iOS version will actually fix this behaviour.  
-On the same note, be sure to update your iOS device to the latest version (currently 10.1.1) as 10.0 and 10.1 have some other bluetooth issues :)
+On the same note, be sure to update your iOS device to the latest version (currently 10.1.1) as 10.0 and 10.1 have some [other bluetooth issues](https://support.apple.com/kb/DL1893?locale=en_US) :)
 
 Greetings from Berlin!
 
