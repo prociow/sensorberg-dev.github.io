@@ -10,8 +10,8 @@ Managing Director and responsible for the web content:             <br/>
 Alexander Oelling                                                  <br/>
 
 ## Office:
-Köpenicker Str. 154                                                <br/>
-10997 Berlin-Kreuzberg                                           <br/>
+Leipziger Straße 126                                               <br/>
+10117 Berlin                                                       <br/>
 Germany                                                            <br/>
 
 ## Contact:
