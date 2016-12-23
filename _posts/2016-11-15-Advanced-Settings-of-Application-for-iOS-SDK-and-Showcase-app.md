@@ -114,7 +114,7 @@ Example :
 }
 ```
 
-### Font Object :
+### [Font Object](id:font-object)
 
 >|key|type|
 >|---|---|
@@ -131,7 +131,7 @@ Example :
 }
 ```
 
-### Color String 
+### [Color String](id:color-string) 
 
 > "#RRGGBB"  formated string
 
