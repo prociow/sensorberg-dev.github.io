@@ -51,4 +51,4 @@ The relevant code for this test case and delayed notifications are the following
 alarmManager.setExact(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis() + 3 * 1000 , pendingIntent);
 {% endhighlight %}
 
-If you are experience similar issues feel free to discuss in the comments.
+If you experience similar issues feel free to discuss in the comments.
