@@ -114,7 +114,7 @@ Example :
 }
 ```
 
-### [Font Object](id:fontObject)
+<h3><span id="fontObject">Font Object</span></h3>
 
 >|key|type|
 >|---|---|
@@ -131,7 +131,7 @@ Example :
 }
 ```
 
-### [Color String](id:colorString) 
+<h3><span id="colorString">Color String</span></h3>
 
 > "#RRGGBB"  formated string
 
