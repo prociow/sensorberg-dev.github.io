@@ -73,31 +73,31 @@ Example :
 
 >|key|type|description|
 >|---|---|---|---|
->|navigationBarColor|[color string](#color-string)| Color for top navigation bar|
->|navigationBarTitleFont|[font object](#font-object)|Font for screen titles on top navigation bar|
->|navigationBarTitleColor|[color string](#color-string)|Color for screen titles on top navigation bar|
+>|navigationBarColor|[color string](#colorString)| Color for top navigation bar|
+>|navigationBarTitleFont|[font object](#fontObject)|Font for screen titles on top navigation bar|
+>|navigationBarTitleColor|[color string](#colorString)|Color for screen titles on top navigation bar|
 >|navigationBarLogoImage|image url string|Icon image on left top of top navigation bar|
->|navigationBarLogoColor|[color string](#color-string)|Image tint color for the icon image on left top of top navigation bar|
->|tabBarColor|[color string](#color-string)|Color for bottom tab bar|
->|tabBarSelectedItemColor|[color string](#color-string)|Color of selected item on botom tab bar.|
->|tableViewSectionHeaderTextFont|[font object](#font-object)|Font for all tableview section headers|
->|tableViewSectionHeaderTextColor|[color string](#color-string)|Text color for all tableview section headers|
->|switchColor|[color string](#color-string)|color of UISwitch|
->|switchOnColor|[color string](#color-string)|color of UISwitch when switch is on|
->|switchThumbTintColor|[color string](#color-string)|thumb color of UISwitch|
->|baseTableViewCellTitleTextFont|[font object](#font-object)|title text font of UITableViewCell|
->|baseTableViewCellTitleTextColor|[color string](#color-string)|title text color of UITableViewCell|
->|baseTableViewCellDetailTextFont|[font object](#font-object)|detail text font of UITableViewCell|
->|baseTableViewCellDetailTextColor|[color string](#color-string)|detail text color of UITableViewCell|
->|historyCellTitleTextFont|[font object](#font-object)|title text font of notification history|
->|historyCellTitleTextColor|[color string](#color-string)|title text color of notification history|
->|historyCellDetailTextFont|[font object](#font-object)|detail text font of notification history|
->|historyCellDetailTextColor|[color string](#color-string)|detail text color of notification history|
->|historyCellContentBackgroundColor|[font object](#font-object)|background color of notification history item|
->|beaconCellTitleTextFont|[font object](#font-object)|Beacon name text font on scanner screen|
->|beaconCellTitleTextColor|[color string](#color-string)|Beacon name text color on scanner screen|
->|beaconCellDetailTextFont|[font object](#font-object)|Beacon major minor text font on scanner screen|
->|beaconCellDetailTextColor|[color string](#color-string)|Beacon major minor text color on scanner screen|
+>|navigationBarLogoColor|[color string](#colorString)|Image tint color for the icon image on left top of top navigation bar|
+>|tabBarColor|[color string](#colorString)|Color for bottom tab bar|
+>|tabBarSelectedItemColor|[color string](#colorString)|Color of selected item on botom tab bar.|
+>|tableViewSectionHeaderTextFont|[font object](#fontObject)|Font for all tableview section headers|
+>|tableViewSectionHeaderTextColor|[color string](#colorString)|Text color for all tableview section headers|
+>|switchColor|[color string](#colorString)|color of UISwitch|
+>|switchOnColor|[color string](#colorString)|color of UISwitch when switch is on|
+>|switchThumbTintColor|[color string](#colorString)|thumb color of UISwitch|
+>|baseTableViewCellTitleTextFont|[font object](#fontObject)|title text font of UITableViewCell|
+>|baseTableViewCellTitleTextColor|[color string](#colorString)|title text color of UITableViewCell|
+>|baseTableViewCellDetailTextFont|[font object](#fontObject)|detail text font of UITableViewCell|
+>|baseTableViewCellDetailTextColor|[color string](#colorString)|detail text color of UITableViewCell|
+>|historyCellTitleTextFont|[font object](#fontObject)|title text font of notification history|
+>|historyCellTitleTextColor|[color string](#colorString)|title text color of notification history|
+>|historyCellDetailTextFont|[font object](#fontObject)|detail text font of notification history|
+>|historyCellDetailTextColor|[color string](#colorString)|detail text color of notification history|
+>|historyCellContentBackgroundColor|[font object](#fontObject)|background color of notification history item|
+>|beaconCellTitleTextFont|[font object](#fontObject)|Beacon name text font on scanner screen|
+>|beaconCellTitleTextColor|[color string](#colorString)|Beacon name text color on scanner screen|
+>|beaconCellDetailTextFont|[font object](#fontObject)|Beacon major minor text font on scanner screen|
+>|beaconCellDetailTextColor|[color string](#colorString)|Beacon major minor text color on scanner screen|
 
 Example :   
 
@@ -114,7 +114,7 @@ Example :
 }
 ```
 
-### [Font Object](id:font-object)
+<h3><span id="fontObject">Font Object</span></h3>
 
 >|key|type|
 >|---|---|
@@ -131,7 +131,7 @@ Example :
 }
 ```
 
-### [Color String](id:color-string) 
+<h3><span id="colorString">Color String</span></h3>
 
 > "#RRGGBB"  formated string
 
