@@ -10,6 +10,23 @@ additionalNavigation : [
 
 ---  
 
+<div class="callout callout-alert">
+    <h1><i class="fa fa-exclamation-triangle"></i>Note about the new portal:</h1>
+    <p>To use portal.sensorberg.com you must update the resolver:</p>
+{% highlight c %}
+PUBLISH(({
+        SBEventUpdateResolver *updateEvent = [SBEventUpdateResolver new];
+        updateEvent.baseURL = @"https://portal.sensorberg-cdn.com";
+        updateEvent.interactionsPath    = @"/api/v2/sdk/gateways/{apiKey}/interactions.json";
+        updateEvent.analyticsPath       = @"/api/v2/sdk/gateways/{apiKey}/analytics.json";
+        updateEvent.settingsPath        = @"/api/v2/sdk/gateways/{apiKey}/settings.json?platform=ios";
+        updateEvent.pingPath            = @"/api/v2/sdk/gateways/{apiKey}/active.json";
+        updateEvent;
+    })); 
+{% endhighlight %}
+    <p>This is a temporary measure while our users migrate to the new portal.</p>
+</div>
+
 # Getting started with the Sensorberg SDK
 
 *This is a guide to help developers get up to speed with Sensorberg iOS SDK. These step-by-step instructions are written for Xcode 7, using the iOS 8 SDK. If you are using a previous version of Xcode, you may want to update before starting.*  
@@ -89,27 +106,6 @@ If you want to receive events while the app is innactive, you need to pass `YES`
     SBManager.sharedManager().requestLocationAuthorization(true)
 
 > **Important**: Be sure to add the `NSLocationAlwaysUsageDescription` (or `NSLocationWhenInUseUsageDescription`) key to your plist file and the corresponding string to explain to the user why the app requires access to location.
-
-<div class="callout callout-alert">
-    <h1><i class="fa fa-exclamation-triangle"></i>Note about the new portal:</h1>
-    <p>To use portal.sensorberg.com you must do the following:</p>
-</div>
-
-```
-PUBLISH(({
-        SBEventUpdateResolver *updateEvent = [SBEventUpdateResolver new];
-        updateEvent.baseURL = @"https://portal.sensorberg-cdn.com";
-        updateEvent.interactionsPath    = @"/api/v2/sdk/gateways/{apiKey}/interactions.json";
-        updateEvent.analyticsPath       = @"/api/v2/sdk/gateways/{apiKey}/analytics.json";
-        updateEvent.settingsPath        = @"/api/v2/sdk/gateways/{apiKey}/settings.json?platform=ios";
-        updateEvent.pingPath            = @"/api/v2/sdk/gateways/{apiKey}/active.json";
-        updateEvent;
-    }));
-```
-This is a temporary measure while our users migrate to the new portal.  
-The `{apiKey}` will be automatically replaced by the SDK.  
-
-
 
 Keep in mind that the SDK also requires the Bluetooth radio to be turned ON. You can check the status of the radio by calling:  
 
