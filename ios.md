@@ -91,8 +91,9 @@ If you want to receive events while the app is innactive, you need to pass `YES`
 > **Important**: Be sure to add the `NSLocationAlwaysUsageDescription` (or `NSLocationWhenInUseUsageDescription`) key to your plist file and the corresponding string to explain to the user why the app requires access to location.
 
 <div class="callout callout-alert">
-
-To use [portal.sensorberg.com](https://portal.sensorberg.com) you must update the `resolver`:
+    <h1><i class="fa fa-exclamation-triangle"></i>Note about the new portal:</h1>
+    <p>To use portal.sensorberg.com you must do the following:</p>
+</div>
 
 ```
 PUBLISH(({
@@ -108,7 +109,7 @@ PUBLISH(({
 This is a temporary measure while our users migrate to the new portal.  
 The `{apiKey}` will be automatically replaced by the SDK.  
 
-</div>
+
 
 Keep in mind that the SDK also requires the Bluetooth radio to be turned ON. You can check the status of the radio by calling:  
 
