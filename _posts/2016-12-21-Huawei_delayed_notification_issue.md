@@ -7,7 +7,7 @@ tags: beacon SDK Huawei SensorbergSDK
 ---
 
 
-Over the last couple month we've noticed some issue with delayed notifications
+Over the last couple months we've noticed some issue with delayed notifications
 on some Huawei devices.
 
 In this article we will explain the issue, the cause and
