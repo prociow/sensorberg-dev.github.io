@@ -12,7 +12,8 @@ additionalNavigation : [
 
 <div class="callout callout-alert">
     <h1><i class="fa fa-exclamation-triangle"></i>Note about the new portal:</h1>
-    <p>To use portal.sensorberg.com you must update the resolver:</p>
+    <p>To use portal.sensorberg.com you must update the resolver url</p>
+    <p>Fire a `SBEventUpdateResolver` immediately after setting the API key:</p>
 {% highlight c %}
 PUBLISH(({
         SBEventUpdateResolver *updateEvent = [SBEventUpdateResolver new];
