@@ -51,7 +51,7 @@ Declare your <em>BroadcastReceiver</em>:
     <application>
         <receiver android:name="com.myCompany.MyActionPresenter"
             android:process=".sensorberg"
-            android:exported:"false">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.sensorberg.android.PRESENT_ACTION" />
             </intent-filter>
