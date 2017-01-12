@@ -8,7 +8,7 @@ Documentation for the Sensorberg SDKs.
 If you want to see your drafts:
 
 ```
-jekyll serve --drafts
+bundle exec jekyll serve --drafts
 ```
 The drafts will not be visible on the actual website.
 
@@ -20,4 +20,4 @@ To install ```jekyll``` run:
 bundle install
 ```
 
-if you want to check all the links locally (including links in your drafts), run: ```rake```
+if you want to check all the links locally (including links in your drafts), run: ```bundle exec rake```
