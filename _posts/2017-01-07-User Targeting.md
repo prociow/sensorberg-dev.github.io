@@ -18,7 +18,7 @@ From a data privacy perspective, we designed the feature in a way so that data i
 <!--more-->
 Here an example which can be used in your application:
 
-{% highlight java %}
+{% highlight java %}  
 public class MyApplication extends MultiDexApplication {
 	public SensorbergSdk sensorbergSDK;
 	@Override
@@ -32,7 +32,7 @@ public class MyApplication extends MultiDexApplication {
     	attributes.put("scoce", "above1000");
     	SensorbergSDK.setAttributes(attributes);
     }
-}
+}  
 {% endhighlight %}
 
 And on iOS:
