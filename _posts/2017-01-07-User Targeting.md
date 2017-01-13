@@ -36,12 +36,12 @@ public class MyApplication extends MultiDexApplication {
 {% endhighlight %}
 
 And on iOS:
-{% highlight ObjC %}
-NSDictionary *attributes = @{ @"userLoggedIn":@YES,
-                               @"userHomeTown":@"Berlin"};
-[[SBManager sharedManager] setTargetAttributes:attributes];
+{% highlight ObjC %}  
+NSDictionary *attributes = @{ @"userLoggedIn":@YES,  
+                              @"userHomeTown":@"Berlin"};  
+[[SBManager sharedManager] setTargetAttributes:attributes];  
 {% endhighlight %}
-To clear the attributes pass a `nil`.
+To clear the attributes pass a `nil`: `[[SBManager sharedManager] setTargetAttributes:nil]`  
 
 
 ## Notes:
