@@ -26,11 +26,11 @@ public class MyApplication extends MultiDexApplication {
     	//initialize your SDK properly
     	Map<String, String> attributes = new HashMap<>();
     	if (userMananger.userloggedIn) {
-    		attributes.put("userLoggedIn", "true");
-    		attributes.put("user.hometown", userMananger.getHomeTown());
+    		attributes.put("user_LoggedIn", "true");
+    		attributes.put("user_hometown", userMananger.getHomeTown());
     	}
     	attributes.put("scoce", "above1000");
-    	sensorbergSDK.setAttributes(attributes);
+    	SensorbergSDK.setAttributes(attributes);
     }
 }
 {% endhighlight %}
