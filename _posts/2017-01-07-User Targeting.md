@@ -29,7 +29,7 @@ public class MyApplication extends MultiDexApplication {
     		attributes.put("user_LoggedIn", "true");
     		attributes.put("user_hometown", userMananger.getHomeTown());
     	}
-    	attributes.put("scoce", "above1000");
+    	attributes.put("score", "above1000");
     	SensorbergSDK.setAttributes(attributes);
     }
 }  
