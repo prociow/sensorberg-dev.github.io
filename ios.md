@@ -13,7 +13,7 @@ additionalNavigation : [
 <div class="callout callout-alert">
     <h1><i class="fa fa-exclamation-triangle"></i>Note about the new portal:</h1>
     <p>The latest version of the Sensorberg iOS SDK ({{ site.latestiOSRelease }}) uses the new `portal.sensorberg.com` back-end</p>
-    <p>If you are still using `manage.sensorberg.com` make sure to use version 2.4.1/<p>
+    <p>If you are still using `manage.sensorberg.com` make sure to use version 2.4.1</p>
 </div>
 
 # Getting started with the Sensorberg SDK
@@ -279,6 +279,6 @@ If you encounter any bugs, please [report them](https://github.com/sensorberg-de
 <!--</div>-->
 
 <div class="callout callout-info">
-    <h1><i class='fa fa-info-circle'></i>Dependency collosions?</h1>
+    <h1><i class='fa fa-info-circle'></i>Dependency collisions?</h1>
     <p>If you have a dependency collision or you don´t want to integrate the sources of our SDK into your project, <a href="mailto:support@sensorbergcom">contact us</a>. We have <a href="https://github.com/sensorberg-dev/ios-sdk/tree/v2m">a script</a> which generates a "mangled" library, with obfuscated symbols.<strong>We only recommend to use it in very rare cases!</strong></p>
 </div>
