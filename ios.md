@@ -12,20 +12,8 @@ additionalNavigation : [
 
 <div class="callout callout-alert">
     <h1><i class="fa fa-exclamation-triangle"></i>Note about the new portal:</h1>
-    <p>To use portal.sensorberg.com you must update the resolver url</p>
-    <p>Fire a `SBEventUpdateResolver` immediately after setting the API key:</p>
-{% highlight c %}
-PUBLISH(({
-        SBEventUpdateResolver *updateEvent = [SBEventUpdateResolver new];
-        updateEvent.baseURL = @"https://portal.sensorberg-cdn.com";
-        updateEvent.interactionsPath    = @"/api/v2/sdk/gateways/{apiKey}/interactions.json";
-        updateEvent.analyticsPath       = @"/api/v2/sdk/gateways/{apiKey}/analytics.json";
-        updateEvent.settingsPath        = @"/api/v2/sdk/gateways/{apiKey}/settings.json?platform=ios";
-        updateEvent.pingPath            = @"/api/v2/sdk/gateways/{apiKey}/active.json";
-        updateEvent;
-    })); 
-{% endhighlight %}
-    <p>This is a temporary measure while our users migrate to the new portal.</p>
+    <p>The latest version of the Sensorberg iOS SDK ({{ site.latestiOSRelease }}) uses the new `portal.sensorberg.com` back-end</p>
+    <p>If you are still using `manage.sensorberg.com` make sure to use version 2.4.1/<p>
 </div>
 
 # Getting started with the Sensorberg SDK
