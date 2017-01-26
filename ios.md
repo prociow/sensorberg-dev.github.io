@@ -12,8 +12,8 @@ additionalNavigation : [
 
 <div class="callout callout-alert">
     <h1><i class="fa fa-exclamation-triangle"></i>Note about the new portal:</h1>
-    <p>The latest version of the Sensorberg iOS SDK ({{ site.latestiOSRelease }}) uses the new `portal.sensorberg.com` back-end</p>
-    <p>If you are still using `manage.sensorberg.com` make sure to use version 2.4.1</p>
+    <p>Starting with version ({{ site.latestiOSRelease }}) of our iOS SDK, we switched to the new <a href="https://portal.sensorberg.com">Sensorberg Portal</a></p>
+    <p>If you haven't migrated your account yet (you should!) please continue using the 2.4.1 version</p>
 </div>
 
 # Getting started with the Sensorberg SDK
@@ -30,7 +30,7 @@ Select the `SBDemoApp` target and run on device.
 
 ### 1. Create an account  
 
-To get started with the Sensorberg SDK, [sign up for a free account](https://manage.sensorberg.com/#/signup)
+To get started with the Sensorberg SDK, [sign up for a free account](https://portal.sensorberg.com/)
 *Read more about our [Beacon Management Platform](https://sensorberg.zendesk.com)*  
 
 ### 2. Cocoapods  
@@ -71,7 +71,7 @@ Import the SensorbergSDK
     import SensorbergSDK
   
 Setup the SBManager with an **API key** and a **delegate**
-*You can find your API key on the [Beacon Managerment Platform](https://manage.sensorberg.com) in the "Apps" section.
+*You can find your API key on the [Beacon Managerment Platform](https://portal.sensorberg.com) in the "Apps" section.
 The Sensorberg SDK uses an [event bus](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) for events dispatching.
 During setup, you pass the class instance that will receive the events as the `delegate`.*  
 
@@ -273,7 +273,7 @@ If you encounter any bugs, please [report them](https://github.com/sensorberg-de
 
 <!--<div class="callout callout-info">-->
 <!--    <h1><i class='fa fa-info-circle'></i>Tip: Edit the default beacon regions</h1>-->
-<!--    <p>By default, the SDK will monitor all <a href="https://sensorberg.zendesk.com/hc/en-us/articles/201635021-How-is-a-Beacon-ID-structured-">the Sensorberg beacon</a> regions and all the regions you specify at manage.sensorberg.com. If you want to only use the actual regions of your active beacons set the default regions to an empty array:<br> -->
+<!--    <p>By default, the SDK will monitor all <a href="https://sensorberg.zendesk.com/hc/en-us/articles/201635021-How-is-a-Beacon-ID-structured-">the Sensorberg beacon</a> regions and all the regions you specify at https://portal.sensorberg.com/. If you want to only use the actual regions of your active beacons set the default regions to an empty array:<br> -->
 <!--    <pre><code class="language-text" data-lang="text">SBSDKManager.setDefaultRegions(@[])</code></pre>-->
 <!--    Please note, you need the <a href="http://sensorberg-dev.github.io/ios-sdk/1.0.2/">1.0.2</a> release to use this feature</p>    -->
 <!--</div>-->
