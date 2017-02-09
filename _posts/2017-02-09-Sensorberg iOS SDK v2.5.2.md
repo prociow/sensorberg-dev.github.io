@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Sensorberg iOS SDK v2.5.2”
+title: "Sensorberg iOS SDK v2.5.2"
 date: 2017-02-09
 comments: true
 tags: beacon SDK iOS SensorbergSDK
----
+
+---  
+
   
 This week we launched [version 2.5.2 of our iOS SDK](https://github.com/sensorberg-dev/ios-sdk) - be sure to update!  
 
@@ -16,9 +18,11 @@ This week we launched [version 2.5.2 of our iOS SDK](https://github.com/sensorbe
 
 - Fixed beacon ranging problem when the device is already in the monitored beacon region.
 
-Greetings from Berlin!
+Greetings from Berlin!  
+
 
 <!--more-->
+
 
 # Related Posts  
 
