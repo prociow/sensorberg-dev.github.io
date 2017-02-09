@@ -18,6 +18,8 @@ This week we launched [version 2.5.2 of our iOS SDK](https://github.com/sensorbe
 
 Greetings from Berlin!
 
+<!--more-->
+
 # Related Posts  
 
 - [Sensorberg iOS SDK v2.4](http://sensorberg-dev.github.io/2016/12/Sensorberg-iOS-SDK-v2.4/)  
