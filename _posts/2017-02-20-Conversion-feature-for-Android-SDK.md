@@ -65,7 +65,7 @@ For this to happen call:
  - You may skip "Ignored" stage if that is what you want and mark Action as "Success" straight away.
 
 In case you need out-of-the-box solution that works with conversions and Notifications we've got you covered.
-Extend the abstract [ActionReceiver](https://github.com/sensorberg-dev/android-sdk/blob/master/android-sdk/src/main/java/com/sensorberg/ActionReceiver.java "ActionReceiver") class and supply your *Notification* in **onGetNotification**, plus implement
+Extend the abstract [ActionReceiver](https://github.com/sensorberg-dev/android-sdk/blob/master/android-sdk/src/main/java/com/sensorberg/ActionReceiver.java "ActionReceiver") class and supply your Notification in **onGetNotification**, plus implement
 **onAction** (or onVisitWebsiteAction / onInAppAction / onUriAction if you want to be more specific) callbacks,
 and the rest of conversion will happen automatically when user taps on it. Remember to put the ActionReceiver extended class in AndroidManifest.xml and use remote process for it.
 

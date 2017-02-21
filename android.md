@@ -263,3 +263,7 @@ Then you must receive the callback.
     <h1><i class="fa fa-info-circle"></i> Tip: Use the secret codes broadcastreceiver to add more debugging to your app.</h1>
     <p>Read all about it in this <a href="/2015/06/Tip-howto-remove-secred-codes-receiver/">blog post</a>.</p>
 </div>
+<div class="callout callout-info">
+    <h1><i class="fa fa-info-circle"></i> Tip: Use conversions to measure user interaction.</h1>
+    <p>Read more about conversions in respective <a href="/2017/02/Conversion-feature-for-Android-SDK/">Android</a> and <a href="/2016/06/New-conversion-feature-in-iOS-SDK/">iOS</a> blog posts.</p>
+</div>
