@@ -107,6 +107,8 @@ Default Conversion value for campaign action is "**ignored**" (kSBConversionIgno
 [[SBManager sharedManager] reportConversion:SBConversionType forCampaignAction:action];
 {% endhighlight %}
 
+[Corresponding blogpost about conversions for Android](https://developer.sensorberg.com/2017/02/Conversion-feature-for-Android-SDK/ "Corresponding blogpost about conversions for Android")
+
 Enjoy the Conversions !!
 
 Sensorberg Tech
