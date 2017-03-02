@@ -23,7 +23,7 @@ static {
 {% endhighlight %}
     <p>2. Use the a different artifact of the SDK</p>
 {% highlight groovy %}
-compile 'com.sensorberg.sdk:android-sdk:2.2.0-RAILS'
+compile 'com.sensorberg.sdk:android-sdk:2.3.0-RAILS'
 {% endhighlight %}
     <p>That's a temporary measure while our users migrate to the new portal.</p>
 </div>
