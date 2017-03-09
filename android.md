@@ -14,16 +14,9 @@ additionalNavigation : [
 
 <div class="callout callout-alert">
     <h1><i class="fa fa-exclamation-triangle"></i>Note about the new portal:</h1>
-    <p>To use portal.sensorberg.com you must do the following:</p>
-    <p>1. Add the following static initializer in your Application class</p>
-{% highlight java %}
-static {
-   com.sensorberg.sdk.internal.transport.RetrofitApiTransport.RESOLVER_BASE_URL = "https://portal.sensorberg-cdn.com";
-}  
-{% endhighlight %}
-    <p>2. Use the a different artifact of the SDK</p>
+    <p>To use portal.sensorberg.com you must use a different artifact of the SDK</p>
 {% highlight groovy %}
-compile 'com.sensorberg.sdk:android-sdk:2.3.0-RAILS'
+compile 'com.sensorberg.sdk:android-sdk:2.3.1-RAILS'
 {% endhighlight %}
     <p>That's a temporary measure while our users migrate to the new portal.</p>
 </div>
