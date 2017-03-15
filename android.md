@@ -12,13 +12,19 @@ additionalNavigation : [
 ]
 ---
 
-<div class="callout callout-alert">
-    <h1><i class="fa fa-exclamation-triangle"></i>Note about the new portal:</h1>
-    <p>To use portal.sensorberg.com you must use a different artifact of the SDK</p>
+<div>
+<h2>SDK migration to new RAILS platform</h2>
+<p>Starting with SDK 2.2.0-RAILS we're using newly implemented Sensorberg IoT RAILS platform as a backend.
+This system upgrade will ensure better functionality, project use cases and&nbsp;simpler user experience.</p>
+<p>As a result, a new account must be set up on the Sensorberg IoT platform in order to continue your projects.
+This applies to every dependency change from <b>non-RAILS</b> version to <b>-RAILS</b> based version.</p>
+<p>Simply create an account by visiting <a href="http://portal.sensorberg.com" target="_blank">portal.sensorberg.com</a>. You have the option to manually move your data (e.g., beacons, campaigns etc) to the new platform and continue to manage your account.&nbsp;</p>
+<p>Alternatively, you may contact our support team at <a href="mailto:support@sensorberg.com">support@sensorberg.com</a>&nbsp;for assistance in the migration procedure.</p>
+<p>For more useful knowledge articles, please visit our&nbsp;<a href="https://support.sensorberg.com/hc/en-us/categories/115000135909-Sensorberg-IoT-Enterprise-Platform" target="_blank">Knowledge Center.</a></p>
+<p>The latest current artifact is:</p>
 {% highlight groovy %}
 compile 'com.sensorberg.sdk:android-sdk:2.3.2-RAILS'
 {% endhighlight %}
-    <p>That's a temporary measure while our users migrate to the new portal.</p>
 </div>
 
 # How to install the Sensorberg Android SDK
@@ -66,7 +72,7 @@ Enable the SDK in your [Application](http://developer.android.com/reference/andr
 public class DemoApplication extends Application {
     private SensorbergSdk sdk;
     private BackgroundDetector detector;
-    
+
     static {
     	if (BuildConfig.DEBUG){
     		Logger.enableVerboseLogging();
@@ -87,7 +93,7 @@ public class DemoApplication extends Application {
                 showAlert(action, beaconEvent.trigger);
             }
         });
-                
+
         detector = new BackgroundDetector(sdk);
         registerActivityLifecycleCallbacks(detector);
 	}
@@ -176,7 +182,7 @@ MyApp.getInstance().bootStrapper.setAdvertisingIdentifier(null);
 
 <div class="callout callout-alert">
     <h1><i class="fa fa-exclamation-triangle"></i> Android 6 Permissions</h1>
-    <p>If you app will target android 6 you will need to prompt the user for location permissions before scanning will work - this should be down in the activity. For 
+    <p>If you app will target android 6 you will need to prompt the user for location permissions before scanning will work - this should be down in the activity. For
        a more in-depth discussion please see <a href="https://developer.sensorberg.com/2016/07/Be-Ready-For-Android6-Permissions">the Android 6 blog</a>.</p>
 
 
@@ -214,7 +220,7 @@ In your activity which would use the scanner you need to ask for (location permi
 
 {% endhighlight %}
 
-Then you must receive the callback. 
+Then you must receive the callback.
 
 {% highlight java %}
      @Override
