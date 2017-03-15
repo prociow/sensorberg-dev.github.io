@@ -12,7 +12,7 @@ additionalNavigation : [
 ]
 ---
 
-<div>
+<div class="callout callout-alert">
 <h2>SDK migration to new RAILS platform</h2>
 <p>Starting with SDK 2.2.0-RAILS we're using newly implemented Sensorberg IoT RAILS platform as a backend.
 This system upgrade will ensure better functionality, project use cases and&nbsp;simpler user experience.</p>
